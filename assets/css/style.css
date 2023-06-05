@@ -1,1 +1,27 @@
+/* google fonts */
 * {font-family: "Raleway", sans-serif}
+
+/* scroll to top */
+#scroll-to-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 100px;
+  z-index: 99;
+  border:none;
+  display:inline-block;
+  outline:0;
+  padding:6px 16px;
+  vertical-align:middle;
+  overflow:hidden;
+  text-decoration:none!important;
+  color:teal;
+  background-color:#c2c2c2;
+  text-align:center;
+  cursor:pointer;
+  white-space:nowrap;
+}
+
+#scroll-to-top:hover {
+  background-color: #555;
+}

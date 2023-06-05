@@ -1,21 +1,44 @@
 $( document ).ready(function() {
     
 
+	// Typewriter effect
+		var app = document.getElementById('typewriter');
+		var typewriter = new Typewriter(app, {
+		  loop: true
+		});
 
-	var app = document.getElementById('typewriter');
+		var string1 = "Hello there";
+		var string2 = "Welcome to my portfolio";
+		var string3 = "I am a software engineer who uses software to solve real world problems";
 
-	var typewriter = new Typewriter(app, {
-	  loop: true
-	});
+		typewriter
 
-	typewriter
-	  .pauseFor(2500)
-	  .typeString('Hello there')
-	  .pauseFor(300)
-	  .deleteChars(10)
-	  .typeString('I am a programmer')
-	  .typeString('I am currently learning Java')
-	  .pauseFor(1000)
-	  .start();
+		  .typeString(string1)
+		  .pauseFor(500)
+		  .deleteChars(string1.length)
+
+		  .typeString(string2)
+		  .pauseFor(500)
+		  .deleteChars(string2.length)
+
+		  .typeString(string3)
+		  .pauseFor(500)
+		  .deleteChars(string3.length)
+
+		  .start();
+
+	// scroll to top
+		$(window).scroll(function(){
+		    if ($(this).scrollTop() > 100) {
+		        $('#scroll-to-top').fadeIn();
+		    } else {
+		        $('#scroll-to-top').fadeOut();
+		    }
+		});
+		$('#scroll-to-top').click(function(){
+		    $("html, body").animate({ scrollTop: 0 }, 600);
+		    return false;
+		});
+
 
  });
