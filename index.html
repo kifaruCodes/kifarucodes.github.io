@@ -43,35 +43,32 @@
 		<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 	
 </head>
-<body style="background: #625F5F; color:yellow;" >
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		  <div class="container-fluid">
-		    <a class="navbar-brand" href="#">
-		    	<img src="assets/img/logo.png" class="img-fluid" alt="" style="height: 50px;">
-		    </a>
-		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-		      <span class="navbar-toggler-icon"></span>
-		    </button>
-		    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-		      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-		        <!-- <li class="nav-item">
-		          <a class="nav-link active" aria-current="page" href="#">Home</a>
-		        </li> -->
-		        <li class="nav-item">
-		          <a class="nav-link" href="#about">About</a>
-		        </li>
-		        <li class="nav-item">
-		          <a class="nav-link" href="#blog">Blog</a>
-		        </li>
-		        <li class="nav-item">
-		          <a class="nav-link" href="#projects">Projects</a>
-		        </li>
-		        
-		      </ul>
-		      
-		    </div>
-		  </div>
-		</nav>
+<body style="background: #FFFFFF; color:black;" >
+	<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+	  <div class="container-fluid">
+	    <a class="navbar-brand" href="#">
+	    	<img src="assets/img/logo.png" class="img-fluid" alt="" style="height: 50px;">
+	    </a>
+	    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	      <span class="navbar-toggler-icon"></span>
+	    </button>
+	    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+	        <li class="nav-item">
+	          <a class="nav-link" href="#about">About</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="#blog">Blog</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="#projects">Projects</a>
+	        </li>
+	        
+	      </ul>
+	      
+	    </div>
+	  </div>
+	</nav> -->
 
 	<!-- scroll to top -->
 
@@ -96,10 +93,10 @@
 
 		<!-- about me -->
 		<div class="row d-flex justify-content-center">
-			<div class="col">
+			<!-- <div class="col">
 				<img src="assets/img/logo.png" class="img-thumbnail" alt="KifaroCodes logo" style="height: 100px;box-shadow: 0px 0px 8px #888888;">
-			</div>
-			<div class="col  d-flex justify-content-center">
+			</div> -->
+			<div class="col-lg-12  d-flex justify-content-center">
 				<!-- <button type="button" class="btn btn-primary">Primary</button> -->
 				<div id="typewriter"></div>
 			</div>
@@ -108,47 +105,101 @@
 		<!-- social media links -->
 		<div class="row d-flex justify-content-center">
 			<div class="col  d-flex justify-content-center">
-				<a href="https://twitter.com/kifarucodes" target="_blank" type="button" class="btn btn-outline-warning"><i class="fa fa-twitter"></i></a>
-				<a href="https://www.linkedin.com/in/kifaru-codes-09b425279/" target="_blank" type="button" class="btn btn-outline-warning"><i class="fa fa-linkedin"></i></a>
-				<a href="https://github.com/kifaruCodes" target="_blank" type="button" class="btn btn-outline-warning"><i class="fa fa-github"></i></a>				
+				<a href="https://twitter.com/kifarucodes" target="_blank" type="button" class="btn btn-outline-dark"><i class="fa fa-twitter"></i></a>
+				<a href="https://www.linkedin.com/in/kifaru-codes-09b425279/" target="_blank" type="button" class="btn btn-outline-dark"><i class="fa fa-linkedin"></i></a>
+				<a href="https://github.com/kifaruCodes" target="_blank" type="button" class="btn btn-outline-dark"><i class="fa fa-github"></i></a>				
 			</div>
 		</div>
 		<br>
 
 		<!-- projects -->
+		<div class="row">
+			<h2>Articles/Blogs</h2>
+		</div>
 		<div class="row" id="projects">
 			<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 d-flex justify-content-center">
-				<div class="card text-warning bg-dark" style="width: ;margin-bottom:10px;">
-				  <img src="assets/img/java-basics.jpg" class="card-img-top" alt="Java Learning">
+				<div class="card text-light bg-dark" style="width: ;margin-bottom:10px;">
+				  <img src="assets/img/java_logo_lg.png" class="card-img-top" alt="Java Learning" style="width: 200px;">
 				  <div class="card-body">
 				    <h5 class="card-title"><b>Java Basics</b></h5>
-				    <p class="card-text">In this section I explore Java.</p>
-				    <a href="#" class="btn btn-outline-warning">View</a>
+				    <p class="card-text">
+				    	In this section I explore Java basic concepts. The goal is to have the right fundamentals to build projects effectively
+				    </p>
+				    <a href="projects/java-basics.html" class="btn btn-outline-light">View</a>
 				  </div>
 				</div>	
 			</div>
 			<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 d-flex justify-content-center">
-				<div class="card text-warning bg-dark" style="width: ;margin-bottom:10px;">
-				  <img src="assets/img/github-basics.jpg" class="card-img-top" alt="github basics">
+				<div class="card text-light bg-dark" style="width: ;margin-bottom:10px;">
+				  <img src="assets/img/github_logo_lg.png" class="card-img-top" alt="github basics" style="width: 200px;">
 				  <div class="card-body">
-				    <h5 class="card-title"><b>Github Basics</b></h5>
-				    <p class="card-text">In this section I explore aspects of Github. This is due to the fact that github is used lorema </p>
-				    <a href="#" class="btn btn-outline-warning">View</a>
+				    <h5 class="card-title"><b>Git & Github Basics</b></h5>
+				    <p class="card-text">
+				    	Git is essential in working with teams, and managing projects effectively. A good understanding of Git and Github is essential in good development and making sure there are is minimum conflic in the project. 
+				    </p>
+				    <p>
+				    	In this section I explore Git and Github from the basic concepts that is used in everyday usage
+				    </p>
+				    <a href="projects/github-basics.html" class="btn btn-outline-light">View</a>
 				  </div>
 				</div>	
 			</div>
 			<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 d-flex justify-content-center">
-				<div class="card text-warning bg-dark" style="width: ;margin-bottom:10px;">
-				  <img src="assets/img/markdown-basics.jpg" class="card-img-top" alt="Markdown basics">
+				<div class="card text-light bg-dark" style="width: ;margin-bottom:10px;">
+				  <img src="assets/img/markdown_logo_lg_colored.png" class="card-img-top" alt="Markdown basics" style="width: 200px;">
 				  <div class="card-body">
 				    <h5 class="card-title"><b>Markdown Basics</b></h5>
-				    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-				    <a href="#" class="btn btn-outline-warning">View</a>
+				    <p class="card-text">
+				    	Markdown has quite a number of usages, and in this section I explore/document the different syntax that I use to document my git repositories.
+				    </p>
+				    <a href="projects/markdown-basics.html" class="btn btn-outline-light">View</a>
+				  </div>
+				</div>	
+			</div>			
+		</div>
+
+		<!-- projects -->
+		<div class="row">
+			<h2>Projects</h2>
+		</div>
+		<div class="row" id="projects">
+			<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 d-flex justify-content-center">
+				<div class="card text-light bg-dark" style="width: ;margin-bottom:10px;">
+				  <img src="assets/img/java-basics.jpg" class="card-img-top" alt="Java Learning">
+				  <div class="card-body">
+				    <h5 class="card-title"><b>Java Projects</b></h5>
+				    <p class="card-text">
+				    	In this section I explore some beginner Java projects, with the sole purpose of learning.
+				    </p>
+				    <a href="projects/java-basics.html" class="btn btn-outline-light">View</a>
 				  </div>
 				</div>	
 			</div>
-
-			
+			<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 d-flex justify-content-center">
+				<div class="card text-light bg-dark" style="width: ;margin-bottom:10px;">
+				  <img src="assets/img/github-basics.jpg" class="card-img-top" alt="github basics">
+				  <div class="card-body">
+				    <h5 class="card-title"><b>Spring Boot Projects</b></h5>
+				    <p class="card-text">
+				    	Spring Boot is a popular Java framework that abstracts a lot of the setup of Java projects to help focus on building Java products. 
+				    </p>
+				    <p>
+				    	In this section I build real life projects that implement core Java fundamentals
+				    </p>
+				    <a href="projects/spring-boot-projects.html" class="btn btn-outline-light">View</a>
+				  </div>
+				</div>	
+			</div>
+			<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 d-flex justify-content-center">
+				<div class="card text-light bg-dark" style="width: ;margin-bottom:10px;">
+				  <img src="assets/img/markdown-basics.jpg" class="card-img-top" alt="Markdown basics">
+				  <div class="card-body">
+				    <h5 class="card-title"><b>PHP Sample Projects</b></h5>
+				    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				    <a href="projects/markdown-basics.html" class="btn btn-outline-light">View</a>
+				  </div>
+				</div>	
+			</div>			
 		</div>
 	</div>
 </body>
