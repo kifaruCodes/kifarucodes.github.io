@@ -1,5 +1,12 @@
+// splash screen
+$(window).on('load', function() {
+	// Animate loader off screen
+	$("#splash_screen").addClass("animated slideOutUp");;
+});
+
 $( document ).ready(function() {
     
+	
 
 	// Typewriter effect
 		var app = document.getElementById('typewriter');
