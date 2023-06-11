@@ -37,6 +37,25 @@
 		<!-- Typewriter js -->
 		<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 
+		<!-- <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script> -->
+		<!-- <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script> -->
+
+		<!-- <link rel="stylesheet"
+      href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/styles/default.min.css"> -->
+		<!-- <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/highlight.min.js"></script> -->
+
+	
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" integrity="sha512-rO+olRTkcf304DQBxSWxln8JXCzTHlKnIdnMUwYvQa9/Jd4cQaNkItIUj6Z4nvW1dqK0SKXLbn9h4KwZTNtAyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js" integrity="sha512-rdhY3cbXURo13l/WU9VlaRyaIYeJ/KBakckXIvJNAQde8DgpOmE+eZf7ha4vdqVjTtwQt69bD2wH2LXob/LB7Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script>
+			$( document ).ready(function() {
+			    hljs.highlightAll();
+			});
+		</script>
+
+
 		<!-- custom js -->
 		<script type="text/javascript" src="../assets/js/script.js"></script>
 
@@ -44,7 +63,7 @@
 	
 </head>
 <body style="background: #FFFFFF; color:black;" >
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
 	  <div class="container-fluid">
 	    <a class="navbar-brand" href="../index.html">
 	    	<img src="../assets/img/logo.png" class="img-fluid" alt="" style="height: 50px;border-radius: 50%;box-shadow: 0px 0px 8px #888888;">
@@ -96,7 +115,42 @@
 			</div>
 		</div>
 		<div class="row" id="">
+			<div class="col-lg-6">
+				<p>
+					Simple code sample:
+				</p>
+				<p>
+					
 
+<pre  style="box-shadow: 0px 0px 18px #3F3F3F;margin:0px;padding: 0px;">
+<code class="language-java">
+import java.sql.SQLOutput;
+
+public class JavaBasics {
+    public static void main(String[] args) {
+    	System.out.print("Hello there");  
+	}
+}
+</code>
+</pre>
+
+<pre  style="box-shadow: 0px 0px 18px #3F3F3F;margin:0px;padding: 0px;">
+<code class="language-markdown">
+# Heading
+## Heading 2
+
+![asdf]()
+</code>
+</pre>
+
+<pre  style="box-shadow: 0px 0px 18px #3F3F3F;margin:0px;padding: 0px;">
+<code class="language-sql">
+select * from table where col = 'x';
+</code>
+</pre>
+
+				</p>
+			</div>
 		</div>
 		
 	</div>
