@@ -1,7 +1,9 @@
 // splash screen
 $(window).on('load', function() {
 	// Animate loader off screen
-	$("#splash_screen").addClass("animated slideOutUp");;
+	$("#splash_screen").addClass("animated slideOutUp");
+
+	
 });
 
 $( document ).ready(function() {
