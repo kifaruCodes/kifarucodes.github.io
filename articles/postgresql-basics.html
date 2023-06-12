@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kifaru Codes</title>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Portfolio for Kifaru">
+	<meta name="author" content="@kifaruCodes">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon/favicon.ico"/>
+
+	<!-- css libraries cdn -->
+		<!-- Bootstrap css -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		
+		<!-- animate css -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
+
+		<!-- fontawesome css -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+		<!-- google font -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+		<!-- custom css -->
+		<link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+
+	<!-- js libraries  -->
+		<!-- jQuery js -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		
+		<!-- Bootstrap js -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+		<!-- Typewriter js -->
+		<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+
+		<!-- <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script> -->
+		<!-- <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script> -->
+
+		<!-- <link rel="stylesheet"
+      href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/styles/default.min.css"> -->
+		<!-- <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/highlight.min.js"></script> -->
+
+	
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" integrity="sha512-rO+olRTkcf304DQBxSWxln8JXCzTHlKnIdnMUwYvQa9/Jd4cQaNkItIUj6Z4nvW1dqK0SKXLbn9h4KwZTNtAyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js" integrity="sha512-rdhY3cbXURo13l/WU9VlaRyaIYeJ/KBakckXIvJNAQde8DgpOmE+eZf7ha4vdqVjTtwQt69bD2wH2LXob/LB7Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script>
+			$( document ).ready(function() {
+			    hljs.highlightAll();
+			});
+		</script>
+
+
+		<!-- custom js -->
+		<script type="text/javascript" src="../assets/js/script.js"></script>
+
+		<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+	
+</head>
+<body style="background: #FFFFFF; color:black;" >
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+	  <div class="container-fluid">
+	    <a class="navbar-brand" href="../index.html">
+	    	<img src="../assets/img/logo.png" class="img-fluid" alt="" style="height: 50px;border-radius: 50%;box-shadow: 0px 0px 8px #888888;">
+	    </a>
+	    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	      <span class="navbar-toggler-icon"></span>
+	    </button>
+	    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+	        <li class="nav-item">
+	          <a class="nav-link" href="../index.html#about">About</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="../index.html#articles">Articles</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="../index.html#projects">Projects</a>
+	        </li>
+	        
+	      </ul>
+	      
+	    </div>
+	  </div>
+	</nav>
+
+	<!-- scroll to top -->
+
+	<div class="container-fluid">
+
+		<!-- scroll to top -->
+		<button onclick="topFunction()" id="scroll-to-top" title="Go to top"><i class="fa fa-arrow-up"></i></button>
+		
+		<br>
+		
+
+		
+		
+
+		
+		<div class="row ">
+			<div class="col-lg-12">
+				<h1><img src="../assets/img/postgresql_logo_sm.png" class="img-fluid" alt="..."> PostgreSQL Basics</h1> 
+			</div>
+			<div class="col-lg-12">
+
+<h1 id="overview">Overview</h1>
+<p>Personal documentation for postgreSQL</p>
+<h2 id="table-of-content">Table of content</h2>
+<ul>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#psql-commands">pSQL commands</a></li>
+<li><a href="#sql-commands">SQL commands</a></li>
+<li><ul>
+<li><a href="#create-database">create database</a></li>
+</ul></li>
+<li><ul>
+<li><a href="#create-table">create table</a></li>
+</ul></li>
+<li><ul>
+<li><a href="#create-temporary-table">create temporary table</a></li>
+</ul></li>
+<li><ul>
+<li><a href="#copy-a-table">Copy a table</a></li>
+</ul></li>
+<li><ul>
+<li><a href="#drop-table">drop a table</a></li>
+</ul></li>
+<li><ul>
+<li><a href="#truncate-table">Truncate table</a></li>
+</ul></li>
+<li><ul>
+<li><a href="#alter-table">Alter table</a></li>
+</ul></li>
+<li><ul>
+<li><a href="#alter-table">Insert Data</a></li>
+</ul></li>
+<li><ul>
+<li><a href="#upsert-data">Upsert Data</a></li>
+</ul></li>
+<li><ul>
+<li><ul>
+<li><a href="#on-conflict-do-nothing">on conflict do nothing</a></li>
+</ul></li>
+</ul></li>
+<li><ul>
+<li><ul>
+<li><a href="#on-conflict-do-update">on conflict do update</a></li>
+</ul></li>
+</ul></li>
+<li><ul>
+<li><ul>
+<li><a href="#on-conflict-where">on conflict where</a></li>
+</ul></li>
+</ul></li>
+<li><ul>
+<li><a href="#update-data">Update Data</a></li>
+</ul></li>
+<li><ul>
+<li><a href="#delete-data">Delete Data</a></li>
+</ul></li>
+<li><ul>
+<li><a href="#select-statement">Select Statement</a></li>
+</ul></li>
+<li><ul>
+<li><ul>
+<li><a href="#select-where">Select Where</a></li>
+</ul></li>
+</ul></li>
+<li><ul>
+<li><ul>
+<li><a href="#select-group-by">Select Group By</a></li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="installation"><strong>Installation:</strong></h2>
+<p>(<a href="#table-of-content">back to table of content</a>)</p>
+<p>Linux:</p>
+<pre class="bash"><code>$ sudo apt install postgresql</code></pre>
+<p>Windows : - download from :
+https://www.postgresql.org/download/windows/</p>
+
+
+<h2 id="psql-commands"><strong>PSQL Commands</strong></h2>
+<p>(<a href="#table-of-content">back to table of content</a>) 
+
+<ul>
+	<li><code>\q</code> : exit </li>
+	<li><code>\l</code> : view list of all databases
+	(show databases) </li>
+	<li><code>\c database</code> : Connect to database (use
+	db) </li>
+	<li><code>\du</code> : database users ie list all roles </li>
+	<li><code>\d</code> <code>\dt</code> : show tables </li>
+	<li><code>\d table</code> :
+	describe table (desc table) </li>
+	<li><code>\dt table</code> : show table
+	details</li>
+</ul>
+
+<h2 id="sql-commands"><strong>SQL commands</strong></h2>
+<p>(<a href="#table-of-content">back to table of content</a>)</p>
+<h2 id="create-database">## Create database</h2>
+<p>(<a href="#table-of-content">back to table of content</a>)</p>
+<p>granting privileges to db user</p>
+<pre class="sql"><code>GRANT ALL PRIVILEGES ON DATABASE &quot;database&quot; TO user;</code></pre>
+<p>Creating a database</p>
+<pre><code>CREATE DATABASE database;</code></pre>
+<p>Deleting a database</p>
+<pre class="sql"><code>DROP DATABASE database;</code></pre>
+<p>A database will not be dropped/deleted if the database has active
+sessions connected to it.</p>
+<p>To drop a database with active sessions, you can revoke access to the
+database with the below command:</p>
+<pre class="sql"><code>REVOKE CONNECTION ON DATABASE database_name    FROM PUBLIC;</code></pre>
+<p>view database connection information Create a table (eg person)</p>
+<pre><code>/conninfo </code></pre>
+<h2 id="create-table">## Create table</h2>
+<p>(<a href="#table-of-content">back to table of content</a>)</p>
+<p>Create table in database</p>
+<pre class="sql"><code>CREATE TABLE person(
+    id int,
+    fname VARCHAR(100),
+    lname VARCHAR(100),
+    date_of_birth TIMESTAMP,
+)</code></pre>
+<p>another example:</p>
+<pre class="sql"><code>create table if not exists person(
+    id int primary key,
+    fname varchar(100) not null,
+    lname varchar(100) not null,
+    birthdate date,
+    email varchar(50) unique
+);</code></pre>
+<p>Create table from another table:</p>
+<pre class="sql"><code> create table employee
+ as
+ select * from person</code></pre>
+<p>The above will create a table <code>employee</code> with the same
+attributes as <code>person</code>. It will create the same column names
+and data types as the <code>person</code> table</p>
+<p>You can create a table from another table with specific tables as
+below:</p>
+<pre class="sql"><code>create table employee2
+as 
+select id, fname from person;</code></pre>
+<p>to specity differant names, put the query as below:</p>
+<pre class="sql"><code>create table employee3 (employee_id, employee_fname)
+as
+select id, fname from employee2</code></pre>
+<p>to avoid errors during creation, you can add the
+<code>if not exists</code> to the query</p>
+<pre class="sql"><code>create table if not exists employee3 (employee_id, employee_fname)
+as
+select id, fname from employee2</code></pre>
+<h2 id="create-temporary-table">## Create temporary table</h2>
+<p>(<a href="#table-of-content">back to table of content</a>)</p>
+<p>A temporary table is a table that lasts only in the duration of the
+session. One you log out of the db session, it is deleted.</p>
+<p>When you change databases, the temporary table is also deleted.</p>
+<pre class="sql"><code>create temporary table temp_people (
+    id int,
+    fname varchar(10),
+    lname varchar(10),
+    birthdate date
+)</code></pre>
+<h2 id="copy-a-table">## Copy a table</h2>
+<p>(<a href="#table-of-content">back to table of content</a>)</p>
+<pre class="sql"><code>--- create/copy new table
+CREATE TABLE new_table_name 
+AS 
+TABLE existing_table;
+
+--- create copy of table without the data
+CREATE TABLE new_table_name 
+AS
+TABLE existing_table
+[WITH NO DATA];
+
+-- create new table with conditions
+CREATE TABLE new_table_name 
+AS
+SELECT * FROM existing_table
+WHERE conditions;</code></pre>
+<p>example</p>
+<pre class="sql"><code>CREATE TABLE EMPLOYEE 
+AS
+TABLE PERSON;
+
+CREATE TABLE PERSON_BKP 
+AS
+TABLE PERSON
+WITH NO DATA;</code></pre>
+<h2 id="drop-table">## Drop table</h2>
+<p>(<a href="#table-of-content">back to table of content</a>)</p>
+<p>The below script deletes a database.</p>
+<pre class="sql"><code>DROP TABLE IF EXISTS employee;</code></pre>
+<p>A database will not be deleted if it is being used in another table
+or views.</p>
+<p>eg below, the department table is being referenced by the employee
+table, you can not frop the table.</p>
+<pre class="sql"><code>CREATE TABLE employee(
+	emp_id INT PRIMARY KEY,
+	first_name VARCHAR(50) NOT NULL,
+	last_name VARCHAR(50) NOT NULL,
+	gender CHAR(1),
+	dept_id INT NOT NULL,
+	    
+    FOREIGN KEY (dept_id) REFERENCES department(dept_id)
+);
+	
+-- the department table is being referenced by the employee table using the foreign key
+CREATE TABLE department (
+	dept_id INT PRIMARY KEY,
+	dept_name VARCHAR(100) NOT NULL
+);</code></pre>
+<p>To delete a table that is being referenced, use the
+<code>CASCADE</code> parameter.</p>
+<p>now the department table can be deleted with the script below:</p>
+<pre class="sql"><code>DROP TABLE  department CASCADE;</code></pre>
+<p>You can delete multiple tables by seperating them with a comma:</p>
+<pre class="sql"><code>DROP TABLE IF EXISTS table1, table2;</code></pre>
+<h2 id="truncate-table">## Truncate Table</h2>
+<p>(<a href="#table-of-content">back to table of content</a>)</p>
+<p>Truncate is used to delete data from a table.</p>
+<pre class="sql"><code>TRUNCATE TABLE table_name;</code></pre>
+<p><code>DROP</code> can be used as well, however <code>TRUNCATE</code>
+is better as it: 1. can delete huge data-sets. 2. is faster than
+<code>DROP</code></p>
+<p>You can use <code>RESTART IDENTITY</code> to delete all data and
+reset the sequence linked to the <code>id</code> column</p>
+<pre class="sql"><code>TRUNCATE TABLE table_name RESTART IDENTITY;</code></pre>
+<p>If data is linked to another table, the truncate command shall not
+delete data. You can use <code>CASCADE</code> delete the data from the
+table and the data linked to the other table.</p>
+<pre class="sql"><code>TRUNCATE TABLE table_name CASCADE;</code></pre>
+<h2 id="alter-table">## Alter Table</h2>
+<p>(<a href="#table-of-content">back to table of content</a>)</p>
+<p>The <code>ALTER TABLE</code> statement changes the structure of a
+table.</p>
+<p>example of the table below:</p>
+<pre class="sql"><code>create table employee (
+    id int primary key not null,
+    first_name character varying(50) not null,
+    last_name character varying(50) not null,
+    gender character(1),
+    birthdate date,
+    salary integer not null
+)</code></pre>
+<p>Add a column to a table:</p>
+<pre class="sql"><code>alter table employee add column new_col varchar(50);</code></pre>
+<p>Delete column from table:</p>
+<pre class="sql"><code>alter table employee drop column col cascade;</code></pre>
+<p>Change data type of a column</p>
+<pre class="sql"><code>alter table employee alter column type int </code></pre>
+<p>Rename a column:</p>
+<pre class="sql"><code>alter table table_name rename column old_name to new_name
+
+--- example
+alter table employee rename column birthdate to dob;</code></pre>
+<p>Rename a table</p>
+<pre class="sql"><code>alter table table_name rename to new_table_name;
+
+-- example
+alter table employee rename to employee_new;</code></pre>
+<p>Add a <code>not null</code> constraint to a column:</p>
+<pre class="sql"><code>alter table table_name alter column column_name set not null
+
+-- example
+alter table employee alter column dob set not null</code></pre>
+<p>remove/drop <code>not null</code> constraint</p>
+<pre class="sql"><code>alter table table_name alter column column_name drop not null
+
+-- example
+alter table employee alter column dob drop not null</code></pre>
+<p>add a check constraint to a table and all its children
+<strong><em>(revisit)</em></strong>:</p>
+<pre class="sql"><code>ALTER TABLE employee ADD CONSTRAINT first_name CHECK (char_length(first_name) &gt; 1);</code></pre>
+<p>remove a check constraint from a table and all its children
+<strong><em>(revisit)</em></strong>:</p>
+<pre class="sql"><code>ALTER TABLE employee DROP CONSTRAINT first_name;
+
+ALTER TABLE ONLY employee DROP CONSTRAINT first_name; -- remove check constraint from one table only</code></pre>
+<p>Add primary key to table:</p>
+<pre class="sql"><code>ALTER TABLE employee ADD PRIMARY KEY (id);</code></pre>
+<p>move a table to a different tablespace:</p>
+<pre class="sql"><code>ALTER TABLE employee SET TABLESPACE emptablespace;</code></pre>
+<p>move a table to a different schema:</p>
+<pre class="sql"><code>ALTER TABLE myschema.employee SET SCHEMA yourschema;</code></pre>
+<h2 id="insert-data">## Insert Data</h2>
+<p>(<a href="#table-of-content">back to table of content</a>)</p>
+<p>To insert data to table use the below statement:</p>
+<pre class="sql"><code>insert into table_name (col1, col2, col3)
+values
+(&quot;value 1&quot;, &quot;value 2&quot;, &quot;value3&quot;);
+
+-- example
+insert into employee 
+(id, first_name, second_name, gender, dob, salaries)
+values
+(1, &#39;Tony&#39;, &#39;Stark&#39;, &#39;m&#39;, DATE &#39;1964-03-10&#39;, 100000)</code></pre>
+<p>note: - use single quotes <code>'</code> when inserting strings.
+double quotes <code>"</code> will generate errors - Dates are inserted
+in the <code>YYYY-MM-DD</code> format ie <code>DATE '1995-03-12'</code>
+- If the table has a <code>SERIAL</code> column, Postgres will
+automatically generate a sequence number for the serial column. No need
+to specify a value for that column in the INSERT statement. -
+<code>returning</code> returns the inserted data after the the insert
+quert has been executed</p>
+<pre class="sql"><code>-- returns all values after insertion
+insert into table (col1, col2)
+values
+(&#39;col 1&#39;, &#39;col 2&#39;)
+returning *;  
+
+-- return specific column after insertion
+insert into table (col1, col2)
+values
+(&#39;col 1&#39;, &#39;col 2&#39;)
+returning col1; </code></pre>
+<h2 id="upsert-data">## Upsert Data</h2>
+<p>(<a href="#table-of-content">back to table of content</a>)</p>
+<p><code>Upsert</code> is an <code>Insert</code>/<code>update</code>
+operation, i.e. It inserts values, however if the data already exists,
+it is updated.</p>
+<p>The <code>upsert</code> operation is implemented with the
+<code>on conflict</code> clause i.e. if there is conflict, do
+something.</p>
+<p>eg you have the below table:</p>
+<pre class="sql"><code>CREATE TABLE employee (
+    emp_id 	INT PRIMARY KEY,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    gender CHAR(1),
+    birthdate DATE,
+    email VARCHAR(100) UNIQUE,
+    salary INT
+);</code></pre>
+<p>Insert data</p>
+<pre class="sql"><code>INSERT INTO employee
+VALUES
+(1,&#39;Annie&#39;,&#39;Smith&#39;,&#39;F&#39;, DATE &#39;1988-01-09&#39;, &#39;ani@email.com&#39;,5000)
+returning *;</code></pre>
+<p>rerunning the same command above returns an error since we have a
+column with a <code>primary id</code>, and we can not repeat the same
+data.</p>
+<h3 id="on-conflict-do-nothing"><strong>on conflict do
+nothing</strong></h3>
+<pre class="sql"><code>INSERT INTO employee
+VALUES
+(1,&#39;Annie&#39;,&#39;Smith&#39;,&#39;F&#39;, DATE &#39;1988-01-09&#39;, &#39;ani@email.com&#39;,5000)
+on conflict do nothing;</code></pre>
+<h3 id="on-conflict-do-update"><strong>on conflict do
+update</strong></h3>
+<h3 id="on-conflict-where"><strong>on conflict where</strong></h3>
+<h2 id="update-data">## Update Data</h2>
+<p>(<a href="#table-of-content">back to table of content</a>)</p>
+<h2 id="delete-data">## Delete Data</h2>
+<p>(<a href="#table-of-content">back to table of content</a>)</p>
+<h2 id="select-statement">## Select Statement</h2>
+<p>(<a href="#table-of-content">back to table of content</a>)</p>
+<h3 id="select-where">Select Where</h3>
+<p>(<a href="#table-of-content">back to table of content</a>)</p>
+<h3 id="select-group-by">Select Group by</h3>
+<p>(<a href="#table-of-content">back to table of content</a>)</p>
+			</div>
+		</div>
+
+		
+
+
+		
+	</div>
+</body>
+</html>
