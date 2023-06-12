@@ -16,9 +16,12 @@ $( document ).ready(function() {
 		  loop: true
 		});
 
-		var string1 = "Hello there";
-		var string2 = "Welcome to my portfolio";
-		var string3 = "I am a software engineer who uses software to solve real world problems";
+		var string1 = "Java";
+		var string2 = "Spring Boot";
+		var string3 = "PHP";
+		var string4 = "Javascript";
+		var string5 = "React js";
+		var string6 = "SQL";
 
 		typewriter
 
@@ -33,6 +36,18 @@ $( document ).ready(function() {
 		  .typeString(string3)
 		  .pauseFor(500)
 		  .deleteChars(string3.length)
+
+		  .typeString(string4)
+		  .pauseFor(500)
+		  .deleteChars(string4.length)
+
+		  .typeString(string5)
+		  .pauseFor(500)
+		  .deleteChars(string5.length)
+
+		  .typeString(string6)
+		  .pauseFor(500)
+		  .deleteChars(string6.length)
 
 		  .start();
 

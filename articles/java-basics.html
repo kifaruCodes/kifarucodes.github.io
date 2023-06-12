@@ -105,24 +105,125 @@
 		
 		<div class="row ">
 			<div class="col-lg-12">
-				<img src="../assets/img/java_logo_sm.png" class="img-fluid" alt="...">
-				<h2>Java Basics</h2> 
+				<h1><img src="../assets/img/java_logo_sm.png" class="img-fluid" alt="..."> Java Fundamentals</h1> 
 			</div>
 			<div class="col-lg-12">
 				<p>
-					Link to github repo for documentation, <a class="btn btn-dark" href="https://github.com/kifaruCodes/Java-learning" target="_blank">Here <i class="fa fa-github"></i></a>
+					In this section I explore the basic fundamentals of Java.
+				</p>
+				<p>
+					The goal is to use the Java programming language to build software systems, cloud solutions and/or any systems that solve real world problems
+				</p>
+				<p>
+					I start from the very basics and build up to more complex projects. 
+				</p>
+				<p>
+					Link to github repo for documentation here, <a class="btn btn-dark" href="https://github.com/kifaruCodes/Java-learning" target="_blank">Here <i class="fa fa-github"></i></a>
 				</p> 
+				<p>
+					Here is an overview of the sub-sections:
+					<ol>
+						<li><a class="btn btn-outline-dark" href="#the-basics">The basics</a></li>
+						<li><a class="btn btn-outline-dark" href="#oop">Object Oriented Programming</a></li>
+					</ol>
+				</p>
 			</div>
 		</div>
+
+		<!-- The basics -->
 		<div class="row" id="">
-			<div class="col-lg-8">
-				<div class="alert alert-primary animated pulse infinite" role="alert">
-				  Under Construction!
-				  <br>
-				  Article coming soon
-				</div>
+			<div class="col-lg-12">
+				<h2 id="the-basics">The Basics</h2>
+				<p>
+					
+				</p>
+				<p>
+					I explore the very basics of Java which include:
+					<ol>
+						<li>Output Statements</li>
+						<li>Variables & Data types</li>
+						<li>Operators</li>
+						<li>Conditionals</li>
+						<li>Loops * arrays</li>
+						<li>...</li>
+						<li>...</li>
+						<li><b>ETC</b></li>
+					</ol>
+				</p>
+
+				<p>
+					There are two Java files:
+					<ol>	
+						<li><a href="https://github.com/kifaruCodes/Java-learning/blob/main/1.%20java-basics/src/JavaBasics.java" class="btn btn-outline-dark" target="_blank">Java Basics <i class="fa fa-github"></i></a></li>
+						<li><a href="https://github.com/kifaruCodes/Java-learning/blob/main/1.%20java-basics/src/Methods.java" class="btn btn-outline-dark" target="_blank">Methods <i class="fa fa-github"></i></a></li>
+					</ol>
+				</p>
+
+				<p>
+					I created the java files that go throuth the basic concepts, where notes are put in comments as below:
+				</p>
+
+<pre  style="">
+<code class="language-java">
+
+System.out.print("Hello there");        // prints out the string on a line w/o linebreak
+System.out.print("\n");
+System.out.println("This is my first Java code"); // prints out the string w linebreak
+
+/*
+    printf
+        used to format text without having to concatenate strings
+        %s = String
+        %S = String in UPPERCASE
+        %n = newline/linebreak
+        %d = integer/long/short/byte
+        %f = float/double
+        %b = boolean
+
+        reference : https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/How-to-use-Java-printf-to-format-output#:~:text=The%20Java%20printf%20function%20helps,that%20might%20trigger%20output%20errors
+* */
+String name = "Kifaru";
+String language = "Java";
+System.out.printf("My name is %s and I am learning %S. %n", name, language);
+
+</code>
+</pre>
+				
 			</div>
 		</div>
+
+		<!-- OOP -->
+		<div class="row" id="oop">
+			<div class="col-lg-12">
+				<h2 id="the-basics">Object Oriented Programming</h2>
+				<p>
+					
+				</p>
+				<p>
+					Here I explore the basics of Object Oriented Programming which include:
+					<ol>
+						<li>Attributes</li>
+						<li>Methods</li>
+						<li>Internal and External attributes/methods</li>
+						<li>public/static attributes/methods</li>
+						<li>constructors</li>
+					</ol>
+				</p>
+				<p>
+					The code can be accessed from the git repo <a href="https://github.com/kifaruCodes/Java-learning/tree/main/2.%20oop/src" class="btn btn-outline-dark" target="_blank">Here <i class="fa fa-github"></i></a>
+				</p>
+				<p>
+					The files in this learning project are:
+					<ul>					
+						<li><a href="https://github.com/kifaruCodes/Java-learning/blob/main/2.%20oop/src/Main.java" class="btn btn-outline-dark" target="_blank">Main.java <i class="fa fa-github"></i></a> : The main class</li>
+						<li><a href="https://github.com/kifaruCodes/Java-learning/blob/main/2.%20oop/src/Attributes_n_Methods.java" class="btn btn-outline-dark" target="_blank">Attributes_n_Methods.java <i class="fa fa-github"></i></a> : a class with the external attributes and methods</li>
+						<li><a href="https://github.com/kifaruCodes/Java-learning/blob/main/2.%20oop/src/CarClass.java" class="btn btn-outline-dark" target="_blank">CarClass.java <i class="fa fa-github"></i></a> : a class with an experimental project exploring OOP concepts</li>
+					</ul>
+				</p>		
+			</div>
+		</div>
+
+
 		
 	</div>
 </body>
