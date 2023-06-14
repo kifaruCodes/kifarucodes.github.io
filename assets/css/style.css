@@ -31,10 +31,12 @@
   overflow:hidden;
   text-decoration:none!important;
   color:black;
-  background-color:#FFFFFF;
+  background-color:rgba(0,0,0,0);
   text-align:center;
   cursor:pointer;
   white-space:nowrap;
+  border: solid;
+  /*outline-color: black;*/
 }
 
 #scroll-to-top:hover {
