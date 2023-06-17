@@ -222,11 +222,36 @@ public class BackendApiApplication {
 					<p>
 						Create a student <b>package</b> where we shall put all the code that is student related, ie:
 						<ul>
-							<li><b>Student</b> Class : our model</li>
-							<li><b>StudentController</b> Class : has all the resources for our API</li>
-							<li><b>StudentService</b> Class : Business logic of managing the students</li>
-							<li><b>StudentRepository</b> Interface : Acesses your database</li>
-							<li><b>StudentConfig</b> Class </li>
+							<li>
+								<b>Student</b> Class : our model
+								<button type="button" class="btn btn-sm btn-dark" data-bs-toggle="modal" data-bs-target="#studentClass">
+								  <i class="fa fa-code"></i>View Code
+								</button>			
+							</li>
+							<li>
+								<b>StudentController</b> Class : has all the resources for our API
+								<button type="button" class="btn btn-sm btn-dark" data-bs-toggle="modal" data-bs-target="#studentControllerClass">
+								  <i class="fa fa-code"></i>View Code
+								</button>
+							</li>
+							<li>
+								<b>StudentService</b> Class : Business logic of managing the students
+								<button type="button" class="btn btn-sm btn-dark" data-bs-toggle="modal" data-bs-target="#studentServiceClass">
+								  <i class="fa fa-code"></i>View Code
+								</button>
+							</li>
+							<li>
+								<b>StudentRepository</b> Interface : Acesses your database
+								<button type="button" class="btn btn-sm btn-dark" data-bs-toggle="modal" data-bs-target="#studentRepositoryClass">
+								  <i class="fa fa-code"></i>View Code
+								</button>
+							</li>
+							<li>
+								<b>StudentConfig</b> Class
+								<button type="button" class="btn btn-sm btn-dark" data-bs-toggle="modal" data-bs-target="#studentConfigClass">
+			  					<i class="fa fa-code"></i>View Code
+								</button> 
+							</li>
 						</ul>
 					</p>
 				</div>
@@ -240,7 +265,7 @@ public class BackendApiApplication {
 						This is done through the <b>spring data jpa</b>, that is loaded into the <code>src/main/resources/application.properties</code> file, which is shown below:
 					</p>
 					<pre>
-					<code class="language-markdown">
+					<code class="language-java">
 spring.datasource.url=jdbc:postgresql://localhost:5432/database
 spring.datasource.username=
 spring.datasource.password=
@@ -263,7 +288,7 @@ spring.jpa.properties.hibernate.format_sql=true
 
 		<!-- Modals -->
 			<!-- Simple rest api modal start -->
-				<!-- Button trigger modal -->
+				
 				
 				
 				<!-- Modal -->
@@ -329,6 +354,416 @@ public class BackendApiApplication {
 				  </div>
 				</div>
 			<!-- Simple rest api modal end -->
+
+
+			
+
+			
+			<!-- Student class modal start -->
+			<div class="modal fade" id="studentClass" tabindex="-1" aria-labelledby="studentClassLabel" aria-hidden="true">
+			  <div class="modal-dialog">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h5 class="modal-title" id="studentClassLabel">Student Class</h5>
+			        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			      </div>
+			      <div class="modal-body">
+			      	<p>
+			      		Here is the code for the student class
+			      	</p>
+			      	<pre>
+			      	<code class="language-java">
+// This is our model
+
+package com.example.backendApi.student;
+
+import jakarta.persistence.*;
+
+import java.time.LocalDate;
+import java.time.Period;
+
+
+@Entity
+@Table
+public class Student {
+    @Id
+    @SequenceGenerator(
+            name = "student_sequence",
+            sequenceName = "student_sequence",
+            allocationSize = 1
+    )
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "student_sequence"
+    )
+    private Long id;
+    private String name;
+    private String email;
+    private LocalDate dob;
+    @Transient // just means that this does not need to be a column in our database
+    private Integer age;
+
+    // load constructors, getters & setters (alt + insert)
+
+    // null r constructor
+    public Student() {
+    }
+
+    public Student(Long id,
+                   String name,
+                   String email,
+                   LocalDate dob
+    ) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.dob = dob;
+    }
+
+    // constructor w/o id (This is because the db will generate the id for us)
+
+    public Student(String name,
+                   String email,
+                   LocalDate dob
+    ) {
+        this.name = name;
+        this.email = email;
+        this.dob = dob;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public LocalDate getDob() {
+        return dob;
+    }
+
+    public void setDob(LocalDate dob) {
+        this.dob = dob;
+    }
+
+    public Integer getAge() {
+        return Period.between(this.dob, LocalDate.now()).getYears();
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", dob=" + dob +
+                ", age=" + age +
+                '}';
+    }
+}		      	
+			      	</code>
+			      	</pre>
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			<!-- Student class modal end -->
+
+			<!-- Student controller class modal start -->
+			<div class="modal fade" id="studentControllerClass" tabindex="-1" aria-labelledby="studentControllerClassLabel" aria-hidden="true">
+			  <div class="modal-dialog">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h5 class="modal-title" id="studentControllerClassLabel">Student Controller Class</h5>
+			        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			      </div>
+			      <div class="modal-body">
+			      	<p>
+			      		Here is the code for the student Controller class
+			      	</p>
+			      	<pre>
+			      	<code class="language-java">
+package com.example.backendApi.student;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+@RequestMapping(path = "api/student")
+public class StudentController {
+
+    private final StudentService studentService;
+
+    @Autowired
+    public StudentController(StudentService studentService) {
+        this.studentService = studentService;
+    }
+
+    @GetMapping
+    public List<Student> getStudents() {
+        return studentService.getStudents();
+    }
+
+    @PostMapping
+    public void registerNewStudent(@RequestBody Student student){
+        studentService.addNewStudent(student);
+    }
+
+    @DeleteMapping(path = "{studentId}")
+    public void deleteStudent(@PathVariable("studentId") Long studentId){
+        studentService.deleteStudent(studentId);
+    }
+
+    @PutMapping(path = "{studentId}")
+    public void updateStudent(
+            @PathVariable("studentId") Long studentId,
+            @RequestParam(required = false) String name,
+            @RequestParam(required = false) String email
+    ){
+        studentService.updateStudent(studentId, name, email);
+    }
+}   	
+			      	</code>
+			      	</pre>
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			<!-- Student controller class modal end -->
+
+			<!-- Student controller class modal start -->
+			<div class="modal fade" id="studentServiceClass" tabindex="-1" aria-labelledby="studentServiceClassLabel" aria-hidden="true">
+			  <div class="modal-dialog">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h5 class="modal-title" id="studentServiceClassLabel">Student Service Class</h5>
+			        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			      </div>
+			      <div class="modal-body">
+			      	<p>
+			      		Here is the code for the student Service class
+			      	</p>
+			      	<pre>
+			      	<code class="language-java">
+package com.example.backendApi.student;
+
+import jakarta.transaction.Transactional;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.time.LocalDate;
+import java.time.Month;
+import java.util.List;
+import java.util.Objects;
+import java.util.Optional;
+
+@Service
+public class StudentService {
+
+    private final StudentRepository studentRepository;
+
+    @Autowired
+    public StudentService(StudentRepository studentRepository) {
+        this.studentRepository = studentRepository;
+    }
+
+    public List<Student> getStudents() {
+        return studentRepository.findAll();
+    }
+
+    public void addNewStudent(Student student) {
+        Optional<Student> studentOptional = studentRepository.findStudentByEmail(student.getEmail());
+
+        if (studentOptional.isPresent()){
+            throw new IllegalStateException("Email Taken");
+        }
+        System.out.println(student);
+        studentRepository.save(student);
+    }
+
+    public void deleteStudent(Long studentId) {
+        boolean exists = studentRepository.existsById(studentId);
+        if (!exists){
+            throw new IllegalStateException("Student with Id:" + studentId + " does not exist.");
+        }
+        studentRepository.deleteById(studentId);
+    }
+
+    @Transactional
+    public void updateStudent(Long studentId, String name, String email) {
+        Student student = studentRepository
+                .findById(studentId)
+                .orElseThrow(
+                        () -> new IllegalStateException(
+                                "Student with Id:" + studentId + " does not exist"
+                        )
+                );
+
+        if (
+                name != null &&
+                name.length() > 0 &&
+                !Objects.equals(student.getName(), name)
+        ){
+            student.setName(name);
+        }
+
+        if (
+                email != null &&
+                email.length() > 0 &&
+                !Objects.equals(student.getEmail(), email)
+        ){
+            Optional<Student> studentOptional = studentRepository.findStudentByEmail(email);
+            if (studentOptional.isPresent()){
+                throw new IllegalStateException("email taken");
+            }
+            student.setEmail(email);
+        }
+    }
+
+//    @Transactional
+//    public void updateStudent(Long studentId){
+//
+//    }
+}
+
+			      	</code>
+			      	</pre>
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			<!-- Student controller class modal end -->
+
+			<!-- Student repository class modal start -->
+			<div class="modal fade" id="studentRepositoryClass" tabindex="-1" aria-labelledby="studentRepositoryClassLabel" aria-hidden="true">
+			  <div class="modal-dialog">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h5 class="modal-title" id="studentRepositoryClassLabel">Student Repository Interface</h5>
+			        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			      </div>
+			      <div class="modal-body">
+			      	<p>
+			      		Here is the code for the student Repository Interface
+			      	</p>
+			      	<pre>
+			      	<code class="language-java">
+package com.example.backendApi.student;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+import java.util.Optional;
+
+@Repository
+public interface StudentRepository extends JpaRepository<Student, Long> {
+    @Query("Select s from Student s where s.email = ?1")
+    Optional<Student> findStudentByEmail(String email);
+}			      	
+			      	</code>
+			      	</pre>
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			<!-- Student repository class modal end -->
+
+			<!-- Student config class modal start -->
+			<div class="modal fade" id="studentConfigClass" tabindex="-1" aria-labelledby="studentConfigClassLabel" aria-hidden="true">
+			  <div class="modal-dialog">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h5 class="modal-title" id="studentConfigClassLabel">Student Config Class</h5>
+			        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			      </div>
+			      <div class="modal-body">
+			      	<p>
+			      		Here is the code for the student Config class
+			      	</p>
+			      	<pre>
+			      	<code class="language-java">
+package com.example.backendApi.student;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import java.time.LocalDate;
+import java.time.Month;
+import java.util.List;
+
+import static java.time.Month.*;
+
+@Configuration
+public class StudentConfig {
+   @Bean
+    CommandLineRunner commandLineRunner(StudentRepository repository){
+        return args -> {
+            Student kifaru = new Student(
+                    "Kifaru",
+                    "kifaru@mail.com",
+                    LocalDate.of(1991, JUNE, 17)
+            );
+
+            Student edna = new Student(
+                    "edna",
+                    "edna@mail.com",
+                    LocalDate.of(1993, JUNE, 17)
+            );
+
+            repository.saveAll(
+                    List.of(kifaru, edna)
+            );
+        };
+    }
+}
+			      	
+			      	</code>
+			      	</pre>
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			<!-- Student config class modal end -->
 
 		<!-- contact & footer info start -->
 			<hr>
