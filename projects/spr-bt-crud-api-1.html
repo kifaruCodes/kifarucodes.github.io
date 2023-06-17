@@ -151,7 +151,7 @@
 					</p>
 				</div>
 				<div class="col-lg-12">
-					<img class="img-fluid" src="../assets/img/projects/spr-bt-crud-api-1/spring-initializr.jpeg">
+					<img class="img-fluid" src="../assets/img/projects/spr-bt-crud-api-1/spring-initializr.jpeg" style="width:500px;">
 				</div>
 				<div class="col-lg-12">
 					<p>
@@ -224,7 +224,9 @@ public class BackendApiApplication {
 						<ul>
 							<li><b>Student</b> Class : our model</li>
 							<li><b>StudentController</b> Class : has all the resources for our API</li>
-							<li><b>StudentController</b> Class : Business logic of managing the students</li>
+							<li><b>StudentService</b> Class : Business logic of managing the students</li>
+							<li><b>StudentRepository</b> Interface : Acesses your database</li>
+							<li><b>StudentConfig</b> Class </li>
 						</ul>
 					</p>
 				</div>
@@ -232,13 +234,29 @@ public class BackendApiApplication {
 				<div class="col-lg-12">
 					<h2 class="header" id="postgres">PostgreSQL DB</h2>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						To connect to our database, we need to establish a connection between postgres and the the application.
 					</p>
+					<p>
+						This is done through the <b>spring data jpa</b>, that is loaded into the <code>src/main/resources/application.properties</code> file, which is shown below:
+					</p>
+					<pre>
+					<code class="language-markdown">
+spring.datasource.url=jdbc:postgresql://localhost:5432/database
+spring.datasource.username=
+spring.datasource.password=
+spring.jpa.hibernate.ddl-auto=create-drop
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.properties.hibernate.format_sql=true					
+					</code>
+					</pre>
+
+					<p>
+						The above will contain the database configurations that shall allow you to connect to the database
+					</p>
+					<div class="alert alert-warning" role="alert">
+					  <i class="fa fa-warning"></i> If you had commented out the database dependency from the <b>pom.xml</b> file, then you can un-comment it and reload the project again
+					</div>
 				</div>
 			</div>
 		<!-- Content section end -->
