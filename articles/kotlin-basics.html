@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kifaru Codes</title>
+
+	<!-- metas start-->
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Portfolio for Kifaru">
+		<meta name="author" content="@kifaruCodes">
+
+		<link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon/favicon.ico"/>
+	<!-- metas end -->
+
+	<!-- css libraries cdn start -->
+		<!-- Bootstrap css -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		
+		<!-- animate css -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
+
+		<!-- fontawesome css -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+		<!-- google font -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+		<!-- custom css -->
+		<link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+		<style type="text/css">
+			.topic-break {
+				height: 15px;
+				width: 100hw;
+				box-shadow: 0px 0px 8px #888888;
+				background-color: #D6C900
+			}
+		</style>
+	<!-- css libraries cdn end -->
+
+	<!-- js libraries start -->
+		<!-- jQuery js -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		
+		<!-- Bootstrap js -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+		<!-- Typewriter js -->
+		<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+
+		<!-- highlight js -->
+		<!-- css -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" integrity="sha512-rO+olRTkcf304DQBxSWxln8JXCzTHlKnIdnMUwYvQa9/Jd4cQaNkItIUj6Z4nvW1dqK0SKXLbn9h4KwZTNtAyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<!-- js -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js" integrity="sha512-rdhY3cbXURo13l/WU9VlaRyaIYeJ/KBakckXIvJNAQde8DgpOmE+eZf7ha4vdqVjTtwQt69bD2wH2LXob/LB7Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+		<script>
+			$( document ).ready(function() {
+			    hljs.highlightAll();
+			});
+		</script>
+
+		<!-- custom js -->
+		<script type="text/javascript" src="../assets/js/script.js"></script>
+
+		<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+	<!-- js libraries end -->
+	
+</head>
+<body style="background: #FFFFFF; color:black;" >
+
+	<!-- navbar start -->
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		  <div class="container-fluid">
+		    <a class="navbar-brand" href="../index.html">
+		    	<img src="../assets/img/logo.png" class="img-fluid" alt="" style="height: 50px;border-radius: 50%;box-shadow: 0px 0px 8px #888888;">
+		    </a>
+		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		      <span class="navbar-toggler-icon"></span>
+		    </button>
+		    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+		      	<li class="nav-item">
+		          <a class="nav-link" href="../index.html">Home</a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="../index.html#about">About</a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="../index.html#articles">Articles</a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="../index.html#projects">Projects</a>
+		        </li>
+		        
+		      </ul>
+		      
+		    </div>
+		  </div>
+		</nav>
+	<!-- navbar end -->
+
+
+	<div class="container-fluid">
+
+		<!-- scroll to top start -->
+			<button onclick="topFunction()" id="scroll-to-top" title="Go to top"><i class="fa fa-arrow-up"></i></button>
+			<br>
+		<!-- scroll to top end -->
+
+		<!-- page title start-->
+			<div class="row ">
+				<div class="col ">
+					<h1 class="header"><img src="../assets/img/kotlin_logo_sm.png" alt="Kotlin logo" class="img-fluid"><b>Kotlin Basics</b></h1> 
+				</div>
+			</div>
+		<!-- page title end-->
+
+		<!-- Content section start -->
+			<div class="row d-flex justify-content-center">	
+				<div class="col-lg-12">
+					<h2 class="header">Overview</h2>
+					<p>
+						Kotlin is a statically typed language by Jetbrains, and is the official Android language used for Android development by Google
+					</p>
+					<p>
+						I cover the concepts of Kotlin along with example code base below, which range from basics to complex concepts
+					</p>
+					<p>
+						This documentation is meant to be my personal documentation which I shall keep updating and revisiting to keep me on my toes with the language, but it also acts as a learning resource for anyone else who is getting into the language.
+					</p>
+					<p>
+						Below is what is covered in the guide, with links directing to the specific sections.
+					</p>
+				</div>
+				<div class="topic-break"></div>
+				<br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<!-- Table of content start -->
+				<div class="col-lg-12">
+					<h2 class="header">Table of Content</h2>
+					<ol>
+						<!-- io start -->
+						<li>
+							<a href="#io">Standard Input and Output</a>
+							<ul>
+								<li><a href="#io_output">Output</a></li>
+								<li><a href="#io_input">Input</a></li>
+							</ul>
+						</li>
+						<!-- io end -->
+
+
+						<!-- var start -->
+						<li>
+							<a href="#var">Variables</a>
+							<ul>
+								<li><a href="#var_datatypes">Data Types</a></li>
+								<li><a href="#var_mutable_immutable">Mutable & Immutable Variables</a></li>
+								<li><a href="#var_nullable">Nullable Types</a></li>
+								<li><a href="#var_inference">Type Inference</a></li>
+							</ul>
+						</li>
+						<!-- var end -->
+
+
+						<!-- operatorst start -->
+						<li>
+							<a href="#op">Operators</a>
+							<ul>
+								<li><a href="#op_arithmetic">Arithmetic Operators</a></li>
+								<li><a href="#op_assignment">Assignment Operators</a></li>
+								<li><a href="#op_comparison">Comparison Operators</a></li>
+								<li><a href="#op_logical">Logical Operators</a></li>
+							</ul>
+						</li>
+						<!-- operators end -->
+
+
+						<!-- conditionals start -->
+						<li>
+							<a href="#cond">Conditionals</a>
+							<ul>
+								<li><a href="#cond_if">If Statement</a></li>
+								<li><a href="#cond_when">When statement</a></li>
+							</ul>
+						</li>
+						<!-- conditionals end -->
+					</ol>
+				</div>
+				<!-- Table of content end -->
+				<div class="topic-break"></div>
+				<br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<!-- input output start -->
+				<div class="col-lg-12">
+					<h2 class="header" id="io"><b>Standard Input and Output</b></h2>
+					<p>
+						Standard input and Output are means of giving input to a program and receiving output/feeback of a program from the screen.
+					</p>
+
+					<h2 class="header" id="io_output">Output</h2>
+					<p>
+						The Kotling standard output comes in print statements, which are defined as below:
+					</p>
+					<pre>
+					<code class="language-kotlin">
+println("Hello there") // Prints out content and appends a new line
+print("Hello there") // Prints out content without a new line
+					</code>
+					</pre>
+					
+
+					<h2 class="header" id="io_input">Input</h2>
+					<p>
+						To get the input of a user, we use the <code>readLine()</code> or the <code>readln()</code>statement as below
+					</p>
+					<pre>
+					<code class="language-kotlin">
+println("What is the name of your city: ")
+var city  = readln()
+println("Your city is $city")
+					</code>
+					</pre>
+					<p>
+						Note that the <code>readln()</code> and <code>readLine()</code> statements output the passed input as a string. To get a string output (for possible processing such as calculations), you can use the <b>Null assertion</b> and the <code>toInt()</code> statement as below
+					</p>
+					<pre>
+					<code class="language-kotlin">
+println("What is your age: ")
+var age  = readLine()!!
+println("Your age is ${age.toInt()}")
+					</code>
+					</pre>
+				</div>
+				<!-- input output end -->
+				<div class="topic-break"></div>
+				<br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<!-- variables start -->
+				<div class="col-lg-12">
+					<h2 class="header" id="var"><b>Variables</b></h2>
+					<p>
+						Variables are used to store data in programming languages, and they could be integers, string, boolean etc
+					</p>
+
+					<h2 class="header" id="var_datatypes">Variable Data Types</h2>
+					<p>
+						Data types are basically the type of data that a variable holds. The most commonly used data types are Integer, String, Boolean etc, but below is a list of <b>primitive</b> data types in Kotlin
+					</p>
+					<pre>
+					<code class="language-kotlin">
+// Byte, -126-127 (8 bits)
+val byteno : Byte = 23
+
+// Short, -32768-32769 (16 bit)
+val shortno : Short = 10000
+
+// Integer, (32 bit)
+val intno : Int = 200_000_000
+
+// Long (64 bit)
+val longNo : Long = 1_000_000_000_000_000_000
+
+// Float
+val floatNo : Float = 123.1234F
+
+// Double
+val doubleNo : Double = 1234.124132515
+
+// Character
+val char : Char = 'z'
+
+// Boolean
+val boolVal : Boolean = true
+
+// String
+val myString : String = "This is my string"
+					</code>
+					</pre>
+
+
+
+
+					<h3 class="header" id="var_mutable_immutable">Mutable & Immutable variables</h3>
+
+					<p>
+						There are two types of variables ie mutable & immutable(read-only) variables:
+						<ul>
+							<li>mutable variables are variables that can be changed in the program and are declared by <code>var</code></li>
+							<li>immutable variables are variables that can not be changed (read-only or constants) and are declared by <code>val</code></li>
+						</ul>
+
+						<pre>
+						<code class="language-kotlin">
+val name : String = "Kifaru"            // this variable can not be changed
+var another_name : String = "Iron man"  // this variable can be changed
+						</code>
+						</pre>
+					</p>
+				</div>
+
+
+				<!-- variables nullable start -->
+				<div class="col-lg-12">
+					<h2 class="header" id="var_nullable">Nullable Types</h2>
+					<p>
+						Kotlin by default does not alllow assigning null values to variables. This means that the below code will give an error.
+						<pre>
+						<code class="language-kotlin">
+val string: String = null // this will give an error
+						</code>
+						</pre>
+					</p>
+					<p>
+						To solve this, put a <code>?</code> after the variable data type, like below:
+					</p>
+					<pre>
+						<code class="language-kotlin">
+val string: String? = null // this will not give an error
+						</code>
+						</pre>
+				</div>
+				<!-- variables nullable end -->
+
+				<!-- variables type inference start -->
+				<div class="col-lg-12">
+					<h2 class="header" id="var_inference">Type Inference</h2>
+					<p>
+						Type inference in Kotlin is where the compiler can automatically tell what data type a variable is meant to be without having to explicitly put the data type
+					</p>
+					<pre>
+					<code class="language-kotlin">
+val color = "Blue" // compiler will automatically tell that this is a string
+val number = 20 // compiler will automatically tell that this is an integer
+					</code>
+					</pre>
+				</div>
+				<!-- variables type inference end -->
+				<!-- variables end -->
+				<div class="topic-break"></div>
+				<br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<!-- operators start -->
+				<div class="col-lg-12">
+					<h2 class="header" id="op"><b>Operators</b></h2>
+					<p>
+						
+					</p>
+
+					<!-- arithmetic operators start -->
+					<h2 class="header" id="op_arithmetic">Arithmetic Operators</h2>
+					<p>
+						Arithmetic operators are used for mathematic operations such as addition, subtraction etc. Below is a list of the common arithmetic operations
+					</p>
+					<table class="table table-striped table-hover table-dark">
+					  <thead>
+					    <tr>
+					      <th scope="col">Operator</th>
+					      <th scope="col">Name</th>
+					      <!-- <th scope="col">Handle</th> -->
+					    </tr>
+					  </thead>
+					  <tbody>
+					    <tr>
+					      <td>+</td>
+					      <td>Addition</td>
+					      <!-- <td>@mdo</td> -->
+					    </tr>
+					    <tr>
+					      <td>-</td>
+					      <td>Subtraction</td>
+					      <!-- <td>@fat</td> -->
+					    </tr>
+					    <tr>
+					      <td >*</td>
+					      <td>Multiplication</td>
+					    </tr>
+					    <tr>
+					      <td >/</td>
+					      <td>Division</td>
+					    </tr>
+					    <tr>
+					      <td >%</td>
+					      <td>Modulus</td>
+					    </tr>
+					    <tr>
+					      <td >++</td>
+					      <td>Increment</td>
+					    </tr>
+					    <tr>
+					      <td >--</td>
+					      <td>Decrement</td>
+					    </tr>
+					  </tbody>
+					</table>
+					<!-- arithmetic operators end -->
+
+					<!-- assignment operators start -->
+					<h2 class="header" id="op_assignment">Assignment Operators</h2>
+					<p>
+						As the name suggests, the assignment operators are used to assign values to variables. Below is an example of the common assignment operators
+					</p>
+					<table class="table table-striped table-hover table-dark">
+					  <thead>
+					    <tr>
+					      <th scope="col"></th>
+					      <th scope="col"></th>
+					      <th scope="col"></th>
+					      <!-- <th scope="col">Handle</th> -->
+					    </tr>
+					  </thead>
+					  <tbody>
+					    <tr>
+					      <th scope="row">=</th>
+					      <td>x = 2</td>
+					      <td></td>
+					      <!-- <td>@mdo</td> -->
+					    </tr>
+					    <tr>
+					      <th scope="row">+</th>
+					      <td>x += 5</td>
+					      <td>Addition</td>
+					      <!-- <td>@mdo</td> -->
+					    </tr>
+					    <tr>
+					      <th scope="row">-</th>
+					      <td>x -= 5</td>
+					      <td>Subtraction</td>
+					      <!-- <td>@fat</td> -->
+					    </tr>
+					    <tr>
+					      <th scope="row">*</th>
+					      <td >x *= 5</td>
+					      <td>Multiplication</td>
+					    </tr>
+					    <tr>
+					      <th scope="row">/</th>
+					      <td >x /= 5</td>
+					      <td>Division</td>
+					    </tr>
+					    <tr>
+					      <th scope="row">%</th>
+					      <td >x %= 5</td>
+					      <td>Modulus</td>
+					    </tr>
+					    
+					  </tbody>
+					</table>
+					<!-- assignment operators end -->
+
+					<!-- comparison operators start -->
+					<h2 class="header" id="op_comparison">Comparison Operators</h2>
+					<p>
+						Again as the name suggests, comparison operators are used to compare two variables or values. They return a boolean value ie, <code>true</code> or <code>false</code>
+					</p>
+					<table class="table table-striped table-hover table-dark">
+					  <thead>
+					    <tr>
+					      <th scope="col"></th>
+					      <th scope="col"></th>
+					      <!-- <th scope="col">Handle</th> -->
+					    </tr>
+					  </thead>
+					  <tbody>
+					    <tr>
+					      <th scope="row">==</th>
+					      <td>Equal to</td>
+					      <!-- <td>@mdo</td> -->
+					    </tr>
+					    <tr>
+					      <th scope="row">!=</th>
+					      <td>Not equal to</td>
+					      <!-- <td>@mdo</td> -->
+					    </tr>
+					    <tr>
+					      <th scope="row"><</th>
+					      <td>Less than</td>
+					      <!-- <td>@fat</td> -->
+					    </tr>
+					    <tr>
+					      <th scope="row">></th>
+					      <td >Greater than</td>
+					    </tr>
+					    <tr>
+					      <th scope="row"><=</th>
+					      <td >Less than or equal to</td>
+					    </tr>
+					    <tr>
+					      <th scope="row">>=</th>
+					      <td >Greater than or equal to</td>
+					    </tr>
+					    
+					  </tbody>
+					</table>
+					<!-- comparison operators end -->
+
+					<!-- logical operators start -->
+					<h2 class="header" id="op_logical">Logical Operators</h2>
+					<p>
+						These operators chech the logic between variables or values
+					</p>
+					<table class="table table-striped table-hover table-dark">
+					  <thead>
+					    <tr>
+					      <th scope="col"></th>
+					      <th scope="col"></th>
+					    </tr>
+					  </thead>
+					  <tbody>
+					    <tr>
+					      <th scope="row">&&</th>
+					      <td>AND</td>
+					    </tr>
+					    <tr>
+					      <th scope="row">||</th>
+					      <td>OR</td>
+					    </tr>
+					    <tr>
+					      <th scope="row">!</th>
+					      <td>NOT</td>
+					    </tr>					    
+					  </tbody>
+					</table>
+					<!-- logical operators end -->
+
+					<!-- in operator start -->
+					<h2 class="header" id="op_in">In Operator</h2>
+					<p>
+						The <code>in</code> operator is ised to check the existence of a value in a range of values while <code>!in</code> is used to check the absence of a value in a range of values.
+					</p>
+					<p>
+						Below is a simple example
+					</p>
+					<pre>
+					<code class="language-kotlin">
+val range = listOf<Int>(12,21,45,543,3,6,34)
+val search_no = 4
+if (search_no in range){
+    println("found the number")
+} else {
+    println("Number not found")
+}
+					</code>
+					</pre>
+					<!-- in operator end -->
+				</div>
+				<!-- operators end -->
+				<div class="topic-break"></div>
+				<br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<!-- conditionals start -->
+				<div class="col-lg-12">
+					<h2 class="header" id="cond"><b>Conditionals</b></h2>
+					<p>
+						Conditionals in any programming language are used to control the logical flow of the program. Here we explore a number of conditionals that are commonly used in everyday programming languages.
+					</p>
+				</div>
+
+				<!-- if statement start -->
+				<div class="col-lg-12">
+					<h3 class="header" id="cond_if">If Statements</h3>
+					<p>
+						If statements are defined as below, in Kotlin
+					</p>
+					<pre>
+					<code class="language-kotlin">
+if (condition-1){
+    Statement
+} else if (condition-2){
+    Statement
+} else {
+    Statement
+}
+					</code>
+					</pre>
+					<p>
+						Example
+					</p>
+					<pre>
+					<code class="language-kotlin">
+var number = 20
+if (number > 100){
+    println("Number is bigger than 100")
+} else if (number < 100){
+    println("Number is less than 100")
+} else {
+    println("Number is 100")
+}
+					</code>
+					</pre>
+				</div>
+				<!-- if statement end -->
+
+				<!-- When statement start -->
+				<div class="col-lg-12">
+					<h3 class="header" id="cond_when">When Statements</h3>
+					<p>
+						Kotlin does not have a <b>Switch</b> statement, instead it has a <b>When</b> statement
+					</p>
+					<p>
+						Below is an example of a when statement
+					</p>
+					
+
+					<pre>
+					<code class="language-kotlin">
+val when_var  = readLine()!!.toInt()
+when(when_var){
+    10 -> {
+        println("Number is 10")
+    }
+    20 -> {
+        println("number is 20")
+    }
+    else -> {
+        println("The number is not listed")
+    }
+}
+					</code>
+					</pre>
+				</div>
+				<!-- when statement end -->
+				<!-- conditionals end -->
+				<div class="topic-break"></div>
+				<br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			</div>
+		<!-- Content section end -->	
+
+		<!-- contact & footer info start -->
+			<hr>
+			<div class="row d-flex justify-content-center" style="box-shadow: 0px 0px 8px #888888;padding: 10px;background: #ffc900">
+				<div class="col  d-flex justify-content-center">
+					<a href="https://twitter.com/kifarucodes" target="_blank" type="button" class="btn btn-outline-dark"><i class="fa fa-twitter"></i></a>
+				</div>
+				<div class="col  d-flex justify-content-center">
+					<a href="https://www.linkedin.com/in/kifaru-codes-09b425279/" target="_blank" type="button" class="btn btn-outline-dark"><i class="fa fa-linkedin"></i></a>
+				</div>
+				<div class="col  d-flex justify-content-center">
+					<a href="https://github.com/kifaruCodes" target="_blank" type="button" class="btn btn-outline-dark"><i class="fa fa-github"></i></a>				
+				</div>
+			</div>
+			<div class="row d-flex justify-content-center" style="box-shadow: 0px 0px 8px #888888;padding: 10px;background: #ffc900;">
+				<div class="col-lg-12 d-flex justify-content-center">
+					<p>&copy; Copyright <b>Kifaru Codes</b>. All Rights Reserved.</p>
+				</div>
+				<div class="col-lg-12 d-flex justify-content-center">
+					<p>Designed by <b>KifaruCodes</b></p>
+				</div>
+			</div>
+			<hr><br>
+		<!-- contact & footer info end -->
+	</div>
+</body>
+</html>
