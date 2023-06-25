@@ -208,12 +208,13 @@
 								<li><a href="#var_mutable_immutable">Mutable & Immutable Variables</a></li>
 								<li><a href="#var_nullable">Nullable Types</a></li>
 								<li><a href="#var_inference">Type Inference</a></li>
+								<li><a href="#var_conversion">Type Conversion</a></li>
 							</ul>
 						</li>
 						<!-- var end -->
 
 
-						<!-- operatorst start -->
+						<!-- operators start -->
 						<li>
 							<a href="#op">Operators</a>
 							<ul>
@@ -221,9 +222,22 @@
 								<li><a href="#op_assignment">Assignment Operators</a></li>
 								<li><a href="#op_comparison">Comparison Operators</a></li>
 								<li><a href="#op_logical">Logical Operators</a></li>
+								<li><a href="#op_in">"In" Operator</a></li>
 							</ul>
 						</li>
 						<!-- operators end -->
+
+
+						<!-- expressions, statements & blocks start -->
+						<li>
+							<a href="#esb">Expressions, Statements & Blocks</a>
+							<ul>
+								<li><a href="#esb_exp">Expressions</a></li>
+								<li><a href="#esb_stm">Statements</a></li>
+								<li><a href="#esb_blk">Blocks</a></li>
+							</ul>
+						</li>
+						<!-- expressions, statements & blocks end -->
 
 
 						<!-- conditionals start -->
@@ -324,6 +338,44 @@ var age  = readLine()!!
 println("Your age is ${age.toInt()}")
 					</code>
 					</pre>
+
+					<p>
+						In the event the user enters the wrong input type (eg string instead of int), we can use the <code>try, catch</code> exception handling.
+						Below is an example:
+					</p>
+					<pre>
+					<code class="language-kotlin">
+// Input statement with a tyy catch block
+try {
+    println("Please enter your age")
+    var age2 = readLine()!!
+    println("Your age is : ${age2.toInt()}")
+} catch (e : Exception){
+    println("You have entered a wrong input type")
+    println("The error is $e")
+}
+					</code>
+					</pre>
+
+					<div class="alert alert-warning" style="box-shadow: 0px 0px 8px #888888;" role="alert">
+					  <b>Note: </b> You can use the default <b>Java</b> <code>Scanner</code> class for inputs as below
+					</div>
+
+					<pre>
+					<code class="language-kotlin">
+// note: don't forget the backticks '`' at System.`in`
+val scanner = Scanner(System.`in`)
+
+println("Please enter a number")
+val ip = scanner.nextInt()
+println("The number entered is $ip")
+
+println("Please enter a sentence")
+val ip2 = scanner.nextLine()
+println("The sentence entered is $ip2")
+					</code>
+					</pre>
+
 				</div>
 				<!-- input output end -->
 				<div class="topic-break"></div>
@@ -488,6 +540,61 @@ val number = 20 // compiler will automatically tell that this is an integer
 					</pre>
 				</div>
 				<!-- variables type inference end -->
+
+
+				<!-- variables type conversion start -->
+				<div class="col-lg-12">
+					<h2 class="header" id="var_conversion">Trype conversion</h2>
+					<p>
+						Type conversion is the process of converting the type of a variable or value into another
+					</p>
+					<p>
+						Below are examples of conversions between different types. Note that conversions from some types to others will give undesired results or errors
+					</p>
+					<pre>
+					<code class="language-kotlin">
+// int to string
+var number1 : Int = 50
+var sentence1 = number1.toString()
+println(sentence1)
+
+// string to int
+var sentence2 = "20"
+var number2 = sentence2.toInt()
+println(number2)
+
+// string to int : This will give an error
+var sentence3 = "sentence"
+var number3 = sentence3.toInt()
+println(number3)
+					</code>
+					</pre>
+
+					<p>
+						Below are the common type conversion statements:
+					</p>
+					<pre>
+					<code class="language-kotlin">
+// convert to integer
+val variable = variable2.toInt()
+
+// convert to string
+val variable = variable2.toString
+
+// convert to float
+val variable = variable2.toFloat()
+
+// convert to long
+val variable = variable2.toLong()
+
+// convert to double
+val variable = variable2.toDouble()
+					</code>
+					</pre>
+				</div>
+				<!-- variables type conversion end -->
+
+
 				<!-- variables end -->
 				<div class="topic-break"></div>
 				<br><br>
@@ -788,6 +895,103 @@ if (search_no in range){
 
 
 
+				<!-- Expressions, statements and blocks start -->
+				<div class="col-lg-12">
+					<h2 class="header" id="esb"><b>Expressions, Statements & Blocks</b></h2>
+					<p>
+						
+					</p>
+
+					<!-- Expressions start -->
+					<h2 class="header" id="esb_exp">Expressions</h2>
+					<p>
+						Expressions are variables and operators that equate to a single value. Below are examples of expressions
+					</p>
+					<pre>
+					<code class="language-kotlin">
+val x : Int = 2 + 3
+// here 2 + 3 is the expression
+
+val no : Int = (1..1000).random()
+// here (1..1000).random() is an expression
+
+val no_check = if(another_no > 3000) "number is bigger" else "number is smaller"
+//here (another_no > 3000) "number is bigger" else "number is smaller" is an expression
+
+					</code>
+					</pre>
+					<!-- Expressions end -->
+
+					<!-- Statement start -->
+					<h2 class="header" id="esb_stm">Statements</h2>
+					<p>
+						Statements are everything that make up a complete unit of execution. <b>Note</b> that Expressions are part of statements
+					</p>
+					<pre>
+					<code class="language-kotlin">
+val x : Int = 2 + 3
+
+val no : Int = (1..1000).random()
+
+val no_check = if(another_no > 3000) "The number is bigger" else "The number is smaller"
+
+println("Hello world")
+					</code>
+					</pre>
+					<!-- Statement end -->
+
+					<!-- Blocks start -->
+					<h2 class="header" id="esb_blk">Blocks</h2>
+					<p>
+						BLocks are zero to more statements enclosed in curly braces <code>{...}</code>.
+						Below is an example of a block
+					</p>
+					<pre>
+					<code class="language-kotlin">
+fun main() {  // main function block
+    val flag = true
+
+    if (flag == true) {      // start of if block
+        print("Hello there ")
+        print("How are you")
+    }                        // end of if block
+}  
+					</code>
+					</pre>
+
+					<!-- Blocks end -->
+				</div>
+				<!-- exprssions, statements and blocks end -->
+				<div class="topic-break"></div>
+				<br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -826,14 +1030,26 @@ if (condition-1){
 					</p>
 					<pre>
 					<code class="language-kotlin">
-var number = 20
-if (number > 100){
-    println("Number is bigger than 100")
-} else if (number < 100){
-    println("Number is less than 100")
+val random_no : Int = (-20..20).random()
+val result = if (random_no < 0) {
+    println(random_no)
+    println("The number is negative")
 } else {
-    println("Number is 100")
+    println(random_no)
+    println("The number is positive")
 }
+					</code>
+					</pre>
+
+					<p>
+						you can also use <b>ternary operators</b> for a simple <code>if</code> statement. <b>Note</b> that this only applies for a simple if-else statement with only one statement in each block.
+						Below is an example.
+					</p>
+					<pre>
+					<code class="language-kotlin">
+val no = readLine()!!.toInt()
+val result =  if (no > 0) "Positive" else "negative"
+println(result)
 					</code>
 					</pre>
 				</div>
@@ -866,6 +1082,10 @@ when(when_var){
 }
 					</code>
 					</pre>
+
+					<div class="alert alert-warning" style="box-shadow: 0px 0px 8px #888888;" role="alert">
+					  <b>Note:</b> The <code>!!</code> in <code>readline()!!</code> is a <b>not-null assertion</b>, that means that the variable is not null. More reading <a href="https://www.baeldung.com/kotlin/not-null-assertion" target="_blank">Here</a>
+					</div>
 				</div>
 				<!-- when statement end -->
 				<!-- conditionals end -->
