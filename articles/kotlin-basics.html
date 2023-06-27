@@ -1225,15 +1225,139 @@ println(result)
 					<!-- while loops start -->
 					<h2 class="header" id="loops_while">While Loops</h2>
 					<p>
-						
+						<code>while/do-while</code> loops will loop continuously till a certain specified condition is met. They can run infinitely if the condition is not met.
 					</p>
+					<p>
+						We have the <code>while</code> and the <code>do-while</code> loops.
+					</p>
+					<p>
+						Below is an example of a <code>while</code> loop
+					</p>
+					<pre>
+					<code class="language-kotlin">
+var no = 0
+
+while (no <= 10){
+    println(no)
+    ++no
+}
+					</code>
+					</pre>
+
+					<p>
+						Below is an example of a <code>do-while</code> loop
+					</p>
+
+					<pre>
+					<code class="language-kotlin">
+var no = 0
+
+do {
+    println(no)
+    ++no
+} while (no <=10)
+					</code>
+					</pre>
+
+					<div class="alert alert-warning" role="alert" style="box-shadow: 0px 0px 8px #888888; ">
+					  <b>Note:</b> a <code>do-while</code> loop will be executed at least once, unlike the <code>while</code> loop
+					</div>
 					<!-- while loops end -->
 
 					<!-- for loops start -->
 					<h2 class="header" id="loops_for">For Loops</h2>
 					<p>
-						
+						<code>for</code> loops will loop a certain number of specified times
 					</p>
+					<p>
+						Below is an example of a simple <code>for</code> loop.
+					</p>
+					<pre>
+					<code class="language-kotlin">
+// print numbers 1 to 100
+for (i in 1..100){
+    println(i)
+}
+
+// print the sum of each following number from 1 to 100
+// ie 1 + 2 + 3 + 4 ... + 98 + 99 + 100
+var no = 0
+for (i in 1..100){
+    print("$no + $i = ")
+    no += i
+    println(no)
+}
+					</code>
+					</pre>
+
+					<div class="alert alert-warning" role="alert" style="box-shadow: 0px 0px 8px #888888;">
+					  <b>Note:</b> <code>i in 1..10</code> is the same as <code>1 <= i <= 10</code>
+					</div>
+
+					<p>
+						<code>downTo</code> can be used to achieve the reverse order as shown below
+					</p>
+
+					<pre>
+					<code class="language-kotlin">
+// print numbers 100 to 1
+for (i in 100 downTo 1){
+    println(i)
+}
+					</code>
+					</pre>
+
+					<p>
+						We can add steps to the iteration as below
+					</p>
+
+					<pre>
+					<code class="language-kotlin">
+// print numbers 1 to 100 with steps of 10
+// this will print out 1, 11, 21, 31,.., 81, 91
+for (i in 1..100 step 10){
+    println(i)
+}
+
+// print numbers 100 to 1 in steps of 5
+// this will print out 100, 95, 90 ... 15, 10, 5
+for (i in 100 downTo 1 step 5){
+    println(i)
+}
+					</code>
+					</pre>
+
+					<p>
+						We can also use <code>until</code> as shown below
+					</p>
+
+					<pre>
+					<code class="language-kotlin">
+// this will print out the numbers 1 till 99
+for (i in 1 until 100){
+    println(i)
+}
+					</code>
+					</pre>
+
+					<p>
+						We can also loop through arrays (both integers and strings) 
+					</p>
+					<pre>
+					<code class="language-kotlin">
+// loop through integers
+val even_no = listOf<Int>(2,4,6,8,10)
+for (i in even_no){
+    println(i)
+}
+
+// loop through strings
+val months = listOf<String>("Jan", "Feb", "Mar", "Apr", "May")
+for (i in months){
+    println(i)
+}
+					</code>
+					</pre>
 					<!-- for loops end -->
 					<h2></h2>
 				</div>
