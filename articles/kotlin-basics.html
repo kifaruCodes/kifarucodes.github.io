@@ -249,6 +249,16 @@
 							</ul>
 						</li>
 						<!-- conditionals end -->
+
+						<!-- loops start -->
+						<li>
+							<a href="#cond">Loops</a>
+							<ul>
+								<li><a href="#loops_">while</a></li>
+								<li><a href="#loops_"></a></li>
+							</ul>
+						</li>
+						<!-- loops end -->
 					</ol>
 				</div>
 				<!-- Table of content end -->
@@ -1062,9 +1072,12 @@ println(result)
 						Kotlin does not have a <b>Switch</b> statement, instead it has a <b>When</b> statement
 					</p>
 					<p>
-						Below is an example of a when statement
+						Below are examples of a when statements
 					</p>
 					
+					<p>	
+						Example 1
+					</p>
 
 					<pre>
 					<code class="language-kotlin">
@@ -1080,6 +1093,59 @@ when(when_var){
         println("The number is not listed")
     }
 }
+					</code>
+					</pre>
+
+					<p>	
+						Example 2
+					</p>
+
+					<pre>
+					<code class="language-kotlin">
+
+println("enter fitst number")
+val no1 = readLine()!!.toInt()
+
+println("enter second no")
+val no2 = readln()!!.toInt()
+
+println("enter operator")
+val op = readln()
+
+val result = when (op){
+    "+" -> {
+        "$no1 $op $no2 = ${no1 + no2}"
+    }
+    "-" -> {
+        "$no1 $op $no2 = ${no1 - no2}"
+    }
+    "*" -> {
+        "$no1 $op $no2 = ${no1 * no2}"
+    }
+    "/" -> {
+        "$no1 $op $no2 = ${no1 / no2}"
+    }
+    "%" -> {
+        "$no1 $op $no2 = ${no1 % no2}"
+    }
+    else -> {
+        "The operator selected is not in the list"
+    }
+}
+
+println(result)
+					</code>
+					</pre>
+
+					<p>
+						Example 3: <code>when</code> can also be used to check the type of a variable, as shown below: 
+					</p>
+
+					<pre>
+					<code class="language-markdown">
+					
+					<!-- Put code here -->
+					
 					</code>
 					</pre>
 
