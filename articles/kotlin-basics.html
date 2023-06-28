@@ -1145,17 +1145,9 @@ println(result)
 					</code>
 					</pre>
 
-					<p>
-						Example 3: <code>when</code> can also be used to check the type of a variable, as shown below: 
-					</p>
+					
 
-					<pre>
-					<code class="language-markdown">
 					
-					<!-- Put code here -->
-					
-					</code>
-					</pre>
 
 					<div class="alert alert-warning" style="box-shadow: 0px 0px 8px #888888;" role="alert">
 					  <b>Note:</b> The <code>!!</code> in <code>readline()!!</code> is a <b>not-null assertion</b>, that means that the variable is not null. More reading <a href="https://www.baeldung.com/kotlin/not-null-assertion" target="_blank">Here</a>
@@ -1426,16 +1418,72 @@ for (i in months){
 					Functions hold code statemsnts that can be executed multiple times without having to repeat the same code over and over again. They are declared by the <code>fun</code> term, and the code statement held in <code>{}</code> curly brackets.
 				</p>
 				<div class="alert alert-warning" role="alert" style="box-shadow: 0px 0px 8px #888888;">
-				  <b>Note:</b> <code>fun main(){..}</code> is the entry point of a program in Kotlin, and is where the code starts running from
+				  <b>Note:</b> <code>fun main(){..}</code> is the entry point of a program in Kotlin, and is where the code starts running from.
 				</div>
+				<p>
+					On defining the function, it is called in the <code>main</code> to have it executed, as shown below.
+				</p>
 				<pre>
 				<code class="language-kotlin">
+// calling the function
 fun main(){
     myfun()
 }
 
+// defining the function
 fun myfun(){
     println("This is my function")
+}
+				</code>
+				</pre>
+
+				<p>
+					We can pass parameters to the function as in the below function that gets the multiple of two integers
+				</p>
+				<pre>
+				<code class="language-kotlin">
+fun main(){
+    multiply(2, 8)
+}
+
+fun multiply(no1 : Int, no2 : Int){
+    val result = no1 * no2
+    println(result)
+}
+				</code>
+				</pre>
+
+				<p>
+					In addition, we can pass <b>default</b> parameters. This means, if we do not pass them as arguments to the function, we shall not have an error, and the default parameter shall be passed as an argument. Below is an example:
+				</p>
+
+				<pre>
+				<code class="language-kotlin">
+fun main(){
+    multiply(2, 8)
+}
+
+// function with a default parameter passed as an argument
+fun multiply(no1 : Int, no2 : Int, message : String = "The multiple is: "){
+    val result = no1 * no2
+    println(message + result)
+}
+				</code>
+				</pre>
+
+				<p>
+					In the above examples, we have functions as <b>statements</b> (ie make up a whole unit of execution <a href="#esb_stm">refer to statements here</a>). To use them as <b>expressions</b> (<a href="#esb_exp">refer to expressions here</a>) we use <code>return</code>. In addition we have to define the data type we are returning, as defined below.
+				</p>
+
+				<pre>
+				<code class="language-kotlin">
+fun main(){
+    val result = multiply(2, 8)
+    print(result)
+}
+
+fun multiply(no1 : Int, no2 : Int) : Int{
+    return no1 * no2
 }
 				</code>
 				</pre>
