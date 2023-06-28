@@ -263,8 +263,30 @@
 						<!-- functions start -->
 						<li>
 							<a href="#fun">Functions</a>
+							<ul>
+								<li><a href="#fun_param">Function parameters</a></li>
+								<li><a href="#fun_defaultparam">Default parameters</a></li>
+								<li><a href="#fun_expression">Return as Expression</a></li>
+							</ul>
 						</li>
 						<!-- functions end -->
+
+						<!-- recursion start -->
+						<li>
+							<a href="#recursion">Recursion</a>
+						</li>
+						<!-- recursion end -->
+
+						<li>
+							<a href="#oop">OOP</a>
+							<ul>
+								<li><a href="#oop_cno">Classes & Objects</a></li>
+								<li><a href="#oop_cni">Constructors & Init</a></li>
+								<li><a href="#oop_gns">Getters & Setters</a></li>
+								<li><a href="#oop_in">Inheritance</a></li>
+								<li><a href="#oop_vm">Visibility Modifiers</a></li>
+							</ul>
+						</li>
 
 					</ol>
 
@@ -1437,6 +1459,7 @@ fun myfun(){
 				</code>
 				</pre>
 
+				<h2 class="header" id="fun_param">Function parameters</h2>
 				<p>
 					We can pass parameters to the function as in the below function that gets the multiple of two integers
 				</p>
@@ -1453,6 +1476,7 @@ fun multiply(no1 : Int, no2 : Int){
 				</code>
 				</pre>
 
+				<h2 class="header" id="fun_defaultparam">Default parameters</h2>
 				<p>
 					In addition, we can pass <b>default</b> parameters. This means, if we do not pass them as arguments to the function, we shall not have an error, and the default parameter shall be passed as an argument. Below is an example:
 				</p>
@@ -1471,6 +1495,7 @@ fun multiply(no1 : Int, no2 : Int, message : String = "The multiple is: "){
 				</code>
 				</pre>
 
+				<h2 class="header" id="fun_expression">Return as Expression</h2>
 				<p>
 					In the above examples, we have functions as <b>statements</b> (ie make up a whole unit of execution <a href="#esb_stm">refer to statements here</a>). To use them as <b>expressions</b> (<a href="#esb_exp">refer to expressions here</a>) we use <code>return</code>. In addition we have to define the data type we are returning, as defined below.
 				</p>
@@ -1527,6 +1552,294 @@ fun multiply(no1 : Int, no2 : Int) : Int{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<!-- recursion start -->
+				<div class="col-lg-12">
+					<h2 class="header" id="recursion"><b>Recursion</b></h2>
+					<p>
+						Recursion is the concept of a function calling itself.
+					</p>
+					<p>
+						Below is an example of a recursion that calls itself infinitely, and does not stop. This is highly inadvisable as it tends to build a lot of issues.
+
+						The program stops with an error: <b><code>Exception in thread "main" java.lang.StackOverflowError</code></b> as it runs too many times 
+					</p>
+					<pre>
+					<code class="language-kotlin">
+fun main(){
+   infinite_recursion()
+}
+
+var loop = 0
+fun infinite_recursion(){
+    loop ++
+    println("I am an infinite recursion: loop $loop")
+    infinite_recursion()
+}
+					</code>
+					</pre>
+
+					<p>
+						to avoid the <b><code>StackOverflowError</code></b> we have to define a stopping point
+					</p>
+					<div class="alert alert-danger" role="alert" style="box-shadow: 0px 0px 8px #888888;">
+					  <i class="fa fa-warning"><b> TO REVISIT THIS SECTION: Concept not understood</b></i>
+					</div>
+				</div>
+				<!-- recursion end -->
+				<div class="topic-break"></div>
+				<br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<!-- OOP start -->
+				<div class="col">
+					<h2 class="header" id="oop"><b>OOP</b></h2>
+					<p>
+						<b>What is OOP?</b>
+					</p>
+
+					<!-- classes and Objects -->
+					<h2 class="header" id="oop_cno">Classes & Objects</h2>
+					<p>
+						A <b>Class</b> is the blueprint of an object and contains all the logic for creating an object
+					</p>
+					<p>
+						In the below example we create a class <b>Car</b> which has different <b>methods</b> describing the car. We pass a parameter <b>Brand</b> which is going to be passed when we instantiate the class to create an object
+					</p>
+					<pre>
+					<code class="language-kotlin">
+class Car (_brand : String){
+    private var isTurnedOn = false
+    var speed = 0
+    var brand = _brand
+
+    fun startEngine(){
+        if (isTurnedOn == false) {
+            print("Turning on the engine...")
+            Thread.sleep(500)
+            print("1 . ")
+            Thread.sleep(500)
+            print("2 . ")
+            Thread.sleep(500)
+            println("3 . ")
+            Thread.sleep(1000) // give a delay of 1s
+            println("The $brand is now on...")
+            Thread.sleep(1000)
+            isTurnedOn = true
+            Thread.sleep(1000)
+        } else {
+            println("The $brand is already turned on")
+            Thread.sleep(1000)
+        }
+    }
+
+    fun drive(speed : Int){
+        // the car has to be on to drive the car
+        if (isTurnedOn) {
+            println("Changing the speed to $speed km/h")
+            Thread.sleep(1000)
+            println("We are now moving at $speed km/h")
+            Thread.sleep(1000)
+        } else {
+            println("The car has to be on to start")
+            Thread.sleep(1000)
+        }
+    }
+
+    fun turnOffEngine(){
+        if (isTurnedOn == true){
+            println("Turning off the engine")
+            Thread.sleep(1000)
+            println("The $brand is now turned off")
+        } else {
+            println("The car is already off")
+        }
+    }
+}
+					</code>
+					</pre>
+					<div class="alert alert-primary" role="alert" style="box-shadow: 0px 0px 8px #888888;">
+					  <b>Note:</b> we use the <code>Thread.sleep(500)</code> for delays in the program, which prevents the program from being executed immediately
+					</div>
+
+					<p>
+						After creating the class, which is out blueprint, we create the object as below
+					</p>
+
+					<pre>
+					<code class="language-kotlin">
+fun main(){
+    // instantiate the class ie create the object
+    val bentley = Car("Bentley")
+    bentley.startEngine()
+    bentley.drive(20)
+    bentley.startEngine()
+    bentley.turnOffEngine()
+}
+					</code>
+					</pre>
+
+					<p>
+						You can also instantiate the class as below
+					</p>
+
+					<pre>
+					<code class="language-kotlin">
+fun main(){
+    // instantiate the class ie create the object
+    val bentley = Car("Bentley").also {
+        it.startEngine()
+        it.drive(20)
+        it.startEngine()
+        it.turnOffEngine()
+    }
+}
+					</code>
+					</pre>
+
+					<p>
+						The above will therefore give an output as below:
+					</p>
+
+					<pre>
+					<code class="language-text">
+Turning on the engine...1 . 2 . 3 . 
+The Bentley is now on...
+Changing the speed to 20 km/h
+We are now moving at 20 km/h
+The Bentley is already turned on
+Turning off the engine
+The Bentley is now turned off
+					</code>
+					</pre>
+
+					<h2 class="header" id="oop_cni">Constructors & Init</h2>
+					<p>
+						<ul>
+							<li><b>Constructors:</b> These are variables/parameters that are passed to your class</li>
+							<li><b>Initializer Blocks:</b> These are methods that are run when your class is instantiated in an object. They will run without having to explicityly call them</li>
+						</ul>
+						Below is an example illustrating the concept of <b>constructors</b> and <b>Initializer blocks</b> with a pizza shop kitchen.
+					</p>
+					<p>
+						We create a class as below:
+					</p>
+					<pre>
+					<code class="language-kotlin">
+class PizzaKitchen(_pizzaInOven:Boolean, _pizzaType:String) {
+    var pizzaInOven = _pizzaInOven
+    var pizzaType = _pizzaType
+
+    init {
+        if (pizzaInOven){
+            println("There is a $pizzaType pizza in the oven. Please wait till it is ready")
+        } else {
+            println("There is no pizza in the oven. You can put a new pizza in")
+        }
+    }
+}
+					</code>
+					</pre>
+
+					<p>
+						From the above class, instantiating it as <code>false</code> or <code>true</code> will give the following results respectively
+					</p>
+
+					<pre>
+					<code class="language-kotlin">
+fun main(){
+    val newPizza = PizzaKitchen(false , "Hawaiian")
+}
+
+// This will give an output of "There is no pizza in the oven. You can put a new pizza in"
+
+
+fun main(){
+    val newPizza = PizzaKitchen(true , "Hawaiian")
+}
+// This will give an output of "There is a Hawaiian pizza in the oven. Please wait till it is ready"
+
+					</code>
+					</pre>
+
+					<p>
+						Note that everything in <code>init</code> runs automatically when the class is instantiated. This can be handy for different applications.
+					</p>
+
+
+					<h2 class="header" id="oop_gns">Getters & Setters</h2>
+					<p>
+						As the names indicate, <b>getters</b> are used to get values of attributes in a class, while <b>setters</b> are used to edit the values of attributes in a class. Below is a simple example of getters and setters:
+					</p>
+					<pre>
+					<code class="language-kotlin">
+
+					</code>
+					</pre>
+
+					<h2 class="header" id="oop_in">Inheritance</h2>
+					<p>
+						
+					</p>
+
+					<h2 class="header" id="oop_vm">Visibility modifiers</h2>
+				</div>
+				<!-- OOP end -->
+				<div class="topic-break"></div>
+				<br><br>
 
 
 
