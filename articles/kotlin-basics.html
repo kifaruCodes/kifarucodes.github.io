@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html> <html>
 <head>
 	<title>Kifaru Codes</title>
 
@@ -1663,13 +1662,22 @@ fun infinite_recursion(){
 				<div class="col">
 					<h2 class="header" id="oop"><b>OOP</b></h2>
 					<p>
-						<b>What is OOP?</b>
+						<b>Object Oriented Programming</b> is the concept of using classes and objects to create codebase that is simple and reusable
 					</p>
 
 					<!-- classes and Objects -->
 					<h2 class="header" id="oop_cno">Classes & Objects</h2>
 					<p>
-						A <b>Class</b> is the blueprint of an object and contains all the logic for creating an object
+						A <b>Class</b> is the blueprint of an object and contains all the logic for creating an object.
+					</p>
+					<p>
+						We can create multiple instances of a class through objects as illustrated below
+					</p>
+					<p>
+						<img src="../assets/img/class_object.jpg" class="img-fluid">
+					</p>
+					<p>
+						A class can be created in the main Kotlin file, but it is recommended that it is created in an external file. It is also recommended that the file name be the same as the class name (optional)
 					</p>
 					<p>
 						In the below example we create a class <b>Car</b> which has different <b>methods</b> describing the car. We pass a parameter <b>Brand</b> which is going to be passed when we instantiate the class to create an object
@@ -1837,13 +1845,85 @@ fun main(){
 
 					<h2 class="header" id="oop_gns">Getters & Setters</h2>
 					<p>
-						As the names indicate, <b>getters</b> are used to get values of attributes in a class, while <b>setters</b> are used to edit the values of attributes in a class. Below is a simple example of getters and setters:
+						As the names indicate, <b>getters</b> are used to get values of attributes in a class, while <b>setters</b> are used to edit the values of attributes in a class. 
+					</p>
+					<p>
+						By default getters and setters are automatically created for each property/attribute internally, so we do not have to explicityly declare a getter or setter. Example below:
 					</p>
 					<pre>
 					<code class="language-kotlin">
+fun main(){
+    val batman = Person("Bruce", 30)
+    println(batman.name) // get the property name
+    batman.name = "wayne" // set the property name
+    println(batman.name) // get the property name again
+}
+
+// Class person
+class Person (_name:String, _age:Int) {
+    var name = _name
+    var age = _age
+}
+					</code>
+					</pre>
+					<p>
+						You can however customize getters and setter using the <b>backing field</b> as below:
+					</p>
+					<pre>
+					<code class="language-kotlin">
+fun main(){
+    val batman = Person("Bruce", 30)
+    println(batman.name)
+    batman.name = "wayne"
+    println(batman.name)
+}
+
+class Person (_name:String, _age:Int) {
+    var name = _name
+        get() {
+            return "the name is " + field
+        }
+        set(value) {
+            if (value.length < 5){
+                println("The name is too short")
+            } else {
+                field = value + " and I am Batman "
+            }
+        }
+    var age = _age
+}
 
 					</code>
 					</pre>
+
+					<p>
+						The general format is therefore as below, and we can add in out custom code to how we would like to format our getters and setters
+					</p>
+					<pre>
+					<code class="language-kotlin">
+var name = _name
+    get() {
+        return field
+    }
+    set(value) {
+        field = value
+    }
+					</code>
+					</pre>
+
+					<div class="alert alert-primary" role="alert" style="box-shadow: 0px 0px 8px #888888;">
+						<p>
+							<b>Note:</b> we do not use the name ,of the property/variable but instead we use <code>field</code> (this is the <b>backing field</b>). This is because using the variable name will be like calling itself, leading to a recursive instance, hence leading to a <b>stackoverflow</b> error
+						</p>
+					  
+					  <p>
+					  	Reference : <a href="https://www.youtube.com/watch?v=H5TYt3ZlS0Q&ab_channel=Smartherd" target="_blank">Backing Field in Kotlin ('field' keyword within custom Getter and Setter methods)</a>
+					  </p>
+					</div>
+
+					<div class="alert alert-warning" role="alert" style="box-shadow: 0px 0px 8px #888888;">
+					  <b>Note: </b>we can not define a custom setter for a <code>val</code> variable as they are immutable
+					</div>
 
 					<h2 class="header" id="oop_in">Inheritance</h2>
 					<p>
