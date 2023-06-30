@@ -283,8 +283,8 @@
 								<li><a href="#oop_cno">Classes & Objects</a></li>
 								<li><a href="#oop_cni">Constructors & Init</a></li>
 								<li><a href="#oop_gns">Getters & Setters</a></li>
-								<li><a href="#oop_in">Inheritance</a></li>
 								<li><a href="#oop_vm">Visibility Modifiers</a></li>
+								<li><a href="#oop_in">Inheritance</a></li>
 							</ul>
 						</li>
 						<!-- oop end -->
@@ -1792,7 +1792,7 @@ The Bentley is now turned off
 					<h2 class="header" id="oop_cni">Constructors & Init</h2>
 					<p>
 						<ul>
-							<li><b>Constructors:</b> These are variables/parameters that are passed to your class</li>
+							<li><b>Constructors:</b> These are variables/parameters that are passed to your class. There are two types of constructors: primary and secondary</li>
 							<li><b>Initializer Blocks:</b> These are methods that are run when your class is instantiated in an object. They will run without having to explicityly call them</li>
 						</ul>
 						Below is an example illustrating the concept of <b>constructors</b> and <b>Initializer blocks</b> with a pizza shop kitchen.
@@ -1925,12 +1925,27 @@ var name = _name
 					  <b>Note: </b>we can not define a custom setter for a <code>val</code> variable as they are immutable
 					</div>
 
-					<h2 class="header" id="oop_in">Inheritance</h2>
-					<p>
-						
-					</p>
+					
 
 					<h2 class="header" id="oop_vm">Visibility modifiers</h2>
+					<p>
+						These are modifiers that determine where functions/properties/classes/interfaces are visible or accesible from. 
+					</p>
+					<p>
+						Here are the different types of modifiers in Kotlin:
+						<ul>
+							<li><b>Public :</b> accessible anywhere and everywhere</li>
+							<li><b>Internal :</b> accessible only within the same module</li>
+							<li><b>Private :</b> accessible only within a class or file</li>
+							<li><b>Protected :</b> accessible within the same file or class (like private) but in addition within the same subclass and child class (inheritance)</li>
+						</ul>
+						If a modifier is not defined, then it is <b>public</b> by default
+					</p>
+
+					<h2 class="header" id="oop_in">Inheritance</h2>
+					<p>
+						This is the process where we derive a class from an existing class. This prevents us from having to repeat code (code reusability)
+					</p>
 				</div>
 				<!-- OOP end -->
 				<div class="topic-break"></div>

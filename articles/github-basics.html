@@ -78,7 +78,7 @@
 	<div class="container-fluid">
 
 		<!-- scroll to top -->
-		<button onclick="topFunction()" id="scroll-to-top" title="Go to top"><i class="fa fa-arrow-up"></i></button>
+		<button onclick="topFunction()" id="scroll-to-top" title="Go to top"><i class="fa fa-arrow-up"></i></button> 
 		
 		<br>
 		
@@ -88,10 +88,146 @@
 
 		
 		<div class="row ">
+
+			<!-- Table of content start -->
+				<div class="col-lg-12">
+					<h1 class="header">
+						<img src="../assets/img/github_logo_sm.png">
+						<b>Github Basics</b>
+					</h1>
+					<p>
+						
+					</p>
+				</div>
+				<div class="col-lg-12">
+					<h2 class="header">Table of Content</h2>
+					<ol>
+						<!-- overview start -->
+						<li>
+							<a href="#ov">Overview</a>
+						</li>
+						<!-- overview end -->
+
+						<li>
+							<a href="#common_terminologies">Common Terminologies</a>
+						</li>
+						<li>
+							<a href="#basic_commands">Basic Commands</a>
+						</li>
+						<li>
+							<a href="#getting_started">Getting started</a>
+						</li>
+
+
+
+						
+
+						<!-- extra research stuff start -->
+						<!-- <li>
+							<a href="#res">Extra Research stuff</a>
+						</li> -->
+						<!-- extra research stuff start -->
+
+
+						<!-- references start -->
+						<!-- <li>
+							<a href="#ref">References</a>
+						</li> -->
+						<!-- references end -->
+
+					</ol>
+
+				</div>
+				<!-- Table of content end -->
+				<div class="topic-break"></div>
+				<br><br>
+
 			<div class="col-lg-12 ">
-				<h2>Github Basics</h2> 
+				<h2 class="header" id="ov">Overview</h2> 
 				<p>
-					Git is an important tool when it comes to tech collaboration. 
+					What is git? Git is an opensource version control system that is widely used for tracking projects and collaborative efforts.
+				</p>
+				<p>
+					There is a common misconception between <b>Git</b> and <b>Github</b>. <b>Git</b> is the open source version control system, while <b>Github</b> is a cloud platform where your git repositories are hosted.
+				</p>
+				<div class="alert alert-primary" role="alert" style="box-shadow: 0px 0px 8px #888888;">
+					<p>
+						It is intersting to note that <b>Github</b> is owned by Microsoft, which is currently the largert open-source contributor
+					</p>
+					<p>
+						Reference: 
+						<ul>
+							<li><a href="https://www.fosslife.org/5-biggest-open-source-contributors" target="_blank">5 Biggest Open Source Contributors</a></li>
+							<li><a href="https://www.globaldata.com/company-profile/github-inc/#:~:text=GitHub%20Inc%20(GitHub)%2C%20a,coding%20and%20project%20management%20services." target="_blank">GitHub Inc: Overview</a></li>
+						</ul>
+					</p>
+				  
+				</div>
+				<p>
+					But what is <b>version control</b>? This is the tracking of files or documents, and is widely used by programmers/coders to track changes to their programs/projects. Basically, when a programmer makes changes to their program/project, they can save them over time, and can choose to view changes made historically or even revert to an initial save point. This is useful as one can track the different changes made over time, view the different versions of the program they have implemented (ie v4 vs v1) or even kekep track of bugs that might have come up during development (If a bug came up, they can revert back to when there was no issues and make comparisons).
+				</p>
+			</div>
+
+			<div class="col-lg-12">
+				<h2 class="header" id="common_terminologies">Common Terminologies</h2>
+				<p>
+					Below is a list of common terminologies with Git, and shall be commonly mentioned
+				</p>
+				<p>
+					<ol>
+						<li><b>Git:</b></li>
+						<li><b>Github:</b></li>
+						<li><b>Repository:</b> This is what holds you files, documents etc</li>
+						<li><b>Version Control:</b></li>
+					</ol>
+				</p>
+			</div>
+
+			<div class="col-lg-12">
+				<h2 class="header" id="basic_commands">Basic Commands</h2>
+				<p>
+					Below is a list of the basic commands which are commonly used in everyday git application
+				</p>
+				<p>
+					<ul>
+						<li><b>clone:</b> Copy another repository onto your local computer/system</li>
+						<li><b>add:</b> track files and changes from your local computer/system onto git</li>
+						<li><b>commit:</b> save you files onto git</li>
+						<li><b>push:</b> send the saved commits to a cloud repository</li>
+						<li><b>pull:</b> Download the updates from a cloud repository to a local computer/system</li>
+					</ul>
+				</p>
+			</div>
+
+			<div class="col-lg-12">
+				<h2 class="header" id="getting_started">Getting Started</h2>
+				<p>
+					To get started, you will need to create an account on Github. Alternatively there is <a href="https://about.gitlab.com/" target="_blank">Gitlab</a>, <a href="https://sourceforge.net/" target="_blank">SourceForge</a> or <a href="https://bitbucket.org/product" target="_blank">BitBucket</a>, but I shall be continuing with Github.
+				</p>
+				<p>
+					On creating an account you should have a dashboard as shown below, with a number of features
+				</p>
+				<p>
+					<img src="../assets/img/articles/git_basics/github_dashboard.jpg" class="img-fluid" style="box-shadow: 0px 0px 8px #888888;height: 300px;">
+				</p>
+				<p>
+					You can create a repo from the left section of the dashboard (as shown on the above image), and you can view all the repositories you currently have
+				</p>
+				<p>
+					<img src="../assets/img/articles/git_basics/new_repo.jpeg" class="img-fluid" style="box-shadow: 0px 0px 8px #888888;height: 300px;">
+				</p>
+				<p>
+					You have the option of creating a <b>private</b> or a <b>public</b> repository. 
+					<ul>
+						<li><b>Private Repo : </b>Only visible to you and the people you share the repo with</li>
+						<li><b>Public Repo : </b> Visible to the public</li>
+					</ul>
+				</p>
+				<p>
+					On creating the repository, you should get the below, which gives you different options on setting up your repository on your command line.
+				</p>
+				<p>
+					<img src="../assets/img/articles/git_basics/create_repo_options.jpeg" class="img-fluid" style="box-shadow: 0px 0px 8px #888888;height: 300px;">
 				</p>
 			</div>
 			<p></p>
