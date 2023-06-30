@@ -190,11 +190,20 @@
 				</p>
 				<p>
 					<ul>
-						<li><b>clone:</b> Copy another repository onto your local computer/system</li>
-						<li><b>add:</b> track files and changes from your local computer/system onto git</li>
-						<li><b>commit:</b> save you files onto git</li>
-						<li><b>push:</b> send the saved commits to a cloud repository</li>
-						<li><b>pull:</b> Download the updates from a cloud repository to a local computer/system</li>
+						<li><code>clone</code> : Copy another repository onto your local computer/system</li>
+						<li><code>add</code> : track files and changes from your local computer/system onto git</li>
+						<li>
+							<code>commit</code> : create a snapshot of the repository at a certain point (ie save a version of the entire project onto git at a certain point in time). 
+							<p>
+								It is important to note that each commit has extra information such as what time & date the commit was made, who made the commit and the commit message.
+							</p>
+							<p>
+								You can also view the history of previous commits and also revert back to a certain commit. This is important when collaborating with others, where you can ask the author what the changes they made were about ect.
+							</p>
+							
+						</li>
+						<li><code>push</code> : send the saved commits to a cloud repository</li>
+						<li><code>pull</code> : Download the updates from a cloud repository to a local computer/system</li>
 					</ul>
 				</p>
 			</div>
@@ -228,6 +237,62 @@
 				</p>
 				<p>
 					<img src="../assets/img/articles/git_basics/create_repo_options.jpeg" class="img-fluid" style="box-shadow: 0px 0px 8px #888888;height: 300px;">
+				</p>
+				<p>
+					On setting up your repository on your local computer (based on the above options), it is good practice to set up a <b>README.md</b> file. This is a file the helps you document the project set up in your repository, and gives more information to your viewers. The readme files are written in a language called <b>Markdown</b>, an you can read more about it in my documentation <a href="markdown-basics.html" target="_blank" class="btn btn-dark">Here</a>
+				</p>
+				<p>
+					Before moving to the command-line on our local system, I shall explain the commands mentioned above:
+					<ul>
+						<li>
+							<code>git init</code> : 
+							<p>
+								This command creates a new git repository in a directory/folder.
+							</p>
+						</li>
+						<li>
+							<code>git add README.md</code>
+							<p>
+								Starts tracking the <b>README.md</b> file onto git. Alternatively you can use <code>git add .</code> to track all the files in the repository.
+							</p> 
+						</li>
+						<li>
+							<code>git commit -m "message"</code>
+							<p>
+								Make a commit with a message
+							</p>
+							<p>
+								Alternatively you can make a commit with a message and description, eg <code>git commit -m "message" -m "description"</code>
+							</p>
+						</li>
+						<li>
+							<code>git branch -M main</code>
+							<p>
+								Forcefully rename the current branch to <b>main</b>
+							</p>
+						</li>
+						<li>
+							<code>git remote add origin link-to-git-repo.git</code>
+							<p>
+								This adds a remote repository to your new local repository
+							</p>
+						</li>
+						<li>
+							<code>git push -u origin main</code>
+							<p>
+								Send the code to the the cloud repository
+							</p>
+							<p>
+								The <code>-u</code> tag sets the upstream of the branch we are pushing to.
+							</p>
+							<p>
+								The upstream is basically a link between the local repo branch and the online repo branch
+							</p>
+							<p>
+								This will therefore tell git to push the local branch to the set upstream branch, and therefore we do not have to specify the branch we are pushing to anymore. We can push the local changes only using <code>git push</code>
+							</p>
+						</li>
+					</ul>
 				</p>
 			</div>
 			<p></p>
