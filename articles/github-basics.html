@@ -121,6 +121,9 @@
 							<a href="#commit">Commiting changes</a>
 						</li>
 						<li>
+							<a href="#gitignore">Git Ignore</a>
+						</li>
+						<li>
 							<a href="#branches">Branches</a>
 						</li>
 
@@ -153,12 +156,16 @@
 				<p>
 					What is git? Git is an opensource version control system that is widely used for tracking projects and collaborative efforts.
 				</p>
+				
 				<p>
-					There is a common misconception between <b>Git</b> and <b>Github</b>. <b>Git</b> is the open source version control system, while <b>Github</b> is a cloud platform where your git repositories are hosted.
+					But what is <b>version control</b>? This is the tracking of files or documents, and is widely used by programmers/coders to track changes to their programs/projects. Basically, when a programmer makes changes to their program/project, they can save them over time, and can choose to view changes made historically or even revert to an initial save point. This is useful as one can track the different changes made over time, view the different versions of the program they have implemented (ie v4 vs v1) or even kekep track of bugs that might have come up during development (If a bug came up, they can revert back to when there was no issues and make comparisons).
+				</p>
+				<p>
+					<b>Git vs Github:</b> There is a common misconception between <b>Git</b> and <b>Github</b>. <b>Git</b> is the open source version control system, while <b>Github</b> is a cloud platform where your git repositories are hosted.
 				</p>
 				<div class="alert alert-primary" role="alert" style="box-shadow: 0px 0px 8px #888888;">
 					<p>
-						It is intersting to note that <b>Github</b> is owned by Microsoft, which is currently the largert open-source contributor
+						It is interesting to note that <b>Github</b> is owned by Microsoft, which is currently the largert open-source contributor
 					</p>
 					<p>
 						Reference: 
@@ -169,9 +176,6 @@
 					</p>
 				  
 				</div>
-				<p>
-					But what is <b>version control</b>? This is the tracking of files or documents, and is widely used by programmers/coders to track changes to their programs/projects. Basically, when a programmer makes changes to their program/project, they can save them over time, and can choose to view changes made historically or even revert to an initial save point. This is useful as one can track the different changes made over time, view the different versions of the program they have implemented (ie v4 vs v1) or even kekep track of bugs that might have come up during development (If a bug came up, they can revert back to when there was no issues and make comparisons).
-				</p>
 			</div>
 
 			<div class="col-lg-12">
@@ -181,10 +185,10 @@
 				</p>
 				<p>
 					<ol>
-						<li><b>Git:</b></li>
-						<li><b>Github:</b></li>
-						<li><b>Repository:</b> This is what holds you files, documents etc</li>
-						<li><b>Version Control:</b></li>
+						<li><b>Git:</b> An opensource version control system.</li>
+						<li><b>Github:</b> A cloud platform where Git repositories are hosted.</li>
+						<li><b>Repository:</b> A container that holds you files, documents etc</li>
+						<!-- <li><b>Version Control:</b></li> -->
 					</ol>
 				</p>
 			</div>
@@ -196,20 +200,39 @@
 				</p>
 				<p>
 					<ul>
-						<li><code>clone</code> : Copy another repository onto your local computer/system</li>
-						<li><code>add</code> : track files and changes from your local computer/system onto git</li>
 						<li>
-							<code>commit</code> : create a snapshot of the repository at a certain point (ie save a version of the entire project onto git at a certain point in time). 
+							<code>git clone repo-link.git</code> : Copy another repository onto your local computer/system
+						</li>
+						<li>
+							<code>git add file</code> : stage new and/or modified files on your repository for tracking.
+						</li>
+						<li>
+							<code>git status</code> : View the status of files in a repo. 
+						</li>
+						<li>
+							<code>git commit -m "message"</code> : create a snapshot of the repository at a certain point (ie track your files...save a version of the entire project onto git at a certain point in time). 
 							<p>
 								It is important to note that each commit has extra information such as what time & date the commit was made, who made the commit and the commit message.
 							</p>
 							<p>
 								You can also view the history of previous commits and also revert back to a certain commit. This is important when collaborating with others, where you can ask the author what the changes they made were about ect.
 							</p>
-							
 						</li>
-						<li><code>push</code> : send the saved commits to a cloud repository</li>
-						<li><code>pull</code> : Download the updates from a cloud repository to a local computer/system</li>
+						<li>
+							<code>git push</code> : send the saved commits to a cloud repository
+						</li>
+						<li>
+							<code>git pull</code> : Download the updates from a cloud repository to a local computer/system
+						</li>
+						<li>
+							<code>git log</code> 
+							<p>
+								Get the history/logs of all the commits made for a repository, from the latest to the earliwst commit
+							</p>
+							<p>
+								You can use <code>git log --oneline</code> to view a compressed/summary version of the commit logs
+							</p>
+						</li>
 					</ul>
 				</p>
 			</div>
@@ -259,13 +282,13 @@
 						<li>
 							<code>git add README.md</code>
 							<p>
-								Starts tracking the <b>README.md</b> file onto git. Alternatively you can use <code>git add .</code> to track all the files in the repository.
+								Stages the <b>README.md</b> file onto git. Alternatively you can use <code>git add .</code> to stage all the files in the repository.
 							</p> 
 						</li>
 						<li>
 							<code>git commit -m "message"</code>
 							<p>
-								Make a commit with a message
+								Tracks the staged files in the repository with a commit message
 							</p>
 							<p>
 								Alternatively you can make a commit with a message and description, eg <code>git commit -m "message" -m "description"</code>
@@ -311,10 +334,17 @@
 				</p>
 				<p>
 					<ol>
-						<li><code>git add files</code> : This will start tracking the new files added into the local repo</li>
-						<li><code>git commit -m "message"</code> : This will create a snapshot of the project</li>
+						<li><code>git add files</code> : This will stage the new files added or modified in the local repo</li>
+						<li><code>git commit -m "message"</code> : This will create a snapshot of the project and start tracking the new files</li>
 						<li><code>git push -u origin branchName</code></li>
 					</ol>
+				</p>
+			</div>
+
+			<div class="col-lg-12">
+				<h2 class="header" id="gitignore">Git Ignore</h2>
+				<p>
+					In a project there are files that one would not want to be tracked, such as API keys or any other sensitive files. The links to the files are stored in a <b>.gitignore</b> file, and will be completely ignored by Git ie, they will not be tracked at all.
 				</p>
 			</div>
 
