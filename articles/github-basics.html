@@ -79,78 +79,79 @@
 
 		<!-- scroll to top -->
 		<button onclick="topFunction()" id="scroll-to-top" title="Go to top"><i class="fa fa-arrow-up"></i></button> 
-		
 		<br>
 		
-
-		
-		
-
-		
+		<!-- content start -->
 		<div class="row ">
 
+			
+			<div class="col-lg-12">
+				<h1 class="header">
+					<img src="../assets/img/github_logo_sm.png">
+					<b>Github Basics</b>
+				</h1>
+				<p>
+					
+				</p>
+			</div>
+
+
 			<!-- Table of content start -->
-				<div class="col-lg-12">
-					<h1 class="header">
-						<img src="../assets/img/github_logo_sm.png">
-						<b>Github Basics</b>
-					</h1>
-					<p>
-						
-					</p>
-				</div>
-				<div class="col-lg-12">
-					<h2 class="header">Table of Content</h2>
-					<ol>
-						<!-- overview start -->
-						<li>
-							<a href="#ov">Overview</a>
-						</li>
-						<!-- overview end -->
+			<div class="col-lg-12">
+				<h2 class="header">Table of Content</h2>
+				<ol>
+					<!-- overview start -->
+					<li>
+						<a href="#ov">Overview</a>
+					</li>
+					<!-- overview end -->
 
-						<li>
-							<a href="#common_terminologies">Common Terminologies</a>
-						</li>
-						<li>
-							<a href="#basic_commands">Basic Commands</a>
-						</li>
-						<li>
-							<a href="#getting_started">Getting started</a>
-						</li>
-						<li>
-							<a href="#commit">Commiting changes</a>
-						</li>
-						<li>
-							<a href="#gitignore">Git Ignore</a>
-						</li>
-						<li>
-							<a href="#branches">Branches</a>
-						</li>
+					<li>
+						<a href="#common_terminologies">Common Terminologies</a>
+					</li>
+					
+					<li>
+						<a href="#getting_started">Getting started</a>
+					</li>
+					<li>
+						<a href="#commit">Commiting changes</a>
+					</li>
+					<li>
+						<a href="#gitignore">Git Ignore</a>
+					</li>
+					<li>
+						<a href="#branches">Branches</a>
+					</li>
+					<li>
+						<a href="#git_command_list">Git Command List</a>
+					</li>
 
 
 
-						
+					
 
-						<!-- extra research stuff start -->
-						<!-- <li>
-							<a href="#res">Extra Research stuff</a>
-						</li> -->
-						<!-- extra research stuff start -->
+					<!-- extra research stuff start -->
+					<!-- <li>
+						<a href="#res">Extra Research stuff</a>
+					</li> -->
+					<!-- extra research stuff start -->
 
 
-						<!-- references start -->
-						<!-- <li>
-							<a href="#ref">References</a>
-						</li> -->
-						<!-- references end -->
+					<!-- references start -->
+					<!-- <li>
+						<a href="#ref">References</a>
+					</li> -->
+					<!-- references end -->
 
-					</ol>
+				</ol>
+			</div>
+			<div class="topic-break"></div>
+			<br><br>
+			<!-- Table of content end -->
+			
 
-				</div>
-				<!-- Table of content end -->
-				<div class="topic-break"></div>
-				<br><br>
 
+			<!-- overview start -->
 			<div class="col-lg-12 ">
 				<h2 class="header" id="ov">Overview</h2> 
 				<p>
@@ -177,7 +178,12 @@
 				  
 				</div>
 			</div>
+			<div class="topic-break"></div>
+			<br><br>
+			<!-- overview end -->
 
+
+			<!-- common terminologies start -->
 			<div class="col-lg-12">
 				<h2 class="header" id="common_terminologies">Common Terminologies</h2>
 				<p>
@@ -192,51 +198,12 @@
 					</ol>
 				</p>
 			</div>
+			<div class="topic-break"></div>
+			<br><br>
+			<!-- common terminologies end -->
 
-			<div class="col-lg-12">
-				<h2 class="header" id="basic_commands">Basic Commands</h2>
-				<p>
-					Below is a list of the basic commands which are commonly used in everyday git application
-				</p>
-				<p>
-					<ul>
-						<li>
-							<code>git clone repo-link.git</code> : Copy another repository onto your local computer/system
-						</li>
-						<li>
-							<code>git add file</code> : stage new and/or modified files on your repository for tracking.
-						</li>
-						<li>
-							<code>git status</code> : View the status of files in a repo. 
-						</li>
-						<li>
-							<code>git commit -m "message"</code> : create a snapshot of the repository at a certain point (ie track your files...save a version of the entire project onto git at a certain point in time). 
-							<p>
-								It is important to note that each commit has extra information such as what time & date the commit was made, who made the commit and the commit message.
-							</p>
-							<p>
-								You can also view the history of previous commits and also revert back to a certain commit. This is important when collaborating with others, where you can ask the author what the changes they made were about ect.
-							</p>
-						</li>
-						<li>
-							<code>git push</code> : send the saved commits to a cloud repository
-						</li>
-						<li>
-							<code>git pull</code> : Download the updates from a cloud repository to a local computer/system
-						</li>
-						<li>
-							<code>git log</code> 
-							<p>
-								Get the history/logs of all the commits made for a repository, from the latest to the earliwst commit
-							</p>
-							<p>
-								You can use <code>git log --oneline</code> to view a compressed/summary version of the commit logs
-							</p>
-						</li>
-					</ul>
-				</p>
-			</div>
 
+			<!-- gettings started start -->
 			<div class="col-lg-12">
 				<h2 class="header" id="getting_started">Getting Started</h2>
 				<p>
@@ -271,7 +238,7 @@
 					On setting up your repository on your local computer (based on the above options), it is good practice to set up a <b>README.md</b> file. This is a file the helps you document the project set up in your repository, and gives more information to your viewers. The readme files are written in a language called <b>Markdown</b>, an you can read more about it in my documentation <a href="markdown-basics.html" target="_blank" class="btn btn-dark">Here</a>
 				</p>
 				<p>
-					Before moving to the command-line on our local system, I shall explain the commands mentioned above:
+					Below is a description of the commands mentioned above:
 					<ul>
 						<li>
 							<code>git init</code> : 
@@ -324,6 +291,12 @@
 					</ul>
 				</p>
 			</div>
+			<div class="topic-break"></div>
+			<br><br>
+			<!-- getting started end -->
+
+
+			<!-- commiting changes start -->
 			<div class="col-lg-12">
 				<h2 class="header" id="commit">Commiting Changes</h2>
 				<p>
@@ -340,14 +313,24 @@
 					</ol>
 				</p>
 			</div>
+			<div class="topic-break"></div>
+			<br><br>
+			<!-- commiting changes end -->
 
+
+			<!-- git ignore start -->
 			<div class="col-lg-12">
 				<h2 class="header" id="gitignore">Git Ignore</h2>
 				<p>
 					In a project there are files that one would not want to be tracked, such as API keys or any other sensitive files. The links to the files are stored in a <b>.gitignore</b> file, and will be completely ignored by Git ie, they will not be tracked at all.
 				</p>
 			</div>
+			<div class="topic-break"></div>
+			<br><br>
+			<!-- git ignore end -->
 
+
+			<!-- branches start -->
 			<div class="col-lg-12">
 				<h2 class="header" id="branches">Branches</h2>
 				<p>
@@ -357,9 +340,73 @@
 					<img src="../assets/img/articles/git_basics/git_branch.jpg" class="img-fluid" style="box-shadow: 0px 0px 8px #888888;height: 300px;">
 				</p>
 			</div>
+			<div class="topic-break"></div>
+			<br><br>
+			<!-- branches end -->
+
+
+			<!-- git command list start -->
+			<div class="col-lg-12">
+				<h2 class="header" id="git_command_list">Git Command List</h2>
+				<p>
+					Below is a list of the basic commands which are commonly used in everyday git application
+				</p>
+				<p>
+					<ul>
+						<li>
+							<code>git clone repo-link.git</code> : Copy another repository onto your local computer/system
+						</li>
+						<li>
+							<code>git add file</code> : stage new and/or modified files on your repository for tracking.
+						</li>
+						<li>
+							<code>git status</code> : View the status of files in a repo. 
+						</li>
+						<li>
+							<code>git commit -m "message"</code> : create a snapshot of the repository at a certain point (ie track your files...save a version of the entire project onto git at a certain point in time). 
+							<p>
+								It is important to note that each commit has extra information such as what time & date the commit was made, who made the commit and the commit message.
+							</p>
+							<p>
+								You can also view the history of previous commits and also revert back to a certain commit. This is important when collaborating with others, where you can ask the author what the changes they made were about ect.
+							</p>
+						</li>
+						<li>
+							<code>git push</code> : send the saved commits to a cloud repository
+						</li>
+						<li>
+							<code>git pull</code> : Download the updates from a cloud repository to a local computer/system
+						</li>
+						<li>
+							<code>git log</code> 
+							<p>
+								Get the history/logs of all the commits made for a repository, from the latest to the earliwst commit
+							</p>
+							<p>
+								You can use <code>git log --oneline</code> to view a compressed/summary version of the commit logs
+							</p>
+						</li>
+						<li>
+							<code>diff</code>
+							<p>
+								<code>git diff</code>: View the changes made between the staged and the unstaged files.
+							</p>
+							<p>
+								<code>git diff [branch-A] [branch-B]</code>: View the difference between two branches.
+							</p>
+						</li>
+						<li>
+							<code>git revert [hash-code]</code>: Undo a commit by reverencing the hash code.
+						</li>
+					</ul>
+				</p>
+			</div>
+			<div class="topic-break"></div>
+			<br><br>
+			<!-- git command list end -->
 		</div>
-		<div class="row" id="">
-		</div>
+		<!-- content end -->
+		
 
 		<!-- contact & footer info start -->
 			<hr>
