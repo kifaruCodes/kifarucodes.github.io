@@ -1,3 +1,5 @@
 # kifarucodes.github.io
 
-Icon Images From : https://icons8.com/icons/
+This is my personal portfolio where I showcase my projects as well as documenting what I learn.
+
+Link to the online portfolio: https://kifarucodes.github.io
