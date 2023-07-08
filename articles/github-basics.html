@@ -98,7 +98,7 @@
 			<div class="col-lg-12">
 				<h1 class="header">
 					<img src="../assets/img/github_logo_sm.png">
-					<b>Github Basics</b>
+					<b>Git & Github Basics</b>
 				</h1>
 				<p>
 					
@@ -142,6 +142,9 @@
 							<li><a href="#branches_merging">Merging Branches</a></li>
 							<li><a href="#branches_mergeconflicts">Merge Conflicts</a></li>
 						</ul>
+					</li>
+					<li>
+						<a href="#pull_request">Pull Request</a>
 					</li>
 					<li>
 						<a href="#git_command_list">Git Command List</a>
@@ -382,6 +385,17 @@
 						where <b>new-branch</b> is the branch you want to create.
 					</p>
 					<p>
+						If you want to create a branch then switch to it, use the <code>checkout</code> command.
+						<ul>
+							<li><code>git checkout -b branch-name</code></li>
+						</ul>
+						This is the equivalent of:
+						<ul>
+							<li><code>git branch branch-name</code></li>
+							<li><code>git switch branch-name</code></li>
+						</ul>
+					</p>
+					<p>
 						However you might want to create a branch on a different revision, which can be done as:
 						<ul>
 							<li><code>git branch branch-name commit-hash</code></li>
@@ -397,7 +411,6 @@
 					</p>
 					</div>
 				<!-- create branch end -->
-
 
 				<!-- view branch start -->
 					<h3 class="header" id="branches_view">View Branches</h3>
@@ -430,7 +443,6 @@
 						<b>switch</b> is the recommended mwthod, as it is exclusively used in switching between branches. (<code>checkout</code> has a lot of different usages, which can be ambiguous or confusing)
 					</p>
 				<!-- switch branch end -->
-
 
 				<!-- rename branch start -->
 					<h3 class="header" id="branches_rename">Renaming branches</h3>
@@ -602,6 +614,45 @@ Automatic merge failed; fix conflicts and then commit the result.
 			<div class="topic-break"></div>
 			<br><br>
 			<!-- branches end -->
+
+
+			<!-- Pull requests start -->
+			<div class="col-lg-12">
+				<h2 class="header" id="pull_request">Pull Requests</h2>
+				<p>
+					Pull requests (or commonly referred as PR) are how one can make contributions to someone else's repository on Github.
+				</p>
+				<p>
+					The process of creating a PR would be as below:
+					<ol>
+						<li>Fork the repo</li>
+						<li>Clone it on your local device/computer</li>
+						<li>Create a branch that you shall work in</li>
+						<li>Make the desired changes/updates.</li>
+						<li><b>add</b> and <b>commit</b> the changes to the repo.</li>
+						<li><b>push</b> the working branch to the remote repo: <code>git push origin branch-name</code></li>
+						<li>
+							On <b>Github</b> open a pull request by going to the forked repo.
+						</li>
+					</ol>
+				</p>
+				<p>
+					To start contributing, one will first <b>fork</b> the repository that they would like to contribute to
+				</p>
+				<div class="alert alert-primary" role="alert" style="box-shadow: 0px 0px 8px #888888;">
+				  <i class="fa fa-book"> <b>Note</b></i>
+				  <p>
+				  	A <b>fork</b> is a completely independent copy of a repository. This differs from a <b>clone</b> where a clone is a copy of a repo that shall still be synchronized to the original copy.
+				  </p>
+				  <p>
+				  	Any changes made to a forked repo shall not in any way affect the original repo copy.
+				  </p>
+				</div>
+				
+			</div>
+			<div class="topic-break"></div>
+			<br><br>
+			<!-- pull requests end -->
 
 
 			<!-- git command list start -->

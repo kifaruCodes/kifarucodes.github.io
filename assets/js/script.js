@@ -12,46 +12,46 @@ $( document ).ready(function() {
     
 	
 
-	// Typewriter effect
-		var app = document.getElementById('typewriter');
-		var typewriter = new Typewriter(app, {
-		  loop: true
-		});
+	// Typewriter effect (not in use)
+		// var app = document.getElementById('typewriter');
+		// var typewriter = new Typewriter(app, {
+		//   loop: true
+		// });
 
-		var string1 = "Java";
-		var string2 = "Spring Boot";
-		var string3 = "PHP";
-		var string4 = "Javascript";
-		var string5 = "React js";
-		var string6 = "SQL";
+		// var string1 = "Java";
+		// var string2 = "Spring Boot";
+		// var string3 = "PHP";
+		// var string4 = "Javascript";
+		// var string5 = "React js";
+		// var string6 = "SQL";
 
-		typewriter
+		// typewriter
 
-		  .typeString(string1)
-		  .pauseFor(500)
-		  .deleteChars(string1.length)
+		//   .typeString(string1)
+		//   .pauseFor(500)
+		//   .deleteChars(string1.length)
 
-		  .typeString(string2)
-		  .pauseFor(500)
-		  .deleteChars(string2.length)
+		//   .typeString(string2)
+		//   .pauseFor(500)
+		//   .deleteChars(string2.length)
 
-		  .typeString(string3)
-		  .pauseFor(500)
-		  .deleteChars(string3.length)
+		//   .typeString(string3)
+		//   .pauseFor(500)
+		//   .deleteChars(string3.length)
 
-		  .typeString(string4)
-		  .pauseFor(500)
-		  .deleteChars(string4.length)
+		//   .typeString(string4)
+		//   .pauseFor(500)
+		//   .deleteChars(string4.length)
 
-		  .typeString(string5)
-		  .pauseFor(500)
-		  .deleteChars(string5.length)
+		//   .typeString(string5)
+		//   .pauseFor(500)
+		//   .deleteChars(string5.length)
 
-		  .typeString(string6)
-		  .pauseFor(500)
-		  .deleteChars(string6.length)
+		//   .typeString(string6)
+		//   .pauseFor(500)
+		//   .deleteChars(string6.length)
 
-		  .start();
+		//   .start();
 
 	// scroll to top
 		$(window).scroll(function(){
