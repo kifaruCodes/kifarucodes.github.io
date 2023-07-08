@@ -24,6 +24,9 @@
 		<!-- google font -->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 
+		<!-- highlight css -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" integrity="sha512-rO+olRTkcf304DQBxSWxln8JXCzTHlKnIdnMUwYvQa9/Jd4cQaNkItIUj6Z4nvW1dqK0SKXLbn9h4KwZTNtAyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 		<!-- custom css -->
 		<link rel="stylesheet" type="text/css" href="../assets/css/style.css">
 
@@ -34,8 +37,15 @@
 		<!-- Bootstrap js -->
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-		<!-- Typewriter js -->
-		<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+		
+		<!-- highlight js -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js" integrity="sha512-rdhY3cbXURo13l/WU9VlaRyaIYeJ/KBakckXIvJNAQde8DgpOmE+eZf7ha4vdqVjTtwQt69bD2wH2LXob/LB7Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+		<script>
+			$( document ).ready(function() {
+			    hljs.highlightAll();
+			});
+		</script>
 
 		<!-- custom js -->
 		<script type="text/javascript" src="../assets/js/script.js"></script>
@@ -130,6 +140,7 @@
 							<li><a href="#branches_tracking">Tracking Branches</a></li>
 							<li><a href="#branches_deleting">Deleting Branches</a></li>
 							<li><a href="#branches_merging">Merging Branches</a></li>
+							<li><a href="#branches_mergeconflicts">Merge Conflicts</a></li>
 						</ul>
 					</li>
 					<li>
@@ -525,6 +536,68 @@
 						where <b>branch-name</b> is the name of the branch that you want to merge to the main branch.
 					</p>
 				<!-- merging branches end -->
+
+				<!-- merge conflicts start -->
+					<h3 class="header" id="branches_mergeconflicts">Merge Conflicts</h3>
+					<p>
+						In some instances one would find themselves with an error where they would try to merge a branch to the main, but the changes in the main would be different from those on the branch being merged to. An example is where a line from the main branch differs from the merging branch. In this instance we have a <b>Merge Conflict</b>
+					</p>
+					<p>
+						with merge conflicts, you will be faced with an error as below:
+						<pre>
+						<code class="language-markdown">
+$ git merge branch
+Auto-merging file.md
+CONFLICT (content): Merge conflict in file.md
+Automatic merge failed; fix conflicts and then commit the result.
+
+						</code>
+						</pre>
+					</p>
+					<p>
+						To solve this, we have a number of work-arounds.
+					</p>
+					<p>
+						<ol>
+							<li>							
+								<b>Cancel the merge</b>
+								<p>
+									In this instance you want to cancel the merge completely, as you might have changed your mind. To do this, run the command:
+									<ul>
+										<li><code>git merge --abort</code></li>
+									</ul>
+								</p>
+							</li>
+							<li>
+								<b>Accept the current change</b>
+								<p>
+									This will keep the changes from the branch being merged to (in most instances the main branch, hence keeping the original changes)
+								</p>
+							</li>
+							<li>
+								<b>Accept incoming change</b>
+								<p>
+									This will take the changes from the branch that is trying from.
+								</p>
+							</li>
+							<li>
+								<b>Accept both changes</b>
+								<p>
+									This will combine the changes from both the files and have both inputs in one file
+								</p>
+							</li>
+						</ol>
+						<div class="alert alert-primary" role="alert" style="box-shadow: 0px 0px 8px #888888;">
+						  <b>Note</b> If using <b>VsCode</b>, you can compare the changes between the two branches from <b>read-only</b> files, which will allow you to see the changes and determine what branch to keep.
+						</div>
+					</p>
+					<p>
+						After deciding what changes to keep, you will have to <b>add</b> the file and make a <b>commit</b> 
+					</p>
+					<p>
+						With this you have solved the merge conflict.
+					</p>
+				<!-- merge conflicts end -->
 			</div>
 			<div class="topic-break"></div>
 			<br><br>
