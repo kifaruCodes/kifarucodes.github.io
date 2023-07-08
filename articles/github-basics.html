@@ -129,6 +129,7 @@
 							<li><a href="#branches_push">Pushing a branch to a remote repo</a></li>
 							<li><a href="#branches_tracking">Tracking Branches</a></li>
 							<li><a href="#branches_deleting">Deleting Branches</a></li>
+							<li><a href="#branches_merging">Merging Branches</a></li>
 						</ul>
 					</li>
 					<li>
@@ -509,6 +510,21 @@
 					  It is important to check whether there is a counterpart branch on the local repo after deleting the remote branch (a tracked local branch). This will prevent having unused branches that could make your repo untidy.
 					</div>
 				<!-- deleting branches end -->
+
+				<!-- merging branches start -->
+					<h3 class="header" id="branches_merging">Merging Branches</h3>
+					<p>
+						After making the changes you want on your branch and tested your code, you will want to merge the changes to the main branch. To do this, you will first need to switch to the main branch:
+						<ul>
+							<li><code>git switch main</code></li>
+						</ul>
+						After switching, you can merge to the main branch as below:
+						<ul>
+							<li><code>git merge branch-name</code></li>
+						</ul>
+						where <b>branch-name</b> is the name of the branch that you want to merge to the main branch.
+					</p>
+				<!-- merging branches end -->
 			</div>
 			<div class="topic-break"></div>
 			<br><br>
@@ -554,6 +570,15 @@
 							</p>
 							<p>
 								You can use <code>git log --oneline</code> to view a compressed/summary version of the commit logs
+							</p>
+						</li>
+						<li>
+							<code>git show "commit-hash"</code>
+							<p>
+								View the details of a commit.
+							</p>
+							<p>
+								<code>"commit-hash"</code> is the hash code of the commit. You do not have to copy the entire hash string as the first 7-8 characters are enough.
 							</p>
 						</li>
 						<li>
