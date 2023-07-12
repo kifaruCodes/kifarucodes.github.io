@@ -136,38 +136,6 @@
 				<!-- overview end -->
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 				<!-- Table of content start -->
 				<div class="col-lg-12">
 					<h2 class="header">Table of Content</h2>
@@ -289,51 +257,9 @@
 					</ol>
 
 				</div>
-				<!-- Table of content end -->
 				<div class="topic-break"></div>
 				<br><br>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+				<!-- Table of content end -->
 
 
 				<!-- input output start -->
@@ -349,8 +275,8 @@
 					</p>
 					<pre>
 					<code class="language-kotlin">
-println("Hello there") // Prints out content and appends a new line
-print("Hello there") // Prints out content without a new line
+						println("Hello there") // Prints out content and appends a new line
+						print("Hello there") // Prints out content without a new line
 					</code>
 					</pre>
 					
@@ -361,9 +287,9 @@ print("Hello there") // Prints out content without a new line
 					</p>
 					<pre>
 					<code class="language-kotlin">
-println("What is the name of your city: ")
-var city  = readln()
-println("Your city is $city")
+						println("What is the name of your city: ")
+						var city  = readln()
+						println("Your city is $city")
 					</code>
 					</pre>
 					<p>
@@ -371,9 +297,9 @@ println("Your city is $city")
 					</p>
 					<pre>
 					<code class="language-kotlin">
-println("What is your age: ")
-var age  = readLine()!!
-println("Your age is ${age.toInt()}")
+						println("What is your age: ")
+						var age  = readLine()!!
+						println("Your age is ${age.toInt()}")
 					</code>
 					</pre>
 
@@ -383,15 +309,15 @@ println("Your age is ${age.toInt()}")
 					</p>
 					<pre>
 					<code class="language-kotlin">
-// Input statement with a tyy catch block
-try {
-    println("Please enter your age")
-    var age2 = readLine()!!
-    println("Your age is : ${age2.toInt()}")
-} catch (e : Exception){
-    println("You have entered a wrong input type")
-    println("The error is $e")
-}
+						// Input statement with a tyy catch block
+						try {
+						    println("Please enter your age")
+						    var age2 = readLine()!!
+						    println("Your age is : ${age2.toInt()}")
+						} catch (e : Exception){
+						    println("You have entered a wrong input type")
+						    println("The error is $e")
+						}
 					</code>
 					</pre>
 
@@ -401,80 +327,24 @@ try {
 
 					<pre>
 					<code class="language-kotlin">
-// note: don't forget the backticks '`' at System.`in`
-val scanner = Scanner(System.`in`)
+						// note: don't forget the backticks '`' at System.`in`
+						val scanner = Scanner(System.`in`)
 
-println("Please enter a number")
-val ip = scanner.nextInt()
-println("The number entered is $ip")
+						println("Please enter a number")
+						val ip = scanner.nextInt()
+						println("The number entered is $ip")
 
-println("Please enter a sentence")
-val ip2 = scanner.nextLine()
-println("The sentence entered is $ip2")
+						println("Please enter a sentence")
+						val ip2 = scanner.nextLine()
+						println("The sentence entered is $ip2")
 					</code>
 					</pre>
 
 				</div>
-				<!-- input output end -->
 				<div class="topic-break"></div>
 				<br><br>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+				<!-- input output end -->
+				
 
 
 
@@ -491,32 +361,32 @@ println("The sentence entered is $ip2")
 					</p>
 					<pre>
 					<code class="language-kotlin">
-// Byte, -126-127 (8 bits)
-val byteno : Byte = 23
+						// Byte, -126-127 (8 bits)
+						val byteno : Byte = 23
 
-// Short, -32768-32769 (16 bit)
-val shortno : Short = 10000
+						// Short, -32768-32769 (16 bit)
+						val shortno : Short = 10000
 
-// Integer, (32 bit)
-val intno : Int = 200_000_000
+						// Integer, (32 bit)
+						val intno : Int = 200_000_000
 
-// Long (64 bit)
-val longNo : Long = 1_000_000_000_000_000_000
+						// Long (64 bit)
+						val longNo : Long = 1_000_000_000_000_000_000
 
-// Float
-val floatNo : Float = 123.1234F
+						// Float
+						val floatNo : Float = 123.1234F
 
-// Double
-val doubleNo : Double = 1234.124132515
+						// Double
+						val doubleNo : Double = 1234.124132515
 
-// Character
-val char : Char = 'z'
+						// Character
+						val char : Char = 'z'
 
-// Boolean
-val boolVal : Boolean = true
+						// Boolean
+						val boolVal : Boolean = true
 
-// String
-val myString : String = "This is my string"
+						// String
+						val myString : String = "This is my string"
 					</code>
 					</pre>
 
@@ -534,8 +404,8 @@ val myString : String = "This is my string"
 
 						<pre>
 						<code class="language-kotlin">
-val name : String = "Kifaru"            // this variable can not be changed
-var another_name : String = "Iron man"  // this variable can be changed
+							val name : String = "Kifaru"            // this variable can not be changed
+							var another_name : String = "Iron man"  // this variable can be changed
 						</code>
 						</pre>
 					</p>
@@ -549,7 +419,7 @@ var another_name : String = "Iron man"  // this variable can be changed
 						Kotlin by default does not alllow assigning null values to variables. This means that the below code will give an error.
 						<pre>
 						<code class="language-kotlin">
-val string: String = null // this will give an error
+							val string: String = null // this will give an error
 						</code>
 						</pre>
 					</p>
@@ -558,7 +428,7 @@ val string: String = null // this will give an error
 					</p>
 					<pre>
 						<code class="language-kotlin">
-val string: String? = null // this will not give an error
+							val string: String? = null // this will not give an error
 						</code>
 						</pre>
 				</div>
@@ -572,8 +442,8 @@ val string: String? = null // this will not give an error
 					</p>
 					<pre>
 					<code class="language-kotlin">
-val color = "Blue" // compiler will automatically tell that this is a string
-val number = 20 // compiler will automatically tell that this is an integer
+						val color = "Blue" // compiler will automatically tell that this is a string
+						val number = 20 // compiler will automatically tell that this is an integer
 					</code>
 					</pre>
 				</div>
@@ -591,20 +461,20 @@ val number = 20 // compiler will automatically tell that this is an integer
 					</p>
 					<pre>
 					<code class="language-kotlin">
-// int to string
-var number1 : Int = 50
-var sentence1 = number1.toString()
-println(sentence1)
+						// int to string
+						var number1 : Int = 50
+						var sentence1 = number1.toString()
+						println(sentence1)
 
-// string to int
-var sentence2 = "20"
-var number2 = sentence2.toInt()
-println(number2)
+						// string to int
+						var sentence2 = "20"
+						var number2 = sentence2.toInt()
+						println(number2)
 
-// string to int : This will give an error
-var sentence3 = "sentence"
-var number3 = sentence3.toInt()
-println(number3)
+						// string to int : This will give an error
+						var sentence3 = "sentence"
+						var number3 = sentence3.toInt()
+						println(number3)
 					</code>
 					</pre>
 
@@ -613,30 +483,29 @@ println(number3)
 					</p>
 					<pre>
 					<code class="language-kotlin">
-// convert to integer
-val variable = variable2.toInt()
+						// convert to integer
+						val variable = variable2.toInt()
 
-// convert to string
-val variable = variable2.toString
+						// convert to string
+						val variable = variable2.toString
 
-// convert to float
-val variable = variable2.toFloat()
+						// convert to float
+						val variable = variable2.toFloat()
 
-// convert to long
-val variable = variable2.toLong()
+						// convert to long
+						val variable = variable2.toLong()
 
-// convert to double
-val variable = variable2.toDouble()
+						// convert to double
+						val variable = variable2.toDouble()
 					</code>
 					</pre>
 				</div>
 				<!-- variables type conversion end -->
 
-
-				<!-- variables end -->
+				
 				<div class="topic-break"></div>
 				<br><br>
-
+				<!-- variables end -->
 
 
 
@@ -882,53 +751,21 @@ val variable = variable2.toDouble()
 					</p>
 					<pre>
 					<code class="language-kotlin">
-val range = listOf<Int>(12,21,45,543,3,6,34)
-val search_no = 4
-if (search_no in range){
-    println("found the number")
-} else {
-    println("Number not found")
-}
+					val range = listOf<Int>(12,21,45,543,3,6,34)
+					val search_no = 4
+					if (search_no in range){
+					    println("found the number")
+					} else {
+					    println("Number not found")
+					}
 					</code>
 					</pre>
 					<!-- in operator end -->
 				</div>
-				<!-- operators end -->
+				
 				<div class="topic-break"></div>
 				<br><br>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+				<!-- operators end -->
 
 
 
@@ -947,14 +784,14 @@ if (search_no in range){
 					</p>
 					<pre>
 					<code class="language-kotlin">
-val x : Int = 2 + 3
-// here 2 + 3 is the expression
+						val x : Int = 2 + 3
+						// here 2 + 3 is the expression
 
-val no : Int = (1..1000).random()
-// here (1..1000).random() is an expression
+						val no : Int = (1..1000).random()
+						// here (1..1000).random() is an expression
 
-val no_check = if(another_no > 3000) "number is bigger" else "number is smaller"
-//here (another_no > 3000) "number is bigger" else "number is smaller" is an expression
+						val no_check = if(another_no > 3000) "number is bigger" else "number is smaller"
+						//here (another_no > 3000) "number is bigger" else "number is smaller" is an expression
 
 					</code>
 					</pre>
@@ -967,13 +804,13 @@ val no_check = if(another_no > 3000) "number is bigger" else "number is smaller"
 					</p>
 					<pre>
 					<code class="language-kotlin">
-val x : Int = 2 + 3
+						val x : Int = 2 + 3
 
-val no : Int = (1..1000).random()
+						val no : Int = (1..1000).random()
 
-val no_check = if(another_no > 3000) "The number is bigger" else "The number is smaller"
+						val no_check = if(another_no > 3000) "The number is bigger" else "The number is smaller"
 
-println("Hello world")
+						println("Hello world")
 					</code>
 					</pre>
 					<!-- Statement end -->
@@ -986,14 +823,14 @@ println("Hello world")
 					</p>
 					<pre>
 					<code class="language-kotlin">
-fun main() {  // main function block
-    val flag = true
+						fun main() {  // main function block
+						    val flag = true
 
-    if (flag == true) {      // start of if block
-        print("Hello there ")
-        print("How are you")
-    }                        // end of if block
-}  
+						    if (flag == true) {      // start of if block
+						        print("Hello there ")
+						        print("How are you")
+						    }                        // end of if block
+						}  
 					</code>
 					</pre>
 
@@ -1002,38 +839,6 @@ fun main() {  // main function block
 				<!-- exprssions, statements and blocks end -->
 				<div class="topic-break"></div>
 				<br><br>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1054,13 +859,13 @@ fun main() {  // main function block
 					</p>
 					<pre>
 					<code class="language-kotlin">
-if (condition-1){
-    Statement
-} else if (condition-2){
-    Statement
-} else {
-    Statement
-}
+						if (condition-1){
+						    Statement
+						} else if (condition-2){
+						    Statement
+						} else {
+						    Statement
+						}
 					</code>
 					</pre>
 					<p>
@@ -1068,14 +873,14 @@ if (condition-1){
 					</p>
 					<pre>
 					<code class="language-kotlin">
-val random_no : Int = (-20..20).random()
-val result = if (random_no < 0) {
-    println(random_no)
-    println("The number is negative")
-} else {
-    println(random_no)
-    println("The number is positive")
-}
+						val random_no : Int = (-20..20).random()
+						val result = if (random_no < 0) {
+						    println(random_no)
+						    println("The number is negative")
+						} else {
+						    println(random_no)
+						    println("The number is positive")
+						}
 					</code>
 					</pre>
 
@@ -1085,9 +890,9 @@ val result = if (random_no < 0) {
 					</p>
 					<pre>
 					<code class="language-kotlin">
-val no = readLine()!!.toInt()
-val result =  if (no > 0) "Positive" else "negative"
-println(result)
+						val no = readLine()!!.toInt()
+						val result =  if (no > 0) "Positive" else "negative"
+						println(result)
 					</code>
 					</pre>
 				</div>
@@ -1109,18 +914,18 @@ println(result)
 
 					<pre>
 					<code class="language-kotlin">
-val when_var  = readLine()!!.toInt()
-when(when_var){
-    10 -> {
-        println("Number is 10")
-    }
-    20 -> {
-        println("number is 20")
-    }
-    else -> {
-        println("The number is not listed")
-    }
-}
+						val when_var  = readLine()!!.toInt()
+						when(when_var){
+						    10 -> {
+						        println("Number is 10")
+						    }
+						    20 -> {
+						        println("number is 20")
+						    }
+						    else -> {
+						        println("The number is not listed")
+						    }
+						}
 					</code>
 					</pre>
 
@@ -1131,37 +936,37 @@ when(when_var){
 					<pre>
 					<code class="language-kotlin">
 
-println("enter fitst number")
-val no1 = readLine()!!.toInt()
+						println("enter fitst number")
+						val no1 = readLine()!!.toInt()
 
-println("enter second no")
-val no2 = readln()!!.toInt()
+						println("enter second no")
+						val no2 = readln()!!.toInt()
 
-println("enter operator")
-val op = readln()
+						println("enter operator")
+						val op = readln()
 
-val result = when (op){
-    "+" -> {
-        "$no1 $op $no2 = ${no1 + no2}"
-    }
-    "-" -> {
-        "$no1 $op $no2 = ${no1 - no2}"
-    }
-    "*" -> {
-        "$no1 $op $no2 = ${no1 * no2}"
-    }
-    "/" -> {
-        "$no1 $op $no2 = ${no1 / no2}"
-    }
-    "%" -> {
-        "$no1 $op $no2 = ${no1 % no2}"
-    }
-    else -> {
-        "The operator selected is not in the list"
-    }
-}
+						val result = when (op){
+						    "+" -> {
+						        "$no1 $op $no2 = ${no1 + no2}"
+						    }
+						    "-" -> {
+						        "$no1 $op $no2 = ${no1 - no2}"
+						    }
+						    "*" -> {
+						        "$no1 $op $no2 = ${no1 * no2}"
+						    }
+						    "/" -> {
+						        "$no1 $op $no2 = ${no1 / no2}"
+						    }
+						    "%" -> {
+						        "$no1 $op $no2 = ${no1 % no2}"
+						    }
+						    else -> {
+						        "The operator selected is not in the list"
+						    }
+						}
 
-println(result)
+						println(result)
 					</code>
 					</pre>
 
@@ -1174,60 +979,10 @@ println(result)
 					</div>
 				</div>
 				<!-- when statement end -->
-				<!-- conditionals end -->
+				
 				<div class="topic-break"></div>
 				<br><br>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+				<!-- conditionals end -->
 
 
 
@@ -1255,12 +1010,12 @@ println(result)
 					</p>
 					<pre>
 					<code class="language-kotlin">
-var no = 0
+						var no = 0
 
-while (no <= 10){
-    println(no)
-    ++no
-}
+						while (no <= 10){
+						    println(no)
+						    ++no
+						}
 					</code>
 					</pre>
 
@@ -1270,12 +1025,12 @@ while (no <= 10){
 
 					<pre>
 					<code class="language-kotlin">
-var no = 0
+						var no = 0
 
-do {
-    println(no)
-    ++no
-} while (no <=10)
+						do {
+						    println(no)
+						    ++no
+						} while (no <=10)
 					</code>
 					</pre>
 
@@ -1294,19 +1049,19 @@ do {
 					</p>
 					<pre>
 					<code class="language-kotlin">
-// print numbers 1 to 100
-for (i in 1..100){
-    println(i)
-}
+						// print numbers 1 to 100
+						for (i in 1..100){
+						    println(i)
+						}
 
-// print the sum of each following number from 1 to 100
-// ie 1 + 2 + 3 + 4 ... + 98 + 99 + 100
-var no = 0
-for (i in 1..100){
-    print("$no + $i = ")
-    no += i
-    println(no)
-}
+						// print the sum of each following number from 1 to 100
+						// ie 1 + 2 + 3 + 4 ... + 98 + 99 + 100
+						var no = 0
+						for (i in 1..100){
+						    print("$no + $i = ")
+						    no += i
+						    println(no)
+						}
 					</code>
 					</pre>
 
@@ -1320,10 +1075,10 @@ for (i in 1..100){
 
 					<pre>
 					<code class="language-kotlin">
-// print numbers 100 to 1
-for (i in 100 downTo 1){
-    println(i)
-}
+						// print numbers 100 to 1
+						for (i in 100 downTo 1){
+						    println(i)
+						}
 					</code>
 					</pre>
 
@@ -1333,17 +1088,17 @@ for (i in 100 downTo 1){
 
 					<pre>
 					<code class="language-kotlin">
-// print numbers 1 to 100 with steps of 10
-// this will print out 1, 11, 21, 31,.., 81, 91
-for (i in 1..100 step 10){
-    println(i)
-}
+						// print numbers 1 to 100 with steps of 10
+						// this will print out 1, 11, 21, 31,.., 81, 91
+						for (i in 1..100 step 10){
+						    println(i)
+						}
 
-// print numbers 100 to 1 in steps of 5
-// this will print out 100, 95, 90 ... 15, 10, 5
-for (i in 100 downTo 1 step 5){
-    println(i)
-}
+						// print numbers 100 to 1 in steps of 5
+						// this will print out 100, 95, 90 ... 15, 10, 5
+						for (i in 100 downTo 1 step 5){
+						    println(i)
+						}
 					</code>
 					</pre>
 
@@ -1353,10 +1108,10 @@ for (i in 100 downTo 1 step 5){
 
 					<pre>
 					<code class="language-kotlin">
-// this will print out the numbers 1 till 99
-for (i in 1 until 100){
-    println(i)
-}
+						// this will print out the numbers 1 till 99
+						for (i in 1 until 100){
+						    println(i)
+						}
 					</code>
 					</pre>
 
@@ -1365,17 +1120,17 @@ for (i in 1 until 100){
 					</p>
 					<pre>
 					<code class="language-kotlin">
-// loop through integers
-val even_no = listOf<Int>(2,4,6,8,10)
-for (i in even_no){
-    println(i)
-}
+						// loop through integers
+						val even_no = listOf<Int>(2,4,6,8,10)
+						for (i in even_no){
+						    println(i)
+						}
 
-// loop through strings
-val months = listOf<String>("Jan", "Feb", "Mar", "Apr", "May")
-for (i in months){
-    println(i)
-}
+						// loop through strings
+						val months = listOf<String>("Jan", "Feb", "Mar", "Apr", "May")
+						for (i in months){
+						    println(i)
+						}
 					</code>
 					</pre>
 					<!-- for loops end -->
@@ -1384,51 +1139,6 @@ for (i in months){
 				<!-- loops end -->
 				<div class="topic-break"></div>
 				<br><br>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1445,15 +1155,15 @@ for (i in months){
 				</p>
 				<pre>
 				<code class="language-kotlin">
-// calling the function
-fun main(){
-    myfun()
-}
+					// calling the function
+					fun main(){
+					    myfun()
+					}
 
-// defining the function
-fun myfun(){
-    println("This is my function")
-}
+					// defining the function
+					fun myfun(){
+					    println("This is my function")
+					}
 				</code>
 				</pre>
 
@@ -1463,14 +1173,14 @@ fun myfun(){
 				</p>
 				<pre>
 				<code class="language-kotlin">
-fun main(){
-    multiply(2, 8)
-}
+					fun main(){
+					    multiply(2, 8)
+					}
 
-fun multiply(no1 : Int, no2 : Int){
-    val result = no1 * no2
-    println(result)
-}
+					fun multiply(no1 : Int, no2 : Int){
+					    val result = no1 * no2
+					    println(result)
+					}
 				</code>
 				</pre>
 
@@ -1481,15 +1191,15 @@ fun multiply(no1 : Int, no2 : Int){
 
 				<pre>
 				<code class="language-kotlin">
-fun main(){
-    multiply(2, 8)
-}
+					fun main(){
+					    multiply(2, 8)
+					}
 
-// function with a default parameter passed as an argument
-fun multiply(no1 : Int, no2 : Int, message : String = "The multiple is: "){
-    val result = no1 * no2
-    println(message + result)
-}
+					// function with a default parameter passed as an argument
+					fun multiply(no1 : Int, no2 : Int, message : String = "The multiple is: "){
+					    val result = no1 * no2
+					    println(message + result)
+					}
 				</code>
 				</pre>
 
@@ -1500,79 +1210,19 @@ fun multiply(no1 : Int, no2 : Int, message : String = "The multiple is: "){
 
 				<pre>
 				<code class="language-kotlin">
-fun main(){
-    val result = multiply(2, 8)
-    print(result)
-}
+					fun main(){
+					    val result = multiply(2, 8)
+					    print(result)
+					}
 
-fun multiply(no1 : Int, no2 : Int) : Int{
-    return no1 * no2
-}
+					fun multiply(no1 : Int, no2 : Int) : Int{
+					    return no1 * no2
+					}
 				</code>
 				</pre>
 				<!-- functions end -->
 				<div class="topic-break"></div>
 				<br><br>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1594,16 +1244,16 @@ fun multiply(no1 : Int, no2 : Int) : Int{
 					</p>
 					<pre>
 					<code class="language-kotlin">
-fun main(){
-   infinite_recursion()
-}
+						fun main(){
+						   infinite_recursion()
+						}
 
-var loop = 0
-fun infinite_recursion(){
-    loop ++
-    println("I am an infinite recursion: loop $loop")
-    infinite_recursion()
-}
+						var loop = 0
+						fun infinite_recursion(){
+						    loop ++
+						    println("I am an infinite recursion: loop $loop")
+						    infinite_recursion()
+						}
 					</code>
 					</pre>
 
@@ -1668,54 +1318,54 @@ fun infinite_recursion(){
 					</p>
 					<pre>
 					<code class="language-kotlin">
-class Car (_brand : String){
-    private var isTurnedOn = false
-    var speed = 0
-    var brand = _brand
+						class Car (_brand : String){
+						    private var isTurnedOn = false
+						    var speed = 0
+						    var brand = _brand
 
-    fun startEngine(){
-        if (isTurnedOn == false) {
-            print("Turning on the engine...")
-            Thread.sleep(500)
-            print("1 . ")
-            Thread.sleep(500)
-            print("2 . ")
-            Thread.sleep(500)
-            println("3 . ")
-            Thread.sleep(1000) // give a delay of 1s
-            println("The $brand is now on...")
-            Thread.sleep(1000)
-            isTurnedOn = true
-            Thread.sleep(1000)
-        } else {
-            println("The $brand is already turned on")
-            Thread.sleep(1000)
-        }
-    }
+						    fun startEngine(){
+						        if (isTurnedOn == false) {
+						            print("Turning on the engine...")
+						            Thread.sleep(500)
+						            print("1 . ")
+						            Thread.sleep(500)
+						            print("2 . ")
+						            Thread.sleep(500)
+						            println("3 . ")
+						            Thread.sleep(1000) // give a delay of 1s
+						            println("The $brand is now on...")
+						            Thread.sleep(1000)
+						            isTurnedOn = true
+						            Thread.sleep(1000)
+						        } else {
+						            println("The $brand is already turned on")
+						            Thread.sleep(1000)
+						        }
+						    }
 
-    fun drive(speed : Int){
-        // the car has to be on to drive the car
-        if (isTurnedOn) {
-            println("Changing the speed to $speed km/h")
-            Thread.sleep(1000)
-            println("We are now moving at $speed km/h")
-            Thread.sleep(1000)
-        } else {
-            println("The car has to be on to start")
-            Thread.sleep(1000)
-        }
-    }
+						    fun drive(speed : Int){
+						        // the car has to be on to drive the car
+						        if (isTurnedOn) {
+						            println("Changing the speed to $speed km/h")
+						            Thread.sleep(1000)
+						            println("We are now moving at $speed km/h")
+						            Thread.sleep(1000)
+						        } else {
+						            println("The car has to be on to start")
+						            Thread.sleep(1000)
+						        }
+						    }
 
-    fun turnOffEngine(){
-        if (isTurnedOn == true){
-            println("Turning off the engine")
-            Thread.sleep(1000)
-            println("The $brand is now turned off")
-        } else {
-            println("The car is already off")
-        }
-    }
-}
+						    fun turnOffEngine(){
+						        if (isTurnedOn == true){
+						            println("Turning off the engine")
+						            Thread.sleep(1000)
+						            println("The $brand is now turned off")
+						        } else {
+						            println("The car is already off")
+						        }
+						    }
+						}
 					</code>
 					</pre>
 					<div class="alert alert-primary" role="alert" style="box-shadow: 0px 0px 8px #888888;">
@@ -1728,14 +1378,14 @@ class Car (_brand : String){
 
 					<pre>
 					<code class="language-kotlin">
-fun main(){
-    // instantiate the class ie create the object
-    val bentley = Car("Bentley")
-    bentley.startEngine()
-    bentley.drive(20)
-    bentley.startEngine()
-    bentley.turnOffEngine()
-}
+						fun main(){
+						    // instantiate the class ie create the object
+						    val bentley = Car("Bentley")
+						    bentley.startEngine()
+						    bentley.drive(20)
+						    bentley.startEngine()
+						    bentley.turnOffEngine()
+						}
 					</code>
 					</pre>
 
@@ -1745,15 +1395,15 @@ fun main(){
 
 					<pre>
 					<code class="language-kotlin">
-fun main(){
-    // instantiate the class ie create the object
-    val bentley = Car("Bentley").also {
-        it.startEngine()
-        it.drive(20)
-        it.startEngine()
-        it.turnOffEngine()
-    }
-}
+						fun main(){
+						    // instantiate the class ie create the object
+						    val bentley = Car("Bentley").also {
+						        it.startEngine()
+						        it.drive(20)
+						        it.startEngine()
+						        it.turnOffEngine()
+						    }
+						}
 					</code>
 					</pre>
 
@@ -1763,13 +1413,13 @@ fun main(){
 
 					<pre>
 					<code class="language-text">
-Turning on the engine...1 . 2 . 3 . 
-The Bentley is now on...
-Changing the speed to 20 km/h
-We are now moving at 20 km/h
-The Bentley is already turned on
-Turning off the engine
-The Bentley is now turned off
+						Turning on the engine...1 . 2 . 3 . 
+						The Bentley is now on...
+						Changing the speed to 20 km/h
+						We are now moving at 20 km/h
+						The Bentley is already turned on
+						Turning off the engine
+						The Bentley is now turned off
 					</code>
 					</pre>
 
@@ -1786,18 +1436,18 @@ The Bentley is now turned off
 					</p>
 					<pre>
 					<code class="language-kotlin">
-class PizzaKitchen(_pizzaInOven:Boolean, _pizzaType:String) {
-    var pizzaInOven = _pizzaInOven
-    var pizzaType = _pizzaType
+						class PizzaKitchen(_pizzaInOven:Boolean, _pizzaType:String) {
+						    var pizzaInOven = _pizzaInOven
+						    var pizzaType = _pizzaType
 
-    init {
-        if (pizzaInOven){
-            println("There is a $pizzaType pizza in the oven. Please wait till it is ready")
-        } else {
-            println("There is no pizza in the oven. You can put a new pizza in")
-        }
-    }
-}
+						    init {
+						        if (pizzaInOven){
+						            println("There is a $pizzaType pizza in the oven. Please wait till it is ready")
+						        } else {
+						            println("There is no pizza in the oven. You can put a new pizza in")
+						        }
+						    }
+						}
 					</code>
 					</pre>
 
@@ -1807,17 +1457,17 @@ class PizzaKitchen(_pizzaInOven:Boolean, _pizzaType:String) {
 
 					<pre>
 					<code class="language-kotlin">
-fun main(){
-    val newPizza = PizzaKitchen(false , "Hawaiian")
-}
+						fun main(){
+						    val newPizza = PizzaKitchen(false , "Hawaiian")
+						}
 
-// This will give an output of "There is no pizza in the oven. You can put a new pizza in"
+						// This will give an output of "There is no pizza in the oven. You can put a new pizza in"
 
 
-fun main(){
-    val newPizza = PizzaKitchen(true , "Hawaiian")
-}
-// This will give an output of "There is a Hawaiian pizza in the oven. Please wait till it is ready"
+						fun main(){
+						    val newPizza = PizzaKitchen(true , "Hawaiian")
+						}
+						// This will give an output of "There is a Hawaiian pizza in the oven. Please wait till it is ready"
 
 					</code>
 					</pre>
@@ -1836,18 +1486,18 @@ fun main(){
 					</p>
 					<pre>
 					<code class="language-kotlin">
-fun main(){
-    val batman = Person("Bruce", 30)
-    println(batman.name) // get the property name
-    batman.name = "wayne" // set the property name
-    println(batman.name) // get the property name again
-}
+						fun main(){
+						    val batman = Person("Bruce", 30)
+						    println(batman.name) // get the property name
+						    batman.name = "wayne" // set the property name
+						    println(batman.name) // get the property name again
+						}
 
-// Class person
-class Person (_name:String, _age:Int) {
-    var name = _name
-    var age = _age
-}
+						// Class person
+						class Person (_name:String, _age:Int) {
+						    var name = _name
+						    var age = _age
+						}
 					</code>
 					</pre>
 					<p>
@@ -1855,27 +1505,27 @@ class Person (_name:String, _age:Int) {
 					</p>
 					<pre>
 					<code class="language-kotlin">
-fun main(){
-    val batman = Person("Bruce", 30)
-    println(batman.name)
-    batman.name = "wayne"
-    println(batman.name)
-}
+						fun main(){
+						    val batman = Person("Bruce", 30)
+						    println(batman.name)
+						    batman.name = "wayne"
+						    println(batman.name)
+						}
 
-class Person (_name:String, _age:Int) {
-    var name = _name
-        get() {
-            return "the name is " + field
-        }
-        set(value) {
-            if (value.length < 5){
-                println("The name is too short")
-            } else {
-                field = value + " and I am Batman "
-            }
-        }
-    var age = _age
-}
+						class Person (_name:String, _age:Int) {
+						    var name = _name
+						        get() {
+						            return "the name is " + field
+						        }
+						        set(value) {
+						            if (value.length < 5){
+						                println("The name is too short")
+						            } else {
+						                field = value + " and I am Batman "
+						            }
+						        }
+						    var age = _age
+						}
 
 					</code>
 					</pre>
@@ -1885,13 +1535,13 @@ class Person (_name:String, _age:Int) {
 					</p>
 					<pre>
 					<code class="language-kotlin">
-var name = _name
-    get() {
-        return field
-    }
-    set(value) {
-        field = value
-    }
+						var name = _name
+						    get() {
+						        return field
+						    }
+						    set(value) {
+						        field = value
+						    }
 					</code>
 					</pre>
 

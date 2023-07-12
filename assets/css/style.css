@@ -54,3 +54,6 @@
   background-color: #D6C900
 }
 
+pre, code {
+  tab-size:0;
+}
