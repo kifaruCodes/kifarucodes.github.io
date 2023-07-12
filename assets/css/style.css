@@ -47,6 +47,12 @@
   color: #C99E00;
 }
 
+/*
+  This is a sections brak on the articles 
+  and projects sections.
+  The purpose is to distinguish the different 
+  sections being documented
+*/
 .topic-break {
   height: 15px;
   width: 100hw;
@@ -54,6 +60,28 @@
   background-color: #D6C900
 }
 
+
+
+/*
+  This is styling for the highligh code
+  sections.
+  This is to remove the tab spaces on 
+  the left side of the sections
+*/
 pre, code {
   tab-size:0;
+}
+
+
+
+/*
+  This is styling for tech stack logo images
+  on index,html page
+*/
+.tech_stack {
+  height: 50px;
+  box-shadow: 0px 0px 4px #888888;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 50%;
 }
