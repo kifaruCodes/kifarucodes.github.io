@@ -182,6 +182,9 @@
 
 						</ul>
 					</li>
+					<li>
+						<a href="#references">References</a>
+					</li>
 				</ul>
 				<div class="topic-break"></div>
 				<br><br>
@@ -191,22 +194,25 @@
 				<h2 id="installation" class="header"><strong>Installation:</strong></h2>
 				<p>(<a href="#table-of-content">back to table of content</a>)</p>
 
-				<p><b>Linux:</b></p>
+				<p><b>Linux (Ubuntu):</b></p>
 				<p>
-					Check if it is already installed:
+				</p>
+				<p>
+					If you are not sure, you can check whether you have an installed version of postgres on your system with the below commands:
 				</p>
 				<pre class="bash"><code>
 					dpkg -L postgresql
 
-					// alternatively
+					# or
+
 					dpkg -s postgresql
 				</code></pre>
 				<p>
-					Update and upgrade the system:
+					If not installed, first Update and upgrade the system:
 				</p>
 				<pre class="bash"><code>sudo apt update && sudo apt upgrade</code></pre>
 				<p>
-					Install the postgersql package
+					Install the postgresql package:
 				</p>
 
 				<pre class="bash">
@@ -216,13 +222,40 @@
 				</pre>
 
 				<p>
-					One can now connect to postgres commandline as user 'postgres' with the below command:
+					Once installed you can check the version using the <code>pg_config</code> command or the <code>dpkg</code> command as below.
+				</p>
+
+				<pre class="bash">
+				<code>
+				pg_config --version
+
+				# or
+
+				dpkg -l postgresql
+				</code>
+				</pre>
+
+				<p>
+					When postgres is installed, a linux user and a database user called 'postgres' are created. We can therefore connect to the postgres cli using the 'postgres' user as below.
 				</p>
 				<pre class="bash">
 				<code>
 				sudo -u postgres psql
+
+				# alternatively, connect to the postgres linux user 
+				# then run the psql command
+
+				sudo su - postgres
+				psql
 				</code>
 				</pre>
+
+				<div class="alert alert-warning" role="alert" style="box-shadow: 0px 0px 8px #888888;">
+				  <i class="fa fa-warning"></i><b>Note:</b>
+				  <p>
+				  	The <b>postgres</b> user has no password, so you can connect to the postgresql cli directly without being prompted for one.
+				  </p>
+				</div>
 
 				<hr>	
 				<p><b>Windows :</p>
@@ -245,7 +278,8 @@
 					(show databases) </li>
 					<li><code>\c database</code> : Connect to database (use
 					db) </li>
-					<li><code>\du</code> : database users ie list all roles </li>
+					<li><code>\du</code> : view database users ie list all roles </li>
+					<li><code>\du+</code> : view database users along with details.</li>
 					<li><code>\d</code> <code>\dt</code> : show tables </li>
 					<li><code>\d table</code> :
 					describe table (desc table) </li>
@@ -558,14 +592,28 @@
 				<!-- select statement start -->
 					<h2 id="select-statement" class="header"> Select Statement</h2>
 					<p>(<a href="#table-of-content">back to table of content</a>)</p>
-					<h3 id="select-where">Select Where</h3>
+					<h3 id="select-where" class="header">Select Where</h3>
 					<p>(<a href="#table-of-content">back to table of content</a>)</p>
-					<h3 id="select-group-by">Select Group by</h3>
+					<h3 id="select-group-by" class="header">Select Group by</h3>
 					<p>(<a href="#table-of-content">back to table of content</a>)</p>
 				<!-- select statement end -->
+				<div class="topic-break"></div>
+				<br><br>
 			<!-- SQL commands start -->
 						
-
+			<!-- references start -->
+				<h2 class="header" id="references">References</h2>
+				<p>
+					<ul>
+						<li><a href="https://www.configserverfirewall.com/postgresql/installing-postgresql-on-ubuntu/" target="_blank">Installing PostgreSQL on Ubuntu</a></li>
+						<li><a href="https://www.commandprompt.com/education/how-to-check-postgresql-version-on-ubuntu/" target="_blank">How to Check PostgreSQL Version on Ubuntu</a></li>
+						<li><a href="https://serverfault.com/questions/601140/whats-the-difference-between-sudo-su-postgres-and-sudo-u-postgres" target="_blank">What's the difference between sudo su - postgres and sudo -u postgres?</a></li>
+						<a href="https://phoenixnap.com/kb/postgres-create-user" target="_blank">How to Create a Postgres User</a>
+					</ul>
+				</p>
+				<div class="topic-break"></div>
+				<br><br>
+			<!-- references end -->
 		
 
 
