@@ -126,7 +126,12 @@
 
 			<!-- overview start -->
 				<h1 id="overview" class="header">Overview</h1>
-				<p>Personal documentation for postgreSQL</p>
+				<p>
+					Postgres is an opensource relational database system that is widely used in database management. In this section I document the major concepts that I have learnt about database management with postgres, and the projects that I have implemented with this technology.
+				</p>
+				<p>
+					This shall be a continuously developed documentation that I shall by building progressively. It is meant to be a personal notebook, documenting my technical development, as well as a learning resource for anyone interested.
+				</p>
 			<!-- overview end -->
 
 			<!-- table of content start -->
@@ -190,7 +195,12 @@
 				<p>
 					Check if it is already installed:
 				</p>
-				<pre class="bash"><code>dpkg -L postgresql</code></pre>
+				<pre class="bash"><code>
+					dpkg -L postgresql
+
+					// alternatively
+					dpkg -s postgresql
+				</code></pre>
 				<p>
 					Update and upgrade the system:
 				</p>
@@ -198,9 +208,28 @@
 				<p>
 					Install the postgersql package
 				</p>
-				<pre class="bash"><code>sudo apt install postgresql</code></pre>
+
+				<pre class="bash">
+				<code>
+				sudo apt install postgresql
+				</code>
+				</pre>
+
+				<p>
+					One can now connect to postgres commandline as user 'postgres' with the below command:
+				</p>
+				<pre class="bash">
+				<code>
+				sudo -u postgres psql
+				</code>
+				</pre>
+
+				<hr>	
 				<p><b>Windows :</p>
-				<p></b> - download from : <a href="https://www.postgresql.org/download/windows/" target="_blank">https://www.postgresql.org/download/windows/</a>
+				<p></b> - download the installer from the below link and go through the installation process. 
+				</p>
+				<p>
+				<a href="https://www.postgresql.org/download/windows/" target="_blank">https://www.postgresql.org/download/windows/</a>	
 				</p>
 				<div class="topic-break"></div>
 				<br><br>
