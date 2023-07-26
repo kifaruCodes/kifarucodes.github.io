@@ -207,7 +207,7 @@
 
 					<!-- oop start -->
 					<li>
-						<a href="#oop">OOP</a>
+						<a href="#oop">OOP</a> 
 					</li>
 					<!-- oop end -->
 				</ol>
@@ -627,6 +627,54 @@
 			<!-- OOP start -->
 			<div class="col-lg-12">
 				<h2 class="header" id="oop">OOP</h2>
+
+				<p>
+					Object oriented programming (OOP) is the concept of using <b>Objects</b> and <b>Classes</b>, where <b>classes</b> are blueprints of classes, and <b>classes</b> are instances of objects.
+				</p>
+				<p>
+					<b>Objects</b> in Java would therefore be programatic representations of real life items/entities eg people, houses, cars, countries etc. This therefore means that each item would have attributes and behaviours/actions (methods) ie in the case of a car, it would have attributes such as color, engine, number of doors etc, while also having behaviours such as driving, braking etc. 
+				</p>
+				<p>
+					We can therefore represent the car described above as below programatically:
+				</p>
+				<pre>
+				<code class="language-java">
+				public class Car {
+				    String name;
+				    String engine;
+				    int cc;
+
+				    public Car(String name, String engine, int cc){
+				        this.name = name;
+				        this.engine = engine;
+				        this.cc = cc;
+				    }
+
+				    // Getters
+				    public String getName(){
+				        return name;
+				    }
+				    public String getEngine(){
+				        return engine;
+				    }
+				    public int getCc(){
+				        return cc;
+				    }
+
+				    // Setters
+				    public void setName(String name){
+				        this.name = name;
+				    }
+				    public void setEngine(String engine){
+				        this.engine = engine;
+				    }
+				    public void setCc(int cc){
+				        this.cc = cc;
+				    }
+				}
+
+				</code>
+				</pre>
 			</div>
 			<div class="topic-break"></div>
 			<br><br>
