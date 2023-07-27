@@ -721,7 +721,93 @@
 					A <b>constructor</b> is a special method that is used to create new objects. So as the name suggests, they <b>construct</b> new objects.
 				</p>
 				<p>
-					Let's take the example of <b>Anime</b>. An anime would have a <b>name</b>, <b>genre</b>, <b>subtitles</b> and <b>episodes</b>. We would also have methods such as <b>watching</b>, <b>setSubtitles</b> and <b>removeSubtitles</b>. With the above attributes and mwthods, we would have the class represented as below: 
+					If we had a <b>class</b> Planet...
+				</p>
+				<pre>
+				<code class="language-java">
+				public class Planet {
+				    String name;
+				    int moons;
+				}
+				</code>
+				</pre>
+				<p>
+					We would instantiate it (creating an object), as below:
+				</p>
+				<p>
+					<code>Planet earth = new Planet();</code>
+				</p>
+				<p>
+					From the above, <code>Planet();</code> is actually calling a <b>Planet</b> constructor method, which creates a new <b>earth</b> object.
+				</p>
+				<p>
+					As we can see, we do not have a method defined in the <b>Planet</b> class. In this case Java has created the constructor method for you, and is usually defined as the <b>default null args constructor</b>. Therefore Java has created an object that is empty.
+				</p>
+				<p>
+					This means that after creation of an object <b>earth</b>, if we try <code>earth.name</code> we get a <b>null</b> result.
+				</p>
+				<pre>
+				<code class="language-java">
+				System.out.println(earth.name); // result shall be null
+				System.out.println(earth.moons); // result shall be null
+				</code>
+				</pre>
+				<p>
+					We can now create a custom <b>constructor</b> in the class as below:
+				</p>
+				<pre>
+				<code class="language-java">
+				public class Planet {
+				    String name;
+				    int moons;
+				    
+				    public Planet(){
+				        
+				    }
+				}
+				</code>
+				</pre>
+				<p>	
+					A <b>constructor</b> is like an ordinary method, but the name will always match the <b>class</b> name, i.e the <b>Planet</b> class has the <b>Planet()</b> constructor. Also note that <b>constructors</b> have no return types (no int, string or void)
+				</p>
+				<p>
+					We can move a step further and now create default values of the objects we create from classes. Now with the <b>Planet</b> class, we can create an object with custom values as below:
+				</p>
+				<pre>
+				<code class="language-java">
+				public class Planet {
+				    String name;
+				    int moons;
+				    
+				    public Planet(String name, int moons){
+				        this.name = name;
+				        this.moons = moons;
+				    }
+				}
+				</code>
+				</pre>
+
+				<p>
+					or
+				</p>
+
+				<pre>
+				<code class="language-java">
+				public class Planet {
+				    String name;
+				    int moons;
+				    
+				    public Planet(String newName, int newMoons){
+				        name = newName;
+				        moons = newMoons;
+				    }
+				}
+				</code>
+				</pre>
+
+
+				<p>
+					Let's take another example of <b>Anime</b>. An anime would have a <b>name</b>, <b>genre</b>, <b>subtitles</b> and <b>episodes</b>. We would also have methods such as <b>watching</b>, <b>setSubtitles</b> and <b>removeSubtitles</b>. With the above attributes and mwthods, we would have the class represented as below: 
 				</p>
 				<pre>
 				<code class="language-java">
@@ -841,7 +927,7 @@
 				</p>
 
 				<pre>
-				<code class="language-markdown">
+				<code class="language-java">
 				Anime( String name, String genre, String subtitles, int episodes){
 			        this.name = name;
 			        this.genre = genre;
