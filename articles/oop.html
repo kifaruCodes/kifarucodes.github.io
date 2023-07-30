@@ -145,14 +145,155 @@
 						In Java, we implement abstraction through <b>interfaces</b> or <b>abstract classes</b>
 					</p>
 					
-					
 
 					<h3 class="header" id="abstraction_abstract_classes">Abstract Classes</h3>
 					<p>
 						An abstract class is declared with <b>abstract</b>, where the class can not be instantiated and has to be extended (inheritance).
 					</p>
+
 					<p>
 						We can have abstract classes and/or abstract methods.
+					</p>
+
+					<p>
+						Let's take the example of three classes:
+						<ul>
+							<li><b>Animal</b> : an abstract class</li>
+							<li><b>Human</b> : extends the Animal class</li>
+							<li><b>Cat</b> : extends the Animal class</li>
+						</ul>
+						
+					</p>
+
+					<p>
+						We first start implementing the <b>Animal abstract class as below. We have a constructor, two abstract methods (no method body) and one normal method (a normal method has to have a body)</b>
+					</p>
+					<pre>
+					<code class="language-java">
+					package Animals;
+
+					abstract class Animal {
+						Animal(){
+					        System.out.println("Animal class created");
+					    }
+					    public abstract void breath();
+
+					    public abstract String eats();
+
+					    public void walk(){
+					        System.out.println("Animal is walking");
+					    }
+					}
+					</code>
+					</pre>
+
+					<p>
+						Next we have the <b>Human</b> class which extends the Animal class. We have to implement the abstract mothods from the Animal abstract class, which is implemented as below. In addition we can have our own additional methods that are not in the parent class.
+					</p>
+					<pre>
+					<code class="language-java">
+					package Animals;
+
+					public class Human extends Animal{
+					    String name;
+					    int height;
+
+					    // class constructor
+					    Human(String name, int height){
+					        this.name = name;
+					        this.height = height;
+					    }
+
+					    public void breath(){
+					        System.out.println(name + " is breathing");
+					    }
+
+					    @Override
+					    public String eats() {
+					        return name + " eats meat and greens.";
+					    }
+
+					    public int height(){
+					        return height;
+					    }
+					}
+					</code>
+					</pre>
+
+					<p>
+						Finally we have the Cat class, also extending the Animal class. We can see that as long as it extends the abstract class, we have to include the abstract methods defined in the parent class.
+					</p>
+					<pre>
+					<code class="language-java">
+					package Animals;
+
+					public class Cat extends Animal{
+
+					    public void breath(){
+					        System.out.println("Cat is breathing");
+					    }
+
+					    @Override
+					    public String eats() {
+					        return "Cat eats meat";
+					    }
+					}
+					</code>
+					</pre>
+
+					<p>
+						The above classes will now be instantiated and executed as below from the Main class.
+					</p>
+					<pre>
+					<code class="language-java">
+					package Animals;
+
+					public class Main {
+					    public static void main(String[] args){
+					        Human cena = new Human("John Cena",100);
+
+					        System.out.println("The height of " + cena.name + " is " + cena.height);
+					        cena.breath();
+					        cena.walk();
+					        System.out.println(cena.eats());
+
+					        System.out.println("\n");
+
+					        Cat gato = new Cat();
+					        gato.breath();
+					        gato.walk();
+					        System.out.println(gato.eats());
+					    }
+					}
+
+					/*
+						The result of the above is:
+
+						Animal class created
+						The height of John Cena is 100
+						John Cena is breathing
+						Animal is walking
+						John Cena eats meat and greens.
+
+
+						Animal class created
+						Cat is breathing
+						Animal is walking
+						Cat eats meat
+					*/
+					</code>
+					</pre>
+					<p>
+						
+					</p>
+
+					<p>
+						From the above we can see that:
+						<ul>
+							<li>The abstract class <b>Animal</b> can not be instantiated, but can only be extended/inherited.</li>
+							<li>The abstract methods can not have a body.</li>
+							<li>The abstract methods have to be implemented in the child class.</li>
+						</ul>
 					</p>
 
 					<hr>
