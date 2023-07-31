@@ -129,8 +129,8 @@
 					<p>
 						OOP has four main concepts:
 						<ol>
-							<li><a href="#abstraction">Abstraction</a></li>
 							<li><a href="#inheritance">Inheritance</a></li>
+							<li><a href="#abstraction">Abstraction</a></li>
 							<li><a href="#polymorphism">Polymorphism</a></li>
 							<li><a href="#encapsulation">Encapsulation</a></li>
 						</ol>
@@ -139,6 +139,70 @@
 				<div class="topic-break"></div>
 				<br><br>
 				<!-- overview end -->
+
+				<!-- inheritance start -->
+				<div class="col-lg-12">
+					<h2 class="header" id="inheritance">Inheritance</h2>
+					<p>
+						Inheritance is where we build a new class from an existing class. Here the new class can have attributes and methods from another class, while adding on new features.
+					</p>
+					<p>
+						The new class is commonly termed as a <b>child</b> class (alternatively subclass, extended-class), while the existing class is termed as a <b>parent</b> class (alternatively super-class, base-class).
+					</p>
+					<p>
+						Let's take the example of buildings such as an appartment, a mansion, a mud-house and an office. Despite all being totally different, they will all have common features such as doors, windows, floors etc. Due to this, we can have a parent class with the common features, then each class could have its unique features. 
+					</p>
+					<p>
+						This can be represented by having the below classes:
+						<ul>
+							<li><b>Building</b> class: Parent</li>
+							<li><b>Appartment</b> class: Child</li>
+							<li><b>Mansion</b> class: Child</li>
+							<li><b>Mud_house</b> class: Child</li>
+						</ul>
+						Which can therefore represented programmatically as:
+					</p>
+					<p>
+						<b>Building</b> class, which is the parent class and contains the attributes and methods that are common among all the other classes.
+					</p>
+					<pre>
+					<code class="language-java">
+					
+					</code>
+					</pre>
+
+					<p>
+						<b>Appartment</b> class, which is a child class and <b>extends</b> the <b>Building</b> parent class
+					</p>
+					<pre>
+					<code class="language-java">
+					
+					</code>
+					</pre>
+
+					<p>
+						<b>Mansion</b> class, which is a child class and <b>extends</b> the <b>Building</b> parent class
+					</p>
+					<pre>
+					<code class="language-java">
+					
+					</code>
+					</pre>
+
+					<p>
+						<b>Mud_house</b> class, which is a child class and <b>extends</b> the <b>Building</b> parent class
+					</p>
+					<pre>
+					<code class="language-java">
+					
+					</code>
+					</pre>
+
+
+				</div>
+				<div class="topic-break"></div>
+				<br><br>
+				<!-- inheritance end -->
 
 				<!-- Abstraction start -->
 				<div class="col-lg-12">
@@ -393,8 +457,14 @@
 
 					<h3 class="header" id="abstraction_interfaces">Interfaces</h3>
 					<p>
-						Every method in an interface is assumed to be abstract.
+						Interfaces work in a similar way to <b>abstract</b> classes, but with some differences such as:
+						<ul>
+							<li>All methods in an interface are assumed to be abstract</li>
+							<li>Since all methods are abstract, you do not use the <b>abstract</b> keyword.</li>
+							<li>Other classes using an interface would use the <b>implements</b> instead of the <b>extends</b> keyword.</li>
+						</ul>
 					</p>
+					
 
 					<hr>
 
@@ -409,19 +479,7 @@
 				<br><br>
 				<!-- abstraction end -->
 
-				<!-- inheritance start -->
-				<div class="col-lg-12">
-					<h2 class="header" id="inheritance">Inheritance</h2>
-					<p>
-						Inheritance is where we build a new class from an existing class. Here the new class can have attributes and methods from another class, while adding on new features.
-					</p>
-					<p>
-						The new class is commonly termed as a <b>child</b> class (alternatively subclass, extended-class), while the existing class is termed as a <b>parent</b> class (alternatively super-class, base-class).
-					</p>
-				</div>
-				<div class="topic-break"></div>
-				<br><br>
-				<!-- inheritance end -->
+				
 
 				<!-- polymorphism start -->
 				<div class="col-lg-12">
