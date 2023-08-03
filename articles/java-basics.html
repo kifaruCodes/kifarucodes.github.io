@@ -952,26 +952,21 @@
 					<hr>
 
 					<p>
-						Now so far we have learnt what constructors are and how to use them. Something extra to note, is that once we create a constructor with default parameters, we have to pass the required parameters when creating the object. However, even after having a constructor with the default values, we can still instantiate the class without any default values by having an empty constructor as below:
+						Now so far we have learnt what constructors are and how to use them. Something extra to note, is that once we create a constructor with default parameters, we have to pass the required parameters when creating the object. However, even after having a constructor with the default values, we can still instantiate the class without any default values by having an empty constructor, or have a constructor with selected parameters. This concept is called <b>constructor overloading</b>.
 					</p>
 					<pre>
 					<code class="language-java">
-					public class Test {
-					    public static void main(String[] args) {
-					        Smartphone nokia = new Smartphone();
-					        nokia.details(); // result: The phone details are: company name: null, processpr: null
-
-					        Smartphone iphone = new Smartphone("Apple", "Snap dragon");
-        					iphone.details(); // result: The phone details are: company name: Apple, processpr: Snap dragon
-					    }
-					}
+					
 
 					class Smartphone {
 					    String companyName;
 					    String processor;
 
 					    public Smartphone(){
+					    }
 
+					    public Smartphone(tring companyName){
+					    	this.companyName = companyName;
 					    }
 
 					    public Smartphone(String companyName, String processor){
@@ -982,6 +977,16 @@
 					    public void details(){
 					        System.out.println("The phone details are: company name: " + companyName +
 					                ", processor: " + processor);
+					    }
+					}
+
+					public class Test {
+					    public static void main(String[] args) {
+					        Smartphone nokia = new Smartphone();
+					        nokia.details(); // result: The phone details are: company name: null, processpr: null
+
+					        Smartphone iphone = new Smartphone("Apple", "Snap dragon");
+        					iphone.details(); // result: The phone details are: company name: Apple, processpr: Snap dragon
 					    }
 					}
 					</code>

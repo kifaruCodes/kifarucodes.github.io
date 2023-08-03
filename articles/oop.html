@@ -157,8 +157,7 @@
 						<ul>
 							<li><b>Building</b> class: Parent</li>
 							<li><b>Appartment</b> class: Child</li>
-							<li><b>Mansion</b> class: Child</li>
-							<li><b>Mud_house</b> class: Child</li>
+							<li><b>Office</b> class: Child</li>
 						</ul>
 						Which can therefore represented programmatically as:
 					</p>
@@ -167,7 +166,27 @@
 					</p>
 					<pre>
 					<code class="language-java">
-					
+					public class Building {
+					    int doors;
+					    int windows;
+					    int floors;
+
+					    Building(int doors, int windows, int floors){
+					        this.doors = doors;
+					        this.windows = windows;
+					        this.floors = floors;
+					    }
+
+					    public void window_material(){
+					        System.out.println("The windows are made of glass");
+					    }
+
+					    public void structure(){
+					        System.out.println("This building has " + this.doors + " doors, "
+					        + this.windows + " windows, and "
+					        + this.floors + " floors.");
+					    }
+					}
 					</code>
 					</pre>
 
@@ -176,27 +195,88 @@
 					</p>
 					<pre>
 					<code class="language-java">
+					public class Apartment extends Building{
+					    int tenants;
+					    Apartment(int doors, int windows, int floors, int tenants) {
+					        super(doors, windows, floors);
+					        this.tenants = tenants;
+					    }
+
+					    public void tenants(){
+					        System.out.println("There are " + this.tenants + " tenants in this apartment.");
+					    }
+					}
+					</code>
+					</pre>
+
 					
+
+					<p>
+						<b>Office</b> class, which is a child class and <b>extends</b> the <b>Building</b> parent class
+					</p>
+					<pre>
+					<code class="language-java">
+					public class Office extends Building{
+					    String company_name;
+
+					    Office(int doors, int windows, int floors, String company_name) {
+					        super(doors, windows, floors);
+					        this.company_name = company_name;
+					    }
+					    public void companies(){
+					        System.out.println("There are 20 companies here in " + this.company_name);
+					    }
+					}
 					</code>
 					</pre>
 
 					<p>
-						<b>Mansion</b> class, which is a child class and <b>extends</b> the <b>Building</b> parent class
+						We can now see the implementation of the objects from the classes in the main class as below:
 					</p>
 					<pre>
 					<code class="language-java">
-					
+					public class Main {
+					    public static void main(String[] args) {
+					        Office office = new Office(12, 2, 3, "The office" );
+					        // inherited methods
+					        office.window_material();
+					        office.structure();
+					        // un-inherited method from the Office class
+					        office.companies();
+
+					        System.out.println("\n");
+
+					        Apartment dopeFlats = new Apartment(15, 20, 5, 50);
+					        // inherited methods
+					        dopeFlats.window_material();
+					        dopeFlats.structure();
+					        // un-inherited method from the Apartment class
+					        dopeFlats.tenants();
+					    }
+					}
+
+					/*
+						Result output:
+
+						The windows are made of glass
+						This building has 12 doors, 2 windows, and 3 floors.
+						There are 20 companies here in The office
+
+
+						The windows are made of glass
+						This building has 15 doors, 20 windows, and 5 floors.
+						There are 50 in this apartment.
+
+					*/
 					</code>
 					</pre>
 
-					<p>
-						<b>Mud_house</b> class, which is a child class and <b>extends</b> the <b>Building</b> parent class
+					<hr>	
+
+					<h3 class="header">Super Keyword</h3>
+					<p>	
+						the <b>super</b> keyword is used to access attributes and methods from the parent class
 					</p>
-					<pre>
-					<code class="language-java">
-					
-					</code>
-					</pre>
 
 
 				</div>
