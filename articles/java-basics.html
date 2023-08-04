@@ -151,7 +151,7 @@
 					</li>
 					<!-- standard input end -->
 
-					<!-- variables start -->
+					<!-- data types start -->
 					<li>
 						<a href="#datatypes">Data Types</a>
 						<ul>
@@ -159,7 +159,13 @@
 							<li><a href="#datatypes_typecasting">Type Casting</a></li>
 						</ul>
 					</li>
-					<!-- variables end -->
+					<!-- data types end -->
+
+					<!-- final keyword start -->
+					<li>
+						<a href="#final">Final Keyword</a>
+					</li>
+					<!-- final keyword end -->
 
 					<!-- operators start -->
 					<li>
@@ -212,6 +218,7 @@
 							<ul>
 								<li><a href="#oop_constructors">Constructors</a></li>
 								<li><a href="#oop_accessmodifiers">Access Modifiers</a></li>
+								<li><a href="#oop_tostring">toString() Method</a></li>
 								
 								<li><a href="#oop_aipe">Abstraction, Inheritance, Polymorphism and Encapsulation</a></li>
 							</ul>
@@ -301,6 +308,52 @@
 
 			</div>
 			<!-- data types end -->
+
+			<!-- final keyword start -->
+			<div class="col-lg-12">
+				<h2 class="header" id="final">Final Keyword</h2>
+				<p>
+					<code>final</code> is a Java keyword that is applied as a <b>constant</b>, and can be applied to:
+					<ul>
+						<li>variable</li>
+						<li>methods</li>
+						<li>classes</li>
+					</ul>
+				</p>
+				<p>
+					On <b>variables</b>, the final keyword is used where a value is assigned to a variable once, after which the value can not be re-assigned. A very common case is in the use of scientific values such as <b>Pi</b> (3.142), <b>Earth gravity</b> (9.8). 
+				</p>
+				<pre>
+				<code class="language-java">
+				final String Pi = 3.142;
+				</code>
+				</pre>
+
+				<p>
+					On <b>Methods</b>, the final keyword is used where one does not want it to be overriden eg when defined in a class.
+				</p>
+				<pre>
+				<code class="language-java">
+				public final String testFunction(){
+			    	return "This is a test function";
+				}
+				</code>
+				</pre>
+
+				<p>
+					On <b>classes</b>, the final keyword is used where one does not want a class to be inherited. You can therefore not create sub-classes from classes that are final.
+				</p>
+				<pre>
+				<code class="language-java">
+				public final class testClass {
+				    public void testMethod() {
+				        System.out.println("test method");
+				    }
+				}
+				</code>
+				</pre>
+			</div>
+			<!-- final keyword end -->
 
 
 			<!-- Operators start -->
@@ -581,7 +634,6 @@
 					</p>
 				</div>
 			</div>
-			
 			<div class="topic-break"></div>
 			<br><br>
 			<!-- conditionals end -->
@@ -1001,72 +1053,115 @@
 				<!-- constructors end -->
 
 				<!-- access modifiers start -->
-				<h2 class="header" id="oop_accessmodifiers">Access Modifiers</h2>
-				<p>	
-					Access modifiers are meant to control access of data from different files, classes, packages etc.
-				</p>
-				<p>	
-					We have the following <b>access modifiers</b>:
-					<ul>	
-						<li>
-							<b>Public:</b> Acessible by all classes anf files.
-						</li>
-						<li>
-							<b>Private:</b> Only accessible within a class.
-						</li>
-						<li>
-							<b><i>Default</i>:</b> Accessible within the same package.
-						</li>
-						<li>
-							<b>Protected:</b> Accessible within the same package and child-class (inheritance)
-						</li>
-					</ul>
-				</p>
-				<p>
-					We can summarise the above as the below:
-				</p>
-				<table class="table">
-				  <thead>
-				    <tr>
-				      <th scope="col">Modifier</th>
-				      <th scope="col">Class</th>
-				      <th scope="col">Package</th>
-				      <th scope="col">child-class</th>
-				      <th scope="col">Global</th>
-				    </tr>
-				  </thead>
-				  <tbody>
-				    <tr>
-				      <th>Public</th>
-				      <td class="table-success"><i class="fa fa-check"></i></td>
-				      <td class="table-success"><i class="fa fa-check"></i></td>
-				      <td class="table-success"><i class="fa fa-check"></i></td>
-				      <td class="table-success"><i class="fa fa-check"></i></td>
-				    </tr>
-				    <tr>
-				      <th>Protected</th>
-				      <td class="table-success"><i class="fa fa-check"></i></td>
-				      <td class="table-success"><i class="fa fa-check"></i></td>
-				      <td class="table-success"><i class="fa fa-check"></i></td>
-				      <td class="table-danger"><i class="fa fa-times"></i></td>
-				    </tr>
-				    <tr>
-				      <th><i>Default</i></th>
-				      <td class="table-success"><i class="fa fa-check"></i></td>
-				      <td class="table-success"><i class="fa fa-check"></i></td>
-				      <td class="table-danger"><i class="fa fa-times"></i></td>
-				      <td class="table-danger"><i class="fa fa-times"></i></td>
-				    </tr>
-				    <tr>
-				      <th>Private</th>
-				      <td class="table-success"><i class="fa fa-check"></i></td>
-				      <td class="table-danger"><i class="fa fa-times"></i></td>
-				      <td class="table-danger"><i class="fa fa-times"></i></td>
-				      <td class="table-danger"><i class="fa fa-times"></i></td>
-				    </tr>
-				  </tbody>
-				</table>
+					<h2 class="header" id="oop_accessmodifiers">Access Modifiers</h2>
+					<p>	
+						Access modifiers are meant to control access of data from different files, classes, packages etc.
+					</p>
+					<p>	
+						We have the following <b>access modifiers</b>:
+						<ul>	
+							<li>
+								<b>Public:</b> Acessible by all classes anf files.
+							</li>
+							<li>
+								<b>Private:</b> Only accessible within a class.
+							</li>
+							<li>
+								<b><i>Default</i>:</b> Accessible within the same package.
+							</li>
+							<li>
+								<b>Protected:</b> Accessible within the same package and child-class (inheritance)
+							</li>
+						</ul>
+					</p>
+					<p>
+						We can summarise the above as the below:
+					</p>
+					<table class="table">
+					  <thead>
+					    <tr>
+					      <th scope="col">Modifier</th>
+					      <th scope="col">Class</th>
+					      <th scope="col">Package</th>
+					      <th scope="col">child-class</th>
+					      <th scope="col">Global</th>
+					    </tr>
+					  </thead>
+					  <tbody>
+					    <tr>
+					      <th>Public</th>
+					      <td class="table-success"><i class="fa fa-check"></i></td>
+					      <td class="table-success"><i class="fa fa-check"></i></td>
+					      <td class="table-success"><i class="fa fa-check"></i></td>
+					      <td class="table-success"><i class="fa fa-check"></i></td>
+					    </tr>
+					    <tr>
+					      <th>Protected</th>
+					      <td class="table-success"><i class="fa fa-check"></i></td>
+					      <td class="table-success"><i class="fa fa-check"></i></td>
+					      <td class="table-success"><i class="fa fa-check"></i></td>
+					      <td class="table-danger"><i class="fa fa-times"></i></td>
+					    </tr>
+					    <tr>
+					      <th><i>Default</i></th>
+					      <td class="table-success"><i class="fa fa-check"></i></td>
+					      <td class="table-success"><i class="fa fa-check"></i></td>
+					      <td class="table-danger"><i class="fa fa-times"></i></td>
+					      <td class="table-danger"><i class="fa fa-times"></i></td>
+					    </tr>
+					    <tr>
+					      <th>Private</th>
+					      <td class="table-success"><i class="fa fa-check"></i></td>
+					      <td class="table-danger"><i class="fa fa-times"></i></td>
+					      <td class="table-danger"><i class="fa fa-times"></i></td>
+					      <td class="table-danger"><i class="fa fa-times"></i></td>
+					    </tr>
+					  </tbody>
+					</table>
 				<!-- access modifiers end -->
+
+				<!-- toString method start -->
+					<h2 class="header" id="#oop_tostring">toString() Method</h2>
+					<p>
+						The <code>toString()</code> is a method that returns the textual representation/description of an object, which by default is the location of the object in memory.
+					</p>
+					<p>
+						Every object can call the <code>toString</code> method, because all classes in Java extend another class called <b>Object</b> (which in turn has the <b>toString</b> method. In addition, one can also override the method to create a custom string.
+					</p>
+					<pre>
+					<code class="language-java">
+					// the toString method as definded in the Object class
+					public String toString() {
+				        return getClass().getName() + "@" + Integer.toHexString(hashCode());
+				    }
+					</code>
+					</pre>
+					<p>
+						To use the method, one can append the <code>toString()</code> statement to a method. 
+					</p>
+					<pre>
+					<code class="language-java">
+					Animal lion = new Animal();
+
+					System.out.println(lion.toString);
+
+					// alternatively 
+					System.out.println(lion);   // this will give the same result as the above
+					</code>
+					</pre>
+
+					<p>
+						To override the default <code>toString()</code> method, put in a custom method in the class as below.
+					</p>
+
+					<pre>
+					<code class="language-java">
+					public String toString(){
+				        return "this is the default toString method";
+				    } 
+					</code>
+					</pre>
+				<!-- toString method end -->
 
 				<!-- abstraction start -->
 				<h2 class="header" id="oop_aipe">Abstraction, Inheritance, Polymorphism & Abstraction</h2>
