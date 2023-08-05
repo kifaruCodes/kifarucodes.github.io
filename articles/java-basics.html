@@ -200,14 +200,20 @@
 					<!-- loops end -->
 
 					<!-- functions start -->
-					<li>
+					<!-- <li>
 						<a href="#functions">Functions</a>
-					</li>
+					</li> -->
 					<!-- functions end -->
 
 					<!-- recursion start -->
-					<li>
+					<!-- <li>
 						<a href="#recursion">Recursion</a>
+					</li> -->
+					<!-- recursion end -->
+
+					<!-- recursion start -->
+					<li>
+						<a href="#arrays">Arrays</a>
 					</li>
 					<!-- recursion end -->
 
@@ -730,7 +736,44 @@
 				<!-- for loops start -->
 				<h3 class="header" id="loops_for">For Loops</h3>
 				<p>
-					
+					<code>for-loops</code> are statements that executes a block of code over a set number of times.
+				</p>
+				<p>
+					The basic structure of a <code>for-loop</code> is:
+				</p>
+				<pre>
+				<code class="language-java">
+				for (start-index ; end-index ; increment){
+				    // statement
+				}
+
+				// eg
+
+				for (int i = 0 ; i <= 10 ; i++){
+				    // statement
+				}
+				</code>
+				</pre>
+
+				<p>
+					As an example, we can print out a string a set number of times as shown below, which increments in the first example, and decrements in the next example.
+				</p>
+				<pre>
+				<code class="language-java">
+				// incrementing from 0 to 20
+				for (int i = 0 ; i <=20 ; i++){
+				    System.out.println(i);
+				}
+
+				// decrementing from 20 to 0 in intervals of 2
+				for (int i = 20 ; i >=0 ; i-=2){
+		    		System.out.println(i);
+				}
+				</code>
+				</pre>
+
+				<p>
+					We can also have a loop within a loop, which is known as a <code>nested loop</code>
 				</p>
 				<!-- for loops end -->
 			</div>
@@ -742,11 +785,11 @@
 
 
 			<!-- functions start -->
-			<div class="col-lg-12">
+			<!-- <div class="col-lg-12">
 				<h2 class="header" id="functions">Functions</h2>
 			</div>
 			<div class="topic-break"></div>
-			<br><br>
+			<br><br> -->
 			<!-- functions end -->
 
 			<!-- recursion start -->
@@ -757,11 +800,96 @@
 			<br><br>
 			<!-- recursion end -->
 
+			<!-- arrays start -->
+			<div class="col-lg-12">
+				<h2 class="header" id="arrays">Arrays</h2>
+				<p>
+					An <code>arrays</code> is a variable that is used to store multiple values.
+				</p>
+				<hr>
+				<p>
+					A normal array would be declared as:<br>
+					<code>int number = 7;</code><br>
+					While an array would be declared as:<br>
+					<code>int[] numbers = {1, 2, 3, 4};</code>
+				</p>
+				<hr>
+				<p>
+					We can alternatively declare an array by:<br>
+					<code>String letters = new String[90];</code><br>
+					if we want to put in the values of the array later. <br>
+					We can then fill in values in the array by:<br>
+					<code>letters[0] = "a";</code><br>
+					<code>letters[1] = "b";</code><br>
+					<code>letters[2] = "c";</code><br>
+
+				</p>
+				<hr>
+				<p>
+					Arrays can be accessed by the index of the value, where the first value has an index of 0. The first value will then be accessed by:<br>
+					<code>numbers[0];</code><br>
+					which can be printed out to the standard output as <br>
+					<code>System.out.println(numbers[0]);</code>
+				</p>
+				<hr>
+				<p>
+					We can also loop through all the values of an array by using a <code>for-loop</code> or a <code>for-each</code> loop.
+				</p>
+				<pre>
+				<code class="language-java">
+				public static void main(String[] args) {
+				    // declare an array "numbers"
+				    int[] numbers = new int[5];
+
+				    // fill in the values in the array
+				    numbers[0] = 121;
+				    numbers[1] = 39;
+				    numbers[2] = 345;
+
+				    // loop through the array with a forloop
+				    for (int i = 0 ; i < numbers.length ; i++){
+				        System.out.println("The number in index:" + i + " is -> " + numbers[i]);
+				    }
+
+				    // loop through an array with a for-each loop
+				    for (int i : numbers){
+			        	System.out.println(i);
+			    	}
+				}
+
+				/*
+					Result:
+
+					The number in index:0 is -> 121
+					The number in index:1 is -> 39
+					The number in index:2 is -> 345
+					The number in index:3 is -> 0
+					The number in index:4 is -> 0
+
+					121
+					39
+					345
+					0
+					0
+				*/
+				</code>
+				</pre>
+				<div class="alert alert-primary" role="alert" style="box-shadow: 0px 0px 8px #888888;">
+				  <b>Note:</b>
+				  <p>
+				  	Arrays can be of one data type, therefore combining different data types would bring in an error.
+				  </p>
+				</div>
+			</div>
+			<div class="topic-break"></div>
+			<br><br>
+			<!-- arrays end -->
+
 			<!-- OOP start -->
 			<div class="col-lg-12">
 				<h2 class="header" id="oop"><b>OOP</b></h2>
 				<!-- overview start -->
-					<h2>Overview</h2>
+					<h2 class="header">Overview</h2>
 
 					<p>
 						Object oriented programming (OOP) is the concept of using <b>Objects</b> and <b>Classes</b>, where <b>classes</b> are blueprints of classes, and <b>classes</b> are instances of objects.
