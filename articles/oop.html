@@ -159,6 +159,7 @@
 							<li><b>Appartment</b> class: Child</li>
 							<li><b>Office</b> class: Child</li>
 						</ul>
+						<img src="../assets/img/articles/oop/building_inheritance.jpg" class="img-fluid"><br>
 						Which can therefore represented programmatically as:
 					</p>
 					<p>
@@ -540,9 +541,25 @@
 						<ul>
 							<li>All methods in an interface are assumed to be abstract</li>
 							<li>Since all methods are abstract, you do not use the <b>abstract</b> keyword.</li>
-							<li>Other classes using an interface would use the <b>implements</b> instead of the <b>extends</b> keyword.</li>
+							<li>Other classes using an interface would use  <code>implements</code> instead of the <code>extends</code> keyword.</li>
 						</ul>
 					</p>
+					<div class="alert alert-primary" role="alert" style="box-shadow: 0px 0px 8px #888888;">
+					  <b>Note:</b>
+					  <p>
+					  	If an interface has only one method, it is termed as a <b>functional interface</b>.
+					  </p>
+					  <p>
+					  	Alternatively it is also known as <b>SAM</b> (Single Abstract Method)
+					  </p>
+					  <p>
+					  	In addition one can annotate it with the <code>@FunctionalInterface</code> annotation. This is optional.
+					  </p>
+					  <hr>
+					  <p>
+					  	An interface with no method can be termed as a <b>marker interface</b>
+					  </p>
+					</div>
 					
 
 					<hr>
@@ -550,9 +567,192 @@
 					
 					<pre>
 					<code class="language-java">
-					
+					// an interface with one method
+					interface TestInterface {
+					    public void interfaceMethod();
+					}
+
+					// a class that implements the interface. 
+					class TestClass implements TestInterface {
+					    public void interfaceMethod(){
+					        System.out.println("This is the implementation of a method from an interface");
+					    }
+					}
+
+					public class Main {
+					    public static void main(String[] args) {
+					        TestClass obj = new TestClass();
+					        obj.interfaceMethod();
+					    }
+					}
 					</code>
 					</pre>
+					<hr>
+
+					<h3 class="header">Lambda Expressions</h3>
+					<p>
+						Let's consider the interface <code>TestInterface</code> defined below with only one method.
+					</p>
+					<pre>
+					<code class="language-java">
+					interface TestInterface {
+					    public void interfaceMethod();
+					}
+					</code>
+					</pre>
+					<p>
+						Naturally we would need a normal class that implements the interface, because we can not instantiate the interface.
+					</p>
+					<img src="../assets/img/articles/oop/interface_class_object.jpg" class="img-fluid"><br>
+					<p>
+						Programmatically, this would be:
+					</p>
+					<pre>
+					<code class="language-java">
+					// interface
+					@FunctionalInterface
+					interface TestInterface {
+					    public void interfaceMethod();
+					}
+
+					// normal class
+					class TestClass implements TestInterface {
+					    public void interfaceMethod(){
+					        System.out.println("This is the implementation of a method from an interface");
+					    }
+					}
+
+					// object creation and implementation of interface method
+					public class Test {
+					    public static void main(String[] args) {
+					        TestClass obj = new TestClass();
+					        obj.interfaceMethod();
+					    }
+					}
+					</code>
+					</pre>
+
+					<p>
+						One can bypass the use of another class to implement the interface in two ways:
+						<ul>
+							<li>Using an <b>anonymous inner class</b></li>
+							<li>Usin a <b>lambda expression</b></li>
+						</ul>
+					</p>
+
+					<p>
+						An 	<b>Anonymous inner class</b> is a class within a class, and it has no name. With this concept, we can then have the above code implementation re-written as:
+					</p>
+					<pre>
+					<code class="language-java">
+					@FunctionalInterface
+					interface TestInterface {
+					    public void interfaceMethod();
+					}
+
+					//class TestClass implements TestInterface {
+					//    public void interfaceMethod(){
+					//        System.out.println("This is the implementation of a method from an interface");
+					//    }
+					//}
+
+					public class Test {
+					    public static void main(String[] args) {
+					        TestInterface obj = new TestInterface(){
+					            public void interfaceMethod(){
+					                System.out.println("This is the implementation of a method from an interface");
+					            }
+					        };
+					        obj.interfaceMethod();
+					    }
+					}
+					</code>
+					</pre>
+
+					<p>
+						We have successfully skipped the process of creating the class that implements the interface, and put the class content as we instantiate the object through the interface. This also goes to show that we can also instantiate an object with an interface through inner classes.
+					</p>
+
+					<p>
+						We can go a step further and use <b>lambda expressions</b>, which are implementations of functional interfaces (interface with one abstract method). This therefore also allows the implementation of interfaces without the use of another class.
+					</p>
+					<p>
+						Lambda expressions follow the format of 
+					</p>
+					<pre>
+					<code class="language-java">
+					// a simple lambda expression with one statement
+					() -> statement;
+
+					// multiple statements in a code block
+					() -> {
+					    statement;
+					    statement;
+					};
+
+					// passing parameters 
+					(param1, param2) -> {
+					    statement;
+					    statement;
+					};
+					</code>
+					</pre>
+					<p>
+						The above code examples can therefore be rewritten with a lambda expression as:
+					</p>
+					<pre>
+					<code class="language-java">
+					@FunctionalInterface
+					interface TestInterface {
+					    public void interfaceMethod();
+					}
+
+					//class TestClass implements TestInterface {
+					//    public void interfaceMethod(){
+					//        System.out.println("This is the implementation of a method from an interface");
+					//    }
+					//}
+
+					public class Test {
+					    public static void main(String[] args) {
+					        TestInterface obj = () -> System.out.println("This is the implementation of a method from an interface");
+					        obj.interfaceMethod();
+					    }
+					}
+					</code>
+					</pre>
+
+					<p>
+						We pass parameters to the lambda expression and have multiple statements as below:
+					</p>
+					<pre>
+					<code class="language-java">
+					@FunctionalInterface
+					interface TestInterface {
+					    public void interfaceMethod(String name, int age);
+					}
+
+					public class Test {
+					    public static void main(String[] args) {
+					        TestInterface obj = (name, age) -> {
+					            System.out.println("The name of the superhero is " + name);
+					            System.out.println(name + " is " + age + " years");
+					        };
+					        obj.interfaceMethod("Batman", 40);
+					    }
+					}
+					</code>
+					</pre>
+
+					<p>
+						It is clear that use of <b>Lambda expressions</b> are cleaner and readable as compared to <b>Inner classes</b>
+					</p>
+					<p>
+						
+					</p>
+
+
+
 				</div>
 				<div class="topic-break"></div>
 				<br><br>
@@ -617,7 +817,7 @@
 					<a href="https://github.com/kifaruCodes" target="_blank" type="button" class="btn btn-outline-dark"><i class="fa fa-github"></i></a>				
 				</div>
 			</div>
-			
+
 			<div class="row d-flex justify-content-center" style="box-shadow: 0px 0px 8px #888888;padding: 10px;background: #ffc900;">
 				<div class="col-lg-12 d-flex justify-content-center">
 					<p>&copy; Copyright <b>Kifaru Codes</b>. All Rights Reserved.</p>
