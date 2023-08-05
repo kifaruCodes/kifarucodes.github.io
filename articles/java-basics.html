@@ -552,6 +552,9 @@
 				<!-- if statements start -->
 				<h3 class="header" id="conditionals_if">If Statements</h3>
 				<p>
+					<code>if</code> statements are used to execute a block of code if a certain condition is met.
+				</p>
+				<p>
 					If statements in java are written as below:
 				</p>
 				<pre>
@@ -585,19 +588,23 @@
 				<!-- switch statements start -->
 				<h3 class="header" id="conditionals_switch">Switch Statements</h3>
 				<p>
+					A <code>switch</code> statement is used to test a variable against a list of values. <code>Switch</code> statements can be used instead of <code>if</code> statements if we have many comparison statements.
+				</p>
+				<p>
 					Switch statements are written as below:
 				</p>
 				<pre>
 				<code class="language-java">
-				switch (condition){
-				    case option-1 :
-				        // statement 1
+				switch (variable){
+				    case comparison-1 :
+				        // statement 
+				        // statement
 				        break
-				    case option-2 : 
-				        // statement 2
+				    case comparison-2 : 
+				        // statement 
 				        break
 				    default : 
-				        // default statement if none of the options are met
+				        // default statement if none of the comparisons are equal to the variable
 				        break;
 				}
 				</code>
@@ -650,8 +657,74 @@
 				<!-- while loops start -->
 				<h3 class="header" id="loops_while">While Loops</h3>
 				<p>
-					
+					A while loop executes a block of code continuously as long as a certain condition is met.
 				</p>
+				<p>
+					A while loop is written as:
+				</p>
+
+				<pre>
+				<code class="language-java">
+				while (condition) {
+				    // statement
+				    // statement
+				}
+				</code>
+				</pre>
+
+				<p>
+					we also have a <code>do-while</code> loop, which does what the <code>while</code> loop does. The only difference is that the <code>do-while</code> loop will execute the code block at least once before running the comparison/condition.
+				</p>
+				<pre>
+				<code class="language-java">
+				do {
+				    // statement
+				    // statement
+				} while (condition)
+				</code>
+				</pre>
+
+				<hr>
+
+				<p>	
+					A good example for implementing a <code>while</code> is a prompt that asks for an input, and will keep asking for an input if none is given. This is expressed programmatically as below:
+				</p>
+				<pre>
+				<code class="language-java">
+				public static void main(String[] args) {
+			    	Scanner input = new Scanner(System.in);
+			    	System.out.println("Please enter your username to continue:");
+			    	String cli_input = input.nextLine();
+			        
+			        // while loop
+			    	while (cli_input.isBlank()){
+			       	System.out.println("Please enter your username to continue:");
+			       	cli_input = input.nextLine();
+			    	}
+			    	System.out.println("Welcome to the program " + cli_input);
+				}
+				</code>
+				</pre>
+
+				<hr>
+
+				<p>
+					We can also implement the above code with a <code>do-while</code> loop as below.
+				</p>
+				<pre>
+				<code class="language-java">
+				public static void main(String[] args) {
+				    Scanner input = new Scanner(System.in);
+				    String cli_input = "";
+
+				    do {
+				       System.out.println("Please enter your username to continue:");
+				       cli_input = input.nextLine();
+				    } while (cli_input.isBlank());
+				    System.out.println("Welcome to the program " + cli_input);
+				}
+				</code>
+				</pre>
 				<!-- while loops end -->
 
 				<!-- for loops start -->
