@@ -928,14 +928,33 @@
 				</p>
 				<pre>
 				<code class="language-java">
+				// we instantiate a 3 row, 2 column array
 				String countries[][] = new String[3][2];
 
+				// then enter the data into the array via the index
 				countries[0][0] = "Kenya";
 				countries[0][1] = "Ethiopia";
 				countries[0][0] = "Nigeria";
 				countries[0][1] = "Ghana";
 				countries[0][0] = "South Africa";
 				countries[0][1] = "Zambia";
+
+				// we can use a for loop to loop through the data as below
+
+				for (int i = 0 ; i < countries.length ; i ++){
+					System.out.println();
+					for (int j = 0 ; j < countries[i].length ; j ++) {
+						System.out.println(countries[i][j]);
+					}
+				}
+
+				// or use a for-each loop to run through all the data
+				for ( String[] x : countries){
+		            System.out.println();
+		            for ( String y : x){
+		                System.out.println(y);
+		            }
+		        }
 
 				</code>
 				</pre>
