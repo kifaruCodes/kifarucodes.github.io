@@ -284,7 +284,7 @@
 					In Java there are two classes of data types:
 					<ol>
 						<li>Primitive data types ie int, char, bool</li>
-						<li>Non-primitive data types ie string, array, class</li>
+						<li>Non-primitive/Reference data types ie string, array, class</li>
 					</ol>
 				</p>
 				<p>
@@ -311,6 +311,49 @@
 				<p>
 					
 				</p>
+
+				<h3 class="header">Reference Data types</h3>
+				<p>
+					Reference data types have access to useful methods, which give them more functionalities:
+				</p>
+				<p>
+					Some Reference data types in Java are:
+					<ul>
+						<li>Strings</li>
+						<li>Arrays</li>
+					</ul>
+				</p>
+				<p>
+					Some methods that can be used with strings are as shown below:
+				</p>
+				<pre>
+				<code class="language-java">
+				String test = "test";
+		        test.toUpperCase();
+		        test.toLowerCase()
+		        test.length();
+		        test.concat();
+				</code>
+				</pre>
+
+				<h3 class="header">Wrapper Class</h3>
+				<p>
+					<b>Wrapper classes</b> are used to convert primitive data types to reference data types, which then allows them to access nethods for extra operations, or to be used in collections such as <b>ArrayLists</b>. The downside of using wrapper classes for reference data types is that they are slower compared to primitive data types, as they have extra steps to access data.
+				</p>
+				<p>
+					The conversion of promitive data types to reference classes is known as <b>Autoboxing</b>, while the inverse is known as <b>unboxing</b>.
+				</p>
+				<p>
+					Primitive data types can be used as reference data types as below:
+				</p>
+				<pre>
+				<code class="language-java">
+				Integer i = 2; // for int
+				Character char = 'c'; // for char
+				Boolean b = true; // for boolean
+				
+				</code>
+				</pre>
 
 			</div>
 			<!-- data types end -->
@@ -782,8 +825,6 @@
 			<!-- Loops end -->
 
 
-
-
 			<!-- methods start -->
 			<div class="col-lg-12">
 				<h2 class="header" id="methods">Methods</h2>
@@ -801,6 +842,8 @@
 			<div class="topic-break"></div>
 			<br><br>
 			<!-- methods end -->
+
+
 
 			<!-- recursion start -->
 			<div class="col-lg-12">
@@ -958,12 +1001,11 @@
 
 				</code>
 				</pre>
-
-
 			</div>
 			<div class="topic-break"></div>
 			<br><br>
 			<!-- arrays end -->
+
 
 			<!-- OOP start -->
 			<div class="col-lg-12">
