@@ -211,11 +211,17 @@
 					</li> -->
 					<!-- recursion end -->
 
-					<!-- recursion start -->
+					<!-- arrays start -->
 					<li>
 						<a href="#arrays">Arrays</a>
 					</li>
-					<!-- recursion end -->
+					<!-- arrays end -->
+
+					<!-- array list start -->
+					<li>
+						<a href="#array_list">Array List</a>
+					</li>
+					<!-- array list end -->
 
 					<!-- oop start -->
 					<li>
@@ -364,6 +370,11 @@
 		        d.isInfinite();
 				</code>
 				</pre>
+
+				<p>
+					If using <b>Intellij IDE</b>, you can see a list of methods for a wrapper class on entering the variable name followed buy a <b>dot</b>, ie in the example below, <code>b.</code>
+				</p>
+				<img src="../assets/img/articles/java_basics/wrapper_class.jpg" class="img-fluid">
 
 			</div>
 			<!-- data types end -->
@@ -995,19 +1006,19 @@
 				// we can use a for loop to loop through the data as below
 
 				for (int i = 0 ; i < countries.length ; i ++){
-					System.out.println();
-					for (int j = 0 ; j < countries[i].length ; j ++) {
-						System.out.println(countries[i][j]);
-					}
+				    System.out.println();
+				    for (int j = 0 ; j < countries[i].length ; j ++) {
+				        System.out.println(countries[i][j]);
+				    }
 				}
 
 				// or use a for-each loop to run through all the data
 				for ( String[] x : countries){
-		            System.out.println();
-		            for ( String y : x){
-		                System.out.println(y);
-		            }
-		        }
+				    System.out.println();
+				    for ( String y : x){
+				        System.out.println(y);
+				    }
+				}
 
 				</code>
 				</pre>
@@ -1015,6 +1026,122 @@
 			<div class="topic-break"></div>
 			<br><br>
 			<!-- arrays end -->
+
+			<!-- array list start -->
+			<div class="col-lg-12">
+				<h2 class="header" id="array_list"><b>Array List</b></h2>
+				<p>
+					Array lists are arrays that are resizeable after compilation. In comparison to regular arrays, they do not take primitive data types, and only take in Reference data types. In the event that one wants to use primitive data types, they would have to be converted to reference data types using wrapper classes.
+				</p>
+				<p>
+					Below is the general operations of ArrayLists:
+				</p>
+				<pre>
+				<code class="language-java">
+				// create a String array list
+				ArrayList< String > cars = new ArrayList< String >();
+
+				// add entries to the array list
+				cars.add("Audi");
+				cars.add("Honda");
+				cars.add("Toyota");
+
+				// loop through an array list
+				for (int i = 0 ; i < cars.size() ; i++){
+				    System.out.println(cars.get(i));
+				}
+
+				/*
+					Output from the for loop:
+
+					Audi
+					Honda
+					Toyota
+				*/
+
+				// edit the content of an arrayList
+				cars.set(2, "Range Rover");		// replaces "Toyota"
+
+				// loop through an array list
+				for (int i = 0 ; i < cars.size() ; i++){
+				    System.out.println(cars.get(i));
+				}
+
+				/*
+					Output from the for loop:
+					
+					Audi
+					Honda
+					Range Rover
+				*/
+
+				// remove an entry from the arrayList
+				cars.remove(1);		// remove the entry on index 1, (Honda)
+
+				// loop through an array list
+				for (int i = 0 ; i < cars.size() ; i++){
+				    System.out.println(cars.get(i));
+				}
+
+				/*
+					Output from the for loop:
+					
+					Audi
+					Range Rover
+				*/
+
+				// clear the entire arrayList (removes all entries)
+				cars.clear();
+				</code>
+				</pre>
+
+				<h3 class="header">2D ArrayLists</h3>
+				<p>	
+					Just like 2D Arrays, 2D ArrayLists are lists within lists.
+				</p>
+				<p>
+					Let's take the example of arrayLists of different countries from different continents. We first create the arrayLists of the countries in each continent, then add the seperate arraylists into another arraylist.
+				</p>
+				<pre>
+				<code class="language-java">
+				// create an arraylist for africa and add countries
+				ArrayList< String > Africa = new ArrayList< String >();
+				Africa.add("Kenya");
+				Africa.add("Uganda");
+				Africa.add("Ethiopia");
+
+				// create an arrayList for asia and add countries
+				ArrayList< String > Asia = new ArrayList< String >();
+				Asia.add("India");
+				Asia.add("Indonesia");
+				Asia.add("Malaysia");
+				Asia.add("Thailand");
+
+				// create an arrayList for europa and add countries
+				ArrayList< String > SouthAmerica = new ArrayList< String >();
+				SouthAmerica.add("Brazil");
+				SouthAmerica.add("Colombia");
+				SouthAmerica.add("Peru");
+
+				// create a 2D arrayList
+				ArrayList< ArrayList< String > > countries = new ArrayList< >();
+				// add the arraylists to the 2d arraylists
+				countries.add(Africa);
+				countries.add(Asia);
+				countries.add(SouthAmerica);
+
+				System.out.println(countries);
+
+				/*
+				*   Result: 
+				*   [[Kenya, Uganda, Ethiopia], [India, Indonesia, Malaysia, Thailand], [Brazil, Colombia, Peru]]
+					 * */
+				</code>
+				</pre>
+			</div>
+			<div class="topic-break"></div>
+			<br><br>
+			<!-- array list end -->
 
 
 			<!-- OOP start -->
