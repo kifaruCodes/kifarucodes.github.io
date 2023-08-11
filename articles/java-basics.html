@@ -1046,9 +1046,14 @@
 				cars.add("Honda");
 				cars.add("Toyota");
 
-				// loop through an array list
+				// loop through an array list with a for loop
 				for (int i = 0 ; i < cars.size() ; i++){
 				    System.out.println(cars.get(i));
+				}
+
+				// loop through an arraylist with a foreach loop
+				for (String i : cars){
+					System.out.println(i);
 				}
 
 				/*
@@ -1062,10 +1067,8 @@
 				// edit the content of an arrayList
 				cars.set(2, "Range Rover");		// replaces "Toyota"
 
-				// loop through an array list
-				for (int i = 0 ; i < cars.size() ; i++){
-				    System.out.println(cars.get(i));
-				}
+				// print out the array list
+				System.out.println(cars);
 
 				/*
 					Output from the for loop:
@@ -1078,10 +1081,8 @@
 				// remove an entry from the arrayList
 				cars.remove(1);		// remove the entry on index 1, (Honda)
 
-				// loop through an array list
-				for (int i = 0 ; i < cars.size() ; i++){
-				    System.out.println(cars.get(i));
-				}
+				// print out the array list
+				System.out.println(cars);
 
 				/*
 					Output from the for loop:
@@ -1136,6 +1137,32 @@
 				*   Result: 
 				*   [[Kenya, Uganda, Ethiopia], [India, Indonesia, Malaysia, Thailand], [Brazil, Colombia, Peru]]
 					 * */
+				</code>
+				</pre>
+
+				<p>
+					We can then loop through the arraylist with a <code>for</code> loop as below
+				</p>
+				<pre>
+				<code class="language-java">
+				for (int i = 0 ; i < countries.size() ; i ++){
+				    for (int j = 0 ; j < countries.get(i).size() ; j++){
+				        System.out.println(countries.get(i).get(j));
+				    }
+				}
+				</code>
+				</pre>
+
+				<p>
+					Or with a <code>for-each</code> loop as:
+				</p>
+				<pre>
+				<code class="language-java">
+				for (ArrayList<String> i : countries){
+				    for (String j : i){
+				        System.out.println(j);
+				    }
+				}
 				</code>
 				</pre>
 			</div>
